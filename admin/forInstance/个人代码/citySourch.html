@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul,li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div id="header"></div>
+<div class="container p-city-list">
+    <div class="enter-city">
+        <span class="enter-txt">点击进入:</span>
+        <!--  <a href="../"><b>北京市</b><span class="arrow">>>></span></a> -->
+    </div>
+    <div class="select-city">
+        <lable>直接搜索：</lable>
+        <input type="text" name="keyword" class="form" id="J-select-city-form" placeholder="请输入城市名字" autocomplete="off" onkeydown="citySearch()">
+        <span onclick="btnSearch()">确定</span>
+    </div>
+    <div class="hot-city" id="hotCity">
+        <b>热门城市：</b>
+        <!--<a>北京</a>-->
+        <!--<a>天津</a>-->
+        <!--<a>上海</a>-->
+        <!--<a>重庆</a>-->
+    </div>
+    <div class="select-letter-wrap">
+        <p class="pt15">
+            <b>按拼音首字母选择：</b>
+        </p>
+        <ul class="city-list-wrap" id="J-city-list">
+            <li class="city-list clearfix">
+                <span class="letter fl">A</span>
+                <ul class="cities fl cf">
+                    <li><a href="#">阿拉善</a></li>
+                    <li><a href="#">鞍山</a></li>
+                    <li><a href="#">安庆</a></li>
+                    <li><a href="#">安阳</a></li>
+                    <li><a href="#">阿坝藏族羌族</a></li>
+                    <li><a href="#">安顺</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

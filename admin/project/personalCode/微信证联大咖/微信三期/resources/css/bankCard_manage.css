@@ -1,0 +1,144 @@
+body{
+    font-family: '思源黑体';
+    background: #f4f4f4;
+    font-size: 62.5%;
+}
+/*银行卡列表*/
+.manage_list{
+
+}
+.manage_list .manage_li{
+    margin: 1rem 1rem 0 1rem;
+    border-radius: .6rem;
+    position: relative;
+
+}
+.manage_li{
+    background-image: linear-gradient(-90deg, #FC6D6D 0%, #FA4646 100%);
+}
+.manage_li .manage_img{
+    padding-top: 1.6rem;
+}
+.manage_li .manage_img img{
+    width: 4.5rem;
+    height: 4.5rem;
+}
+.manage_li .manage_detail{
+    color: #fff;
+    padding-left: .5rem;
+}
+.manage_li .right_img{
+    width: 4rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+.manage_li .manage_detail h3{
+    font-size: 1.6rem;
+}
+.manage_li .manage_detail .card_type{
+    font-size: 1.4rem;
+}
+.manage_li .manage_detail .card_number{
+    font-size: 2rem;
+}
+.manage_list .noCard_tips{
+    font-size: 1.5rem;
+    color: #666666;
+    text-align: center;
+    line-height: 2.8rem;
+    padding: 3rem 0;
+}
+.manage_li{
+    background-image: linear-gradient(-90deg, #FC6D6D 0%, #FA4646 100%);
+}
+/*招商，中国银行，中信银行，广发银行，工商银行，北京银行，华夏银行，浙商银行，徽商银行，盛京银行*/
+.background_one{
+    background-image: linear-gradient(-90deg, #FC6D6D 0%, #FA4646 100%);
+    box-shadow: 4px 4px 10px 0px rgba(252,109,109,0.50);
+}
+/*民生银行*/
+.background_two{
+    background-image: linear-gradient(-270deg, #0085C8 0%, #38B2ED 100%);
+    box-shadow: 4px 4px 10px 0px rgba(0,133,200,0.29);
+}
+/*邮政银行，农业银行*/
+.background_three{
+    background-image: linear-gradient(-270deg, #008A32 0%, #64B267 100%);
+    box-shadow: 4px 4px 10px 0px rgba(65,163,85,0.30);
+}
+/*建设银行，交通银行，兴业银行，浦发银行，上海银行，渤海银行，江苏银行，天津银行*/
+.background_four{
+    background-image: linear-gradient(-90deg, #5284C1 0%, #3D5EAB 100%);
+    box-shadow: 4px 4px 10px 0px rgba(73,116,184,0.35);
+}
+/*光大银行*/
+.background_five{
+    background-image: linear-gradient(-269deg, #A12FC4 0%, #C652E9 100%);
+    box-shadow: 4px 4px 10px 0px rgba(178,63,213,0.31);
+}
+/*平安银行*/
+.background_six{
+    background-image: linear-gradient(-90deg, #FF975C 0%, #EB5300 100%);
+    box-shadow: 4px 4px 10px 0px rgba(252,109,109,0.50);
+}
+/*青岛银行*/
+.background_seven{
+    background-image: linear-gradient(-90deg, #C7525D 0%, #A03B45 100%);
+    box-shadow: 4px 4px 10px 0px rgba(197,81,92,0.37);
+}
+/*添加银行卡*/
+.add_bankCard>.btn-primary,.add_bankCard>.btn-primary:hover,.add_bankCard>.btn-primary:focus{
+    height: 6rem;
+    border: 1px dashed #999;
+    border-radius: .6rem;
+    margin:1rem;
+    background: none;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #666;
+    vertical-align: middle;
+    width: 94%;
+}
+.add_bankCard>.btn-primary img{
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: text-top;
+    margin-right: .6rem;
+}
+.add_bankCard .modal .modal-dialog{
+    width: 70%;
+    margin: 12rem auto;
+    border-radius: .6rem;
+}
+.add_bankCard .modal .modal-dialog .modal-content{
+    border-radius: .8rem;
+}
+.add_bankCard .modal .modal-header,.add_bankCard .modal .modal-footer{
+    border: none;
+}
+.add_bankCard .modal .modal-header{
+    font-size: 1.6rem;
+    color: #333333;
+}
+.add_bankCard .modal .modal-header .modal-title{
+    text-align: center;
+}
+.add_bankCard .modal .modal-body{
+    padding: 0;
+}
+.add_bankCard .modal .modal-body p{
+    text-align: center;
+    font-size: 1.3rem;
+    color: #666666;
+    margin: 0;
+}
+.add_bankCard .modal-footer .btn-primary{
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: #333333;
+    display: block;
+    margin: 0 auto;
+}

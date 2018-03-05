@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>文字搬运工</title>
+    <style>
+        /*设置整体背景、清空边界和填充等样式*/
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #C0C0C0;
+        }
+        /*设置文字移动框所在的DIV宽度、背景色、填充及圆角边框等样式*/
+        #wrapper {
+            margin: 50px auto;
+            width: 800px;
+            background: #fff;
+            overflow: hidden;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        /*设置左侧文字输入框背景色、宽高、填充、左浮动及字体大小等样式*/
+        textarea {
+            background: #EFEFD6;
+            border: none;
+            width: 320px;
+            height: 220px;
+            float: left;
+            padding: 10px;
+            font-size: 18px;
+        }
+        /*设置右侧结果框背景色、宽高、填充、右浮动等样式*/
+        #right {
+            width: 320px;
+            height: 220px;
+            background: #63EFF7;
+            float: right;
+            padding: 10px;
+        }
+        /*设置中间操作部分浮动、宽度、文本居中*/
+        #center {
+            float: left;
+            width: 120px;
+            text-align: center;
+        }
+        /*设置中间超链接样式*/
+        #center a {
+            display: block;
+            color: #fff;
+            background: #F76300;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+            font-family: '微软雅黑';
+        }
+
+        /*不允许用户调整左侧文本输入框的大小*/
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <textarea id="left">携一抹温暖等待你在流年清浅的岁月中;</textarea>
+    <div id="center">
+        <a href="javascript:">把文字右移</a>
+    </div>
+    <textarea id="right"></textarea>
+</div>
+</body>
+<script type="text/javascript">
+    //js代码：文字移动功能
+    window.onload = function(){
+        //准备工作：获取到该功能涉及到的元素
+        var left = document.getElementById('left');
+        //querySelector(); querySelectorAll();
+        var btn = document.querySelector("#center a");
+        var right = document.getElementById('right');
+        btn.onclick = function () {
+            //基本内容重置
+            right.innerHTML = '';
+           if(!left.value){
+               alert("请输入一些内容后再点击移动！");
+               return;
+           }
+           var str =left.value;
+           this.style.opacity = '0.5';
+           //移动文字
+            var timer = setInterval(function () {
+                //移动一个个文字
+                str = left.value;
+                right.innerHTML += str.substring(0,1);//每次把左侧一个文字拿出来放到右侧去
+                //左侧更新为最新的内容
+                left.value = left.value.substring(1);
+
+                /*文字移动完毕后，移动事件失效*/
+                if (!left.value){
+                    clearInterval(timer);
+                    btn.style.opacity = '1';
+                }
+            },80);
+        }
+    }
+
+</script>
+</html>

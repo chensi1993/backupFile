@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>关联店铺</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!--关联店铺css样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/clerk_tied2.css">
+</head>
+<body>
+<div class="container">
+    <!--头部关联部分-->
+    <div class="row band_top text-center">
+        <h3>成功关联到小莫的店</h3>
+        <div class="band-word" id="bandWord">
+            <p>请耐心等待老板确认</p>
+            <p class="agree">待同意</p>
+        </div>
+    </div>
+
+    <!--点击取消关联弹框-->
+    <button type="button" id="cancel" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        取消关联
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" id="modal-inner" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    是否取消关联
+                </div>
+                <div class="modal-footer row" id="footerBtn">
+                    <button type="button" class="btn btn-default col-xs-6" data-dismiss="modal">否</button>
+                    <button type="button" id="determine" class="btn btn-primary col-xs-6" data-toggle="modal" data-target="#myModals">是</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--弹出退款授权码-->
+    <!-- Modal -->
+    <div class="modal fade" id="myModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    请输入退款授权码
+                    <div class="pwd-box">
+                        <input type="tel" maxlength="6" class="pwd-input" id="pwd-input">
+                        <div class="fake-box" id="fake-box">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer row" id="code-row">
+                    <button type="button" id="btnReturn" class="btn btn-default col-xs-6" data-dismiss="modal">返回</button>
+                    <button type="button" id="determines" class="btn btn-primary col-xs-6">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--滑动-->
+    <div class="band_bottom row">
+        <div class="col-xs-1"></div>
+        <div class="slideunlock-wrapper col-xs-10">
+            <input type="hidden" value="1" class="slideunlock-lockable" />
+            <div class="slideunlock-slider">
+                <span class="slideunlock-label"></span>
+                <span class="slideunlock-lable-tip"></span>
+            </div>
+            <!--提示文字-->
+            <div class="tips">
+                <p>为避免接收不必要的推送，请每天工作前打开收款通知，工作结束后关闭收款通知。</p>
+            </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="resources/js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/zepto.min.js"></script>
+<!--底部滑动脚本-->
+<script type="text/javascript" src="resources/js/jquery.slideunlock.js"></script>
+<script type="text/javascript" src="resources/js/clerk_tied2.js"></script>
+</body>
+</html>

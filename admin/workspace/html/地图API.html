@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style type="text/css">
+        body,html,#container{
+            /*height: 100%;*/
+            margin: 0px;
+        }
+        #container{
+            width: 500px;
+            height: 500px;
+        }
+        .panel {
+            background-color: #ddf;
+            color: #333;
+            border: 1px solid silver;
+            box-shadow: 3px 4px 3px 0px silver;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            line-height: 20px;
+        }
+        #input{
+            width: 250px;
+            height: 25px;
+            border: 0;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="container" tabindex="0"></div>
+<div class ='panel'>
+    <input id = 'input' value = '点击地图显示地址' disabled/>
+</div>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=33633f1f9d076fa86634cff8473f014b"></script>
+<script type="text/javascript">
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        zoom:11,
+        center: [116.320828,39.917103]
+    });
+
+    AMap.plugin('AMap.Geocoder',function(){//回调函数
+        //实例化Geocoder
+        var geocoder = new AMap.Geocoder({
+            city: "010"//城市，默认：“全国”
+        });
+        //TODO: 使用geocoder 对象完成相关功能
+        var marker=new AMap.Marker({
+            map:map,
+            bubble:true
+        });
+        map.on('click',function(e){
+            marker.setPosition(e.lnglat);
+            geocoder.getAddress(e.lnglat,function(status,result){
+                if(status=='complete'){
+                    document.getElementById('input').value = result.regeocode.formattedAddress
+                }
+            })
+        })
+    });
+
+
+
+        var marker = new AMap.Marker({
+        position: [116.309584,39.907557],//marker所在的位置
+        map:map//创建时直接赋予map属性
+    });
+    //也可以在创建完成后通过setMap方法执行地图对象
+    // marker.setMap(map);
+
+    var infowindow;
+    var infoWindowContent = '<div class="infowindow-content">' +
+            '<div class="amap-info-header">方恒国际中心</div>' +
+            '<div class="amap-info-body">阜通东大街6号</div></div>';
+
+    map.plugin('AMap.AdvancedInfoWindow', function () {
+
+        infowindow = new AMap.AdvancedInfoWindow({
+            panel: 'panel',
+            placeSearch: true,
+            asOrigin: true,
+            asDestination: true,
+            content: infoWindowContent
+        });
+        infowindow.open(map, [116.481488, 39.990464]);
+
+    });
+</script>
+<script type="text/javascript" src="https://webapi.amap.com/demos/js/liteToolbar.js"></script>
+</body>
+</html>

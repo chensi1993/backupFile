@@ -1,0 +1,144 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '思源黑体';
+    background: #F4F4F4;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+}
+/*top--昨日分润部分*/
+.bigshot_top{
+    height: 14rem;
+    color: #fff;
+    font-size: 1.3rem;
+    background-image: linear-gradient(-225deg, #D6B485 0%, #EFD5A4 100%);
+}
+.bigshot_top a{
+    color: #fff;
+}
+.bigshot_top .profit_p{
+    text-align: center;
+    padding-top: 2.2rem;
+}
+.profit_p p:nth-child(1){
+    margin-bottom: 0;
+}
+.profit_p p:nth-child(2){
+    font-size: 3.75rem;
+}
+.profit_p p:nth-child(3){
+    white-space:nowrap;
+}
+.profit_p span{
+    vertical-align: middle;
+}
+.profit_detail p{
+    margin-top: 10.4rem;
+    margin-bottom: 0;
+    white-space:nowrap;
+}
+/*center--菜单导航部分*/
+.bigshot_center{
+    margin: 2.4rem 1rem;
+}
+.bigshot_center .col-xs-4{
+    text-align: center;
+}
+.bigshot_center .col-xs-4 img{
+    width: 3.7rem;
+    height: 3.7rem;
+}
+.bigshot_center .col-xs-4 p{
+    color: #666;
+    font-size: 1.3rem;
+    margin: .8rem 0 0 0;
+}
+/*bottom--广告部分*/
+.bigshot_bot{
+    height: 21rem;
+    background: url("../img/dakabanner.png") no-repeat ;
+    background-size: 100% 100%;
+}
+@media screen and (min-width:321px) and (max-width:375px){
+    .bigshot_bot{
+        height: 27.5rem;
+        background: url("../img/dakabanner.png") no-repeat ;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (min-width:376px) and (max-width:414px){
+    .bigshot_bot{
+        height: 34rem;
+        background: url("../img/dakabanner.png") no-repeat ;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (min-width:415px) and (max-width:639px){
+    .bigshot_bot{
+        height: 36rem;
+        background: url("../img/dakabanner.png") no-repeat ;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (min-width:640px) and (max-width:719px){
+    .bigshot_bot{
+        height: 38rem;
+        background: url("../img/dakabanner.png") no-repeat ;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (min-width:720px) and (max-width:749px){
+    .bigshot_bot{
+        height: 40rem;
+        background: url("../img/dakabanner.png") no-repeat ;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (min-width:750px) and (max-width:799px){
+    .bigshot_bot{
+        height: 42rem;
+        background: url("../img/dakabanner.png") no-repeat ;
+        background-size: 100% 100%;
+    }
+}
+.bigshot_bot p{
+    text-align: center;
+    color: #FAEE65;
+    font-size: 1.5rem;
+}
+.bigshot_bot p:last-child{
+    font-size: 1.3rem;
+}
+/*底部切换*/
+.bigshot_switch{
+    padding: .5rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border-top:1px solid #ececec;
+    background: #fff;
+}
+.bigshot_switch .col-xs-6{
+    text-align: center;
+}
+.bigshot_switch .col-xs-6 img{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+.bigshot_switch .col-xs-6 p{
+    color: #ff6468;
+    font-size: 1.2rem;
+    margin: 0;
+}
+#switch_li p{
+    color:#999
+}

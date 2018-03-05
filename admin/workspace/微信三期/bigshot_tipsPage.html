@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--Android中UC和QQ浏览器无法触发dropload中scroll和resize-->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>证联大咖</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <style>
+        body{
+            font-family: '思源黑体';
+            background: #fff;
+            font-size: 62.5%;
+        }
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a,a:link,a:visited,a:hover,a:active{
+            text-decoration: none;
+        }
+        .container{
+            padding-top: 6rem;
+        }
+        .container img{
+            width: 17.8rem;
+            height: 16rem;
+            margin: auto;
+            display: block;
+        }
+        .container p{
+            font-size: 1.6rem;
+            color: #EC7A73;
+            letter-spacing: .1rem;
+            text-align: center;
+        }
+        /*底部切换*/
+        .bigshot_switch{
+            padding: .5rem 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            border-top:1px solid #ececec;
+        }
+        .bigshot_switch .col-xs-6{
+            text-align: center;
+        }
+        .bigshot_switch .col-xs-6 img{
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+        .bigshot_switch .col-xs-6 p{
+            color: #ff6468;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        #switch_li p{
+            color:#999
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="resources/img/bushidaka@3x.png">
+    <p>您还不是证联大咖<br/>暂时没有操作权限</p>
+    <!--底部切换-->
+    <ul class="bigshot_switch row">
+        <li class="col-xs-6">
+            <a href="">
+                <img src="resources/img/higherups@3x.png">
+                <p>大咖专区</p>
+            </a>
+        </li>
+        <li class="col-xs-6" id="switch_li">
+            <a href="personal_central.html">
+                <img src="resources/img/mine.png">
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

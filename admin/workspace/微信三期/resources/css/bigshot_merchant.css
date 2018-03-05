@@ -1,0 +1,249 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '思源黑体';
+    background: #f4f4f4;
+    color: #666;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a,a:hover,a:active,a:visited{
+    text-decoration: none;
+}
+/*签约商户费率状态选择下拉框*/
+.merchant_status{
+    text-align: center;
+    background: #fff;
+}
+.merchant_status h3{
+    font-size: 1.6rem;
+    text-align: center;
+    color: #333;
+    background: #fff;
+    /*background: url("../img/jiantou.png") no-repeat right center;*/
+    /*background-size: 1em;*/
+    /*padding-right: 1.5rem;*/
+    /*display: inline-block;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    z-index: 999;
+}
+.merchant_status h3>img{
+    width: 1.4rem;
+    /*display: inline-block;*/
+}
+
+.rotate{
+
+    transform-origin:center center;
+
+    transform: rotate(180deg);
+
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    -o-transform: rotate(180deg);
+
+    transition: transform 0.2s; //过度时间 可调
+
+    -moz-transition: -moz-transform 0.2s;
+
+    -moz-transition: -moz-transform 0.2s;
+
+    -o-transition: -o-transform 0.2s;
+
+    -ms-transition: -ms-transform 0.2s;
+
+}
+
+.rotate1{
+
+    transform-origin:center center;
+
+    transform: rotate(0deg);
+
+    -webkit-transform: rotate(0deg);
+
+    -moz-transform: rotate(0deg);
+
+    -ms-transform: rotate(0deg);
+
+    -o-transform: rotate(0deg);
+
+    transition: transform 0.2s;
+
+    -moz-transition: -moz-transform 0.2s;
+
+    -moz-transition: -moz-transform 0.2s;
+
+    -o-transition: -o-transform 0.2s;
+
+    -ms-transition: -ms-transform 0.2s;
+
+}
+.merchant_status .status_list{
+    display: none;
+    border-top: 1px solid #eee;
+    position: fixed;
+    width: 100%;
+    height: 21rem;
+    z-index: 999;
+    -webkit-transition-duration: 0.4s;
+    margin-top: 4.5rem;
+}
+.merchant_status .status_list::after{
+    position: fixed;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0,0,0,0.4);
+    /*left: 0;*/
+    /*right: 0;*/
+    /*top: 0;*/
+}
+.status_list ul{
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.status_list ul>li{
+    text-align: left;
+    font-size: 1.6rem;
+    color: #999;
+    height: 4.1rem;
+    line-height: 4.1rem;
+    margin: 0 1rem;
+    border-bottom: 1px solid #eee;
+}
+.status_list ul>li:first-child{
+    color: #666;
+}
+.status_list ul>li:last-child{
+    border-bottom: none;
+}
+.merchant_status .merchant_num{
+    font-size: 1.3rem;
+    color: #666;
+    margin-top:1rem
+}
+/*费率状态全部内容*/
+.merchant_center{
+    margin-top: 5.5rem;
+}
+.merchant_center .merchant_num{
+    font-size: 1.3rem;
+    color: #666;
+    margin-top:1rem
+}
+.merchant_center .merchant_contain{
+    margin-bottom: 1rem;
+}
+.merchant_list{
+    margin: 1rem 0 0 0;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 6px 0px rgba(208,208,208,0.50);
+    border-radius: .8rem;
+}
+.merchant_list .list_left h3{
+    font-size: 1.8rem;
+}
+.merchant_list .list_left p{
+    font-size: 1.3rem;
+}
+.merchant_list .list_left p>span{
+    margin-left: .6rem;
+}
+.merchant_list .list_right{
+    text-align: right;
+}
+.merchant_list .list_right button{
+    border: none;
+    border-radius: .4rem;
+    color: #fff;
+    font-size: 1.3rem;
+    margin-top: 25%;
+    width: 7rem;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0;
+}
+.merchant_list .list_right p{
+    padding-right: 1.5rem;
+    font-size: 1.2rem;
+}
+.merchant_list .list_right span{
+    display: inline-block;
+    margin-top: 25%;
+    font-size: 1.2rem;
+    color: #999;
+}
+.merchant_state_success{
+    text-align: center;
+    display: none;
+}
+.merchant_state_fail{
+    text-align: center;
+    display: none;
+}
+#setUp .list_right button{
+    background-image: linear-gradient(-225deg, #EFD5A4 0%, #D6B485 100%);
+}
+#disAgree .list_right button{
+    background: #FF9D9D;
+}
+#disAgree .list_right p{
+    color:#FF9D9D ;
+}
+#pending .list_right button{
+    background: #6AD4FD;
+}
+#pending .list_right p{
+    color:#6AD4FD ;
+}
+#agree .list_right button{
+    background: #20EEB9;
+}
+#agree .list_right p{
+    color: #20EEB9;
+}
+/*加载更多*/
+.js-load-more{
+    text-align: center;
+    color: #999;
+}
+
+/*模态框*/
+.modal-dialog{
+    width: 50%;
+    margin: 46rem auto 0;
+}
+.modal-body{
+    padding: .5rem;
+}
+.modal-content{
+    background: #666;
+    opacity: .8;
+    color: #fff;
+    text-align: center;
+}
+.modal-backdrop.in{
+    opacity: 0;
+}

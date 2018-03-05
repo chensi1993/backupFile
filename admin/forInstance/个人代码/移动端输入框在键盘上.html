@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            text-align: center;
+            background: #ccc;
+        }
+
+        main {
+            position: absolute;
+            top: 50px;
+            bottom: 10px;
+            left: 20px;
+            width: 100%;
+            margin-bottom: 50px;
+            /* 使之可以滚动 */
+            overflow-y: scroll;
+            /* 增加该属性，可以增加弹性，是滑动更加顺畅 */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: #666;
+            border-top: 1px solid #e6e6e6;
+        }
+
+        footer input {
+            display: inline-block;
+            width: 90%;
+            height: 20px;
+            font-size: 14px;
+            outline: none;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    This is the header
+</header>
+<main>
+    <h1><%= title %></h1>
+
+    <p>Welcome to <%= title %></p>
+    <ul>
+        <li>Today</li>
+        <li>is</li>
+        <li>Sunday</li>
+        <li>And</li>
+        <li>I</li>
+        <li>have</li>
+        <li>to</li>
+        <li>go</li>
+        <li>to</li>
+        <li>work</li>
+        <li>tomorrow</li>
+    </ul>
+</main>
+<footer>
+    <input type="text" placeholder="Type here...">
+    <p>ddddddddd</p>
+</footer>
+<script type="text/javascript">
+    $(function () {
+        $('input').on('click', function () {
+            var target = this;
+            // 使用定时器是为了让输入框上滑时更加自然
+            setTimeout(function () {
+                target.scrollIntoView(true);
+            });
+        })
+    });
+</script>
+</body>
+</html>

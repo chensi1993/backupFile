@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript" src="../js/vue.min.js"></script>
+<script>
+    //数据与方法：当一个 Vue 实例被创建时，它向 Vue 的响应式系统中加入了其 data 对象中能找到的所有的属性。当这些属性的值发生改变时，视图将会产生“响应”，即匹配更新为新的值。
+    //我们的数据对象
+    var data = {a:1,b:''};
+    //该对象被加入到一个vue实例中
+    var vm = new Vue({
+        data:data
+    });
+    //他们引入相同的对象
+    console.log(vm.a === data.a);
+
+    //设置属性也会影响到原始数据
+    vm.a = 2;
+    console.log(data.a);
+
+    data.a = 3;
+    console.log(vm.a);
+
+    vm.b= 5;
+    console.log(data.b);
+
+    new Vue({
+        data: {
+            a: 1
+        },
+        created: function () {
+            // `this` 指向 vm 实例
+            console.log('a is: ' + this.a)
+        }
+    })
+</script>
+</body>
+</html>

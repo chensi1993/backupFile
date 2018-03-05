@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="keywords" content="" />
+	    <meta name="description" content="" />
+	    <meta name="format-detection" content="telephone=no" />
+	    <meta http-equiv="Cache-Control" content="no-siteapp">
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="author" content="zlzf-cs" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="resources/bootstrap-3.3.7/css/bootstrap.min.css"/>
+		<style type="text/css">
+			html{font-size: 62.5%;}
+			body{font-family: "SourceHanSansCN-Regular";background-image: linear-gradient(-225deg, #EFD5A4 0%, #D6B485 100%);background-repeat: no-repeat;}
+			p{color: #fff;font-size: 2.5rem;line-height: 3.5rem;letter-spacing: 0.5rem;font-weight: bold;margin-top: 7rem;}
+			.Invitation_header{margin: 5rem auto;}
+			.Invitation_QR{margin-left: 8%;padding: 0.8rem 0.8rem 1.5rem 0.8rem;background-color: #fff;border-radius: 0.5rem 0.5rem 0 0;}
+			.Invitation_QR img{width: 100%;height: 100%;}
+			.Invitation_but{border-top: 0.17rem solid #E2E2E2;background-color: #fff;margin-left: 8%;padding: 0.8rem 0;color: #999;letter-spacing: 0.2rem;border-radius:0 0 0.5rem 0.5rem;line-height: 2.8rem;font-size: 1.6rem;}
+			
+			@media only screen and (max-width: 375px) {
+			    .Invitation_header{margin-bottom: 8.5rem;}
+			    .Invitation_but{font-size: 1.4rem;}
+			}
+			@media only screen and (min-width: 375px) and (max-width: 414px) {
+			    .Invitation_header{margin-bottom: 11.5rem;}
+			    .Invitation_but{font-size: 1.6rem;}
+			}
+			/*下载提示框*/
+			#shareIt {
+				-webkit-user-select: none;
+				display: none;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.85);
+				opacity: 0.7;
+				filter: alpha(opacity=70);
+				text-align: center;
+				top: 0;
+				left: 0;
+				z-index: 1000;
+			}
+			#shareIt img {
+				max-width: 100%;
+			}
+			#shareIt p{
+				font-size: 1.6rem;
+				color: #fff;
+				font-weight: normal;
+				text-align: right;
+				padding-right: 3rem;
+				line-height: normal;
+				letter-spacing: 0;
+			}
+			#shareIt .share_text{
+				margin: 7.5rem 0 0 0;
+			}
+			#shareIt .arrow {
+				position: absolute;
+				right: 5%;
+				top: 1%;
+				width: 6.5rem;
+			}
+			#shareIt .shareTo{
+				margin: 0;
+				line-height: normal;
+				letter-spacing: 0;
+			}
+			#shareImg{
+				width: 1.5rem;
+				margin: 0 .5rem;
+			}
+			.shareTo img{
+			width: 2.2rem;
+			margin: 0 .5rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<p class="text-center weChart_share">扫描下方二维码<br/>快速申请门店收款码</p>
+			<div class="row Invitation_header">
+				<div class="Invitation_QR col-xs-10"><img src="resources/img/erweim@3x.png"/></div>
+				<div class="Invitation_but col-xs-10 text-center">服务商：证联支付有限责任公司</div>
+			</div>
+			<!--下载提示框-->
+			<div id="shareIt">
+				<img class="arrow" src="resources/img/jiantouzhiy.svg">
+				<p class="share_text">请点击右上角<img id="shareImg" src="resources/img/fenx.svg">按钮</p>
+				<p class="shareTo">将它<img src="resources/img/zhuanfa.svg">給指定好友</p>
+				<p class="shareTo">或分享到<img src="resources/img/pengyouq.svg"></p>
+			</div>
+			<!-- 按钮触发模态框 -->
+			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+				开始演示模态框
+			</button>
+			<!-- 模态框（Modal） -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="height: 80%;margin-top: 10%SS;">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;
+							</button>
+							<h4 class="modal-title" id="myModalLabel">
+								模态框（Modal）标题
+							</h4>
+						</div>
+						<div class="modal-body">
+							习近平同普京向深圳北理莫斯科大学致贺辞
+							金砖新十年 风起再扬帆 喜迎十九大
+							习近平同文莱苏丹会谈 接受新驻华大使国书 贺词
+							李克强主持会议 张德江 俞正声 刘云山
+							黑龙江鸡东裕晨煤矿发生瓦斯爆炸 9名矿工遇难
+							乐天将出售在华超市业务 曾称"不撤出中国"
+							中国气象台发布双台风最新动态:都不会登陆中国
+							日本记者称欧盟针对中国 华春莹:你们猜的太多了
+							希拉里新书怼普京仇视她 俄方冷淡:没兴趣看你书
+							这公司宣称拿下巴基斯坦地铁2亿订单 惊动外交部
+							温度 | 90后医生倾囊相助患病女童 自己啃馒头
+							特朗普叫停中资收购美国芯片商 商务部回应
+							菲媒:菲律宾交通部考虑向中国退还48节轻轨车厢
+							取款方式将有巨变 多家银行发布通知可"刷脸取款"
+							男子七夕节群发暧昧信息 被女方丈夫带人围殴
+							湖南男子败诉后在法院外给法官烧花圈 被拘十天
+							女子网购摄像头看自家猫 结果自己洗澡过程被直播
+							请收起你的喜欢，对我来说就是负担
+							"零一本"里失落的县中:千余名高考生两人达一本线
+							给你的偶像rapper打call？别意淫了，饶了他们吧
+							中国到底有多少人买不起iPhone X?
+							财经 | 时间结点9月底！上海通知关停比特币平台
+							褚时健有家族企业十几家 黄牛将iPhone X炒至2万
+							科技 | 网易前方体验iPhone X:摸了后真会欲罢不能
+							选手身价上涨20倍 网综 《中国有嘻哈》为何爆红
+							体育 | 北京亚运吉祥物"盼盼"原型 大熊猫"巴斯"离世
+							神了!前国足队长玩足彩再中欧冠 揭秘欧联投注
+							娱乐 | 网红晒合同证明薛之谦合伙人身份 称证据属实
+							曾说为白百何退圈的陈羽凡 这么快就复出了
+							女人 | 马蓉欣欣皆婚骗？ 网友评:欣欣像蓉
+							杨幂赵又廷同框！白浅夜华下凡就为看它？
+							网易号 | 今天我们来讲一只很苗条的橘猫！
+							入秋吃它，搭上粉丝味道鲜极了！
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+							</button>
+							<button type="button" class="btn btn-primary">
+								提交更改
+							</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal -->
+			</div>
+		</div>
+		<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+		<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script>
+		//    下载提示框
+		//点击下载按钮弹出遮罩层
+		$(".weChart_share").on("click",function(){
+			$("#shareIt").show();
+		});
+		//点击任意地方隐藏遮罩层
+		$("#shareIt").on("click",function(){
+			$("#shareIt").hide();
+		})
+	</script>
+	</body>
+</html>

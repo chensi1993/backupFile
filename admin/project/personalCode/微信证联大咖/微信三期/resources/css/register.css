@@ -1,0 +1,211 @@
+body{
+    font-family: '思源黑体';
+    background: #f4f4f4;
+    font-size: 62.5%;
+}
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #999999;
+    /*vertical-align: middle;*/
+}
+input{
+    outline:none;
+    background-color: transparent;
+    -webkit-appearance:none;
+    appearance:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+/*logo*/
+.register_logo{
+    display: block;
+    margin: 3.5rem auto;
+    width: 6.5rem;
+    height: 6.5rem;
+}
+/*列表*/
+.register_list{
+    margin: 0 1rem;
+}
+.register_list .register_li{
+    height: 4rem;
+    line-height: 2.5rem;
+
+    border-bottom: 1px solid #999;
+}
+#register_number{
+    margin-bottom: 2rem;
+}
+#register_other{
+    margin-bottom: .6rem;
+}
+/*8.23修改---start*/
+#register_referee{
+    margin: 2rem 0 0 0;
+}
+/*8.23修改---end*/
+#agree_img{
+    vertical-align: middle;
+    display: inline-block;
+    visibility: hidden;
+    width: 9%;
+}
+.register_list .register_li label{
+    width: 15%;
+    text-align: center;
+    border-right: 1px solid #999;
+    margin: 0;
+    vertical-align: middle;
+}
+.register_list .register_li input{
+    border: none;
+    padding-left: 1rem;
+    font-size: 1.6rem;
+    vertical-align: middle;
+
+}
+.register_list .register_li input::-webkit-input-placeholder{
+    font-size: 1.3rem;
+    color: #999999;
+}
+.register_list .register_li input::-moz-placeholder{
+    font-size: 1.3rem;
+    color: #999999;
+}
+.register_list .register_li input:-ms-input-placeholder{
+    font-size: 1.3rem;
+    color: #999999;
+}
+#number_inp,#referee_inp{
+    width: 68%;
+}
+#code_inp{
+    width: 45%;
+    border-radius: 0;
+    border-right: 1px solid #999;
+}
+#getVerCodeBtn{
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #FF6468;
+    /*padding-left: 2rem;*/
+    letter-spacing: .1rem;
+}
+.register_li .number_lab{
+
+}
+.register_li .number_lab img{
+    width: 1.35rem;
+    height: 1.8rem;
+}
+.register_li .code_lab{
+
+}
+.register_li .code_lab img{
+    width: 1.6rem;
+    height: 1.8rem;
+}
+.register_li .referee_lab{
+
+}
+.register_li .referee_lab img{
+    width: 1.35rem;
+    height: 1.8rem;
+
+}
+/*8.23添加---start*/
+.register_list .phone_error{
+    font-size: 1.2rem;
+    color: #FF6468;
+    text-align: center;
+    padding-top: .5rem;
+    display: none;
+
+}
+.register_list .phone_error img{
+    width: 1rem;
+    height: 1rem;
+    margin-right: .5rem;
+    vertical-align:middle;
+}
+.register_list .phone_error span{
+    vertical-align: middle;
+}
+/*8.23添加---end*/
+.register_agree .checkbox{
+
+}
+.register_agree .label1{
+    position: relative;
+    font-weight: normal;
+}
+.register_agree .label1>a{
+    margin-left: 1rem;
+    line-height: 2rem;
+}
+.register_agree .label1:after{
+    position: absolute;
+    top: .2rem;
+    left: -1.4rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    /*border: 1px solid #dcdcdc;*/
+    background: url("../img/noagree@3x.png") no-repeat;
+    background-size: 100% 100%;
+    content: '';
+}
+.register_agree input[type='checkbox']:checked + .label1:after {
+    background: url("../img/agree@3x.png") no-repeat ;
+    background-size: 100% 100%;
+    width: 1.6rem;
+    height: 1.4rem;
+}
+.register_agree img{
+    width: 1.2rem;
+    height: 1rem;
+}
+.register_agree span{
+    font-size: 1.3rem;
+    color: #999999;
+    vertical-align: middle;
+}
+/*下一步*/
+/*8.23添加---start*/
+.referee_submit{
+    margin-top: 3rem;
+}
+/*8.23添加---end*/
+.referee_submit input{
+    border: none;
+    /*8.23修改---start*/
+    background: #b6b6b6;
+    box-shadow: 10px 10px 15px 0px #b6b6b6;
+    /*8.23修改---end*/
+    border-radius: 10rem;
+    width: 45%;
+    height: 5rem;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    margin: 0 auto;
+    display: block;
+    letter-spacing: .2rem;
+}
+.referee_submit input:focus{
+    background-color:#b6b6b6;
+    box-shadow: 10px 10px 15px 0px #b6b6b6;
+}
+.referee_submit input:hover{
+    background-color:#ff9d9f;
+    box-shadow: 10px 10px 15px 0px #ff9d9f;
+}
+.referee_submit p{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: #999999;
+    letter-spacing: .1rem;
+}
+.referee_submit p>a{
+    color: #FF6468;
+}

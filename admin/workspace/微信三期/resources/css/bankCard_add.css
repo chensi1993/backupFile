@@ -1,0 +1,138 @@
+body{
+    font-family: '思源黑体';
+    background: #f4f4f4;
+    font-size: 62.5%;
+}
+html{
+	-webkit-tap-highlight-color:none;
+	}
+.container{
+    padding: 0;
+}
+input{
+    -webkit-appearance:none;
+    appearance:none;
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+/*请绑定持卡人本人银行卡*/
+.add_tips{
+    font-size: 1.5rem;
+    color: #666666;
+    margin: 1rem 0;
+    padding: 0 1.5rem;
+}
+/*表单*/
+.add_content{
+    /*padding: 0 1.5rem;*/
+}
+.add_content .add_group{
+    line-height: 2rem;
+    padding: 1rem 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+.add_content .add_group .add_label{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: #333333;
+    padding: .3rem 0 0 0;
+}
+.add_content .add_group .add_right .add_input{
+    font-size: 1.5rem;
+    border: none;
+}
+.add_content .add_group .add_right .input_other{
+    width: 85%;
+}
+.add_content .add_group .add_right .add_input::-webkit-input-placeholder{
+    font-size: 1.5rem;
+    color: #999999;
+}
+.add_content .add_group .add_right .add_input::-moz-placeholder{
+    font-size: 1.5rem;
+    color: #999999;
+}
+.add_content .add_group .add_right .add_input:-ms-input-placeholder{
+    font-size: 1.5rem;
+    color: #999999;
+}
+.add_content .add_group .add_right .jump_to{
+    color: #999;
+    font-size: 1.8rem;
+    position: absolute;
+    top: .5rem;
+    right: .2rem;
+}
+.add_content .add_group .add_right .code_btn{
+    width: 38%;
+    background: #FF6468;
+    border-radius: .6rem;
+    border: none;
+    padding: .5rem;
+    color: #fff;
+    font-size: 1rem;
+}
+.add_content .add_list{
+    padding: 0 1.5rem;
+    background: #fff;
+}
+.add_select{
+    /*height: 2.8rem;
+    line-height: 2.8rem;*/
+}
+.pecial_reminder{
+    font-size: 1.2rem;
+    color: #FF6468;
+    margin-top: 1rem;
+    padding: 0 1.5rem;
+    white-space:nowrap;
+}
+#cardMan{
+    margin-bottom: 2rem;
+    border-bottom: none;
+    background: #fff;
+    padding: 1rem 1.5rem;
+}
+#add_bCard{
+    position: relative;
+    padding-right: 0;
+}
+#add_code{
+    width: 60%;
+}
+#phone_code{
+    border-bottom: none;
+}
+#opTio{
+    width: 100%;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    font-size: 1.5rem;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: #fff;
+}
+/*提交*/
+.add_button{
+margin-top: 4rem;
+}
+#add_submit{
+    border: none;
+    width: 75%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    letter-spacing: .2rem;
+    background-image: linear-gradient(-90deg, #FF986E 0%, #FF6468 100%);
+    border-radius: 4.1rem;
+    display: block;
+    margin: auto;
+}
+/*.add_button input:focus{*/
+    /*background-color:#b6b6b6;*/
+/*}*/
+

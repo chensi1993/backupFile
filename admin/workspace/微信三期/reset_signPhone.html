@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>修改登录手机号</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            font-family: '思源黑体';
+            background: #f4f4f4;
+        }
+        a,a:hover,a:active,a:visited{
+            text-decoration: none;
+            color: #666;
+        }
+        .signPhone_tips{
+            width: 80%;
+            /*height: 4.4rem;*/
+            text-align: center;
+            font-size: 1.5rem;
+            color: #666;
+            margin: 0 auto;
+            padding: 4rem 0;
+        }
+        .signPhone_btn{
+            overflow: hidden;
+            padding: 0 2.5rem;
+        }
+        .signPhone_btn .btn_left,.signPhone_btn .btn_right{
+            width: 40%;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: .6rem;
+            letter-spacing: .1rem;
+            padding: 0;
+        }
+        .signPhone_btn .btn_left{
+            background: #FFFFFF;
+            border: 1px solid #FF6468;
+            color: #FF6468;
+            float: left;
+        }
+        .signPhone_btn .btn_right{
+            background-image: linear-gradient(-90deg, #FF986E 0%, #FF6468 100%);
+            color: #FFFFFF;
+            float: right;
+        }
+        .signPhone_btn>.btn-primary,.signPhone_btn>.btn-primary:hover,.signPhone_btn>.btn-primary:focus,.signPhone_btn>.btn-primary.focus{
+            background: none;
+        }
+        .modal-body{
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666666;
+        }
+        .signPhone_btn .modal .modal-dialog{
+            width: 90%;
+            margin: 12rem auto;
+            border-radius: .6rem;
+        }
+        .signPhone_btn .modal .modal-dialog .modal-content{
+            border-radius: .8rem;
+        }
+        .modal-footer button{
+            border: none;
+            background: none;
+            font-size: 1.6rem;
+        }
+        #modal_left{
+            color: #999;
+        }
+        #modal_right{
+            margin-left: 0;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="signPhone_tips">
+        <p>您是否还在使用原手机号</p>
+        <p>185****0820</p>
+    </div>
+    <div class="signPhone_btn">
+        <!--<button class="btn_left" onclick="javascript:noCheck();">不使用</button>-->
+        <!-- 按钮触发模态框 -->
+        <button class="btn btn-primary btn-lg btn_left" data-toggle="modal" data-target="#myModal">不使用</button>
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        请拨打客服热线，人工修改<br/>400-600-961
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="modal_left" class="btn btn-default col-xs-6" data-dismiss="modal">取消</button>
+                        <!--2017-8-18“400-600961”修改为“400-600-961”-->
+                        <button type="button" id="modal_right" class="btn col-xs-6"><a href="tel:400-600-961">拨打</a> </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <button class="btn_right signPhone_li" type="button" onclick="javascript:isCheck();">使用中</button>
+    </div>
+
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    //使用中
+    function isCheck(){
+        window.location.href = 'reset_signPhone_password.html'
+    }
+</script>
+</body>
+</html>

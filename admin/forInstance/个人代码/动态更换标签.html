@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="outer">
+    <input id="inp" type="button" value="按钮" checked>
+
+    <div id="one" onclick="jumpTo()">跳转</div>
+    <a style="display: none;" id="two" href="http://www.baidu.com/">跳转</a>
+</div>
+<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<script>
+    var input = document.getElementById('inp');
+    var outer = document.getElementById('outer');
+    var one = document.getElementById('one');
+    var two = document.createElement('two');
+    function clickMe(){
+        if(input.checked == true){
+            one.style.display='block';
+            two.style.display='none';
+        }else{
+            one.style.display='none';
+            two.style.display='block';
+        }
+    }
+
+    function jumpTo(){
+        window.location.href='http://www.baidu.com/';
+    }
+
+</script>
+</body>
+</html>

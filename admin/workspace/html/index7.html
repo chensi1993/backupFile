@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="dvPassword">输入密码：<input type="password" id="txtPwd" onkeydown="entercheck()" /><input type="button" value="确定" onclick="check()"/></div>
+<script>
+    function check() {
+        if (document.getElementById('txtPwd').value == '123') {
+            window.history.back(-1);//返回到上一个页面
+        }
+        else alert('密码不正确！！');
+    }
+
+    //点击enter键提交表单
+    function entercheck(){
+        var event = window.event || arguments.callee.caller.arguments[0];
+        if (event.keyCode == 13)
+        {
+            check();
+        }
+    }
+</script>
+</body>
+</html>

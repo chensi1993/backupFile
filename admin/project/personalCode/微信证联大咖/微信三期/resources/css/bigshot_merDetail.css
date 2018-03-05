@@ -1,0 +1,87 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '思源黑体';
+    background: #f4f4f4;
+    color: #666;
+}
+.container{
+    padding: 0;
+}
+/*商户信息*/
+.info_top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #f4f4f4;
+}
+.info_top .merDetail_info{
+    margin: 1rem 1.5rem;
+    background: url("../img/dainpu@3x.png") no-repeat;
+    background-size: 100% 100%;
+}
+.content{
+    margin-top: 14rem;
+}
+.info_left>div{
+    height: 3.5rem;
+    line-height: 3.5rem;
+}
+.info_left>div .col-xs-5{
+    font-size: 1.6rem;
+    color: #666;
+    white-space:nowrap;
+}
+.info_left>div .col-xs-7{
+    font-size: 1.6rem;
+    color: #999;
+    white-space:nowrap;
+}
+.info_right button{
+    border: none;
+    padding: .4rem .8rem;
+    border-radius: .4rem;
+    color: #fff;
+    font-size: 1.3rem;
+    margin-top: 12%;
+    white-space:nowrap;
+    /*line-height: 2.5rem;*/
+    background-image: linear-gradient(-225deg, #EFD5A4 0%, #D6B485 100%);
+}
+/*商户店铺*/
+.merDetail_shop .shop_list{
+    margin: 1rem 1.5rem;
+    background: url(../img/dainpu@3x.png) no-repeat;
+    background-size: 100% 100%;
+}
+.info_li .row{
+    margin: 0;
+}
+.info_li>div{
+    padding: 0.8rem 0;
+}
+.info_li>div .col-xs-3{
+    font-size: 1.6rem;
+    color: #666;
+    white-space: nowrap;
+}
+.info_li>div .col-xs-9{
+    font-size: 1.6rem;
+    color: #999;
+    padding: 0 1rem;
+}
+.info_li .info_tips{
+    font-size: 1.2rem;
+    color: #4891FF;
+    margin-left: .6rem;
+}
+/*没有门店显示提示文字*/
+.no_shop_tips{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #666;
+    display: none;
+}

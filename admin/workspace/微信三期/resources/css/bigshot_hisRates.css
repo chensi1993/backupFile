@@ -1,0 +1,28 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '思源黑体';
+    background: #f4f4f4;
+}
+.hisRates_contain h3{
+    font-size: 1.6rem ;
+    color: #333;
+}
+.hisRates_list{
+    margin-bottom: 1rem;
+}
+.hisRates_list .hisRates_li{
+    height: 4.5rem;
+    line-height: 4.5rem;
+    background: #fff;
+    color: #999;
+    border-bottom: 1px solid #ececec;
+}
+.hisRates_li .col-xs-9{
+    font-size: 1.4rem;
+}
+.hisRates_li .col-xs-3{
+    font-size: 1.6rem;
+    text-align: right;
+}

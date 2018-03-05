@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        p{
+            /*display: inline-block;*/
+            text-align: center;
+        }
+        .div1{
+            width: 210px;
+            margin: 0 auto;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            background: #ececec;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="div1">
+        <!--<p id="p1">标签标签标签标签</p>-->
+        <p id="p1">标签标签标签标签标签标签标签标签标签标签</p>
+    </div>
+</div>
+<script src="../js/jquery-3.0.0.min.js"></script>
+<script>
+//    var divWidth = document.getElementsByClassName('div1')[0].Width;
+
+    var wClient = document.getElementById('p1').clientWidth;//获取p标签可视区域宽
+    var wScroll = document.getElementById('p1').scrollWidth;//获取p标签溢出的宽
+    console.log(wClient);
+    console.log(wScroll);
+    
+    var p = document.getElementById('p1');
+    var parent = p.parentNode;	//获取p标签的父亲节点
+    var marquee = document.createElement('marquee');
+    //如果p标签溢出的宽>p标签的可视区域宽，把p标签变成marquee标签
+    if(wScroll > wClient){
+        alert('超出啦~~~');
+        marquee.innerHTML = p.innerHTML;
+        marquee.id = p.id;
+        parent.removeChild(p);
+        parent.appendChild(marquee);
+        marquee.setAttribute('scrolldelay','300');
+    }
+</script>
+</body>
+</html>

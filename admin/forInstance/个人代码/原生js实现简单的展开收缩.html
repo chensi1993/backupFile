@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style>
+        body{
+            font-size: 12px;
+            margin: 50px  400px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            width: 120px;
+            border: 1px solid #e6e6e6;
+            background: #fff;
+            list-style: none;
+        }
+
+        ul>li>a{
+            display: block;
+            padding:5px   12px;
+            background: #f2f2f2;
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+        ul>li .icon{
+            display: inline-block;
+            width: 6px;
+            height: 9.5px;
+            background: url("img/xia-not-selected.png") no-repeat ;
+            background-size: 6px 9.5px;
+        }
+        ul>li .icon-two{
+            display: inline-block;
+            width: 9.5px;
+            height: 6px;
+            background: url("img/xia-selected.png")no-repeat;
+            background-size: 9.5px 6px;
+        }
+        li>div{
+            display: none;
+        }
+        li>div>p{
+            padding: 5px 0 5px 16px ;
+            border-bottom:1px solid #f2f2f2;
+            cursor: pointer;
+        }
+        .active{
+            background: chocolate;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <a href="javascript:">
+            <i class="icon"></i>
+            <span>我的好友</span>
+        </a>
+        <div>
+            <p>张三</p>
+            <p>李四</p>
+        </div>
+    </li>
+    <li>
+        <a href="javascript:">
+            <i class="icon"></i>
+            <span>我的企业</span>
+        </a>
+        <div>
+            <p>企业1</p>
+            <p>企业2</p>
+        </div>
+    </li>
+    <li>
+        <a href="javascript:">
+            <i class="icon"></i>
+            <span>黑名单</span>
+        </a>
+        <div>
+            <p>黑名单1</p>
+            <p>黑名单2</p>
+        </div>
+    </li>
+</ul>
+<script>
+    window.onload=function () {
+        var an=document.getElementsByTagName("a");
+        var Div=document.getElementsByTagName("div");
+        var icon=document.getElementsByTagName("i");
+        var active=document.getElementsByTagName("p");
+        for(var i=0;i<an.length;i++){
+            an[i].index=i;
+            active[i].index=i;
+            an[i].onclick=function () {
+                if(icon[this.index].className=="icon-two"){
+                    icon[this.index].className="icon";
+                    Div[this.index].style.display="none";
+                }else {
+                    for(var j=0;j<an.length;j++){
+                        icon[j].index=j;
+                        Div[j].index=j;
+                        icon[j].className="icon";
+                        Div[j].style.display="none";
+                    }
+                    icon[this.index].className="icon-two";
+                    Div[this.index].style.display="block";
+                }
+            };
+            for(var s=0; s<active.length;s++){
+                active[s].index=s;
+                active[s].onclick=function () {
+                    for(var k=0;k<active.length;k++){
+                        active[k].className="";
+                    }
+                    active[this.index].className="active";
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

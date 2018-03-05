@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str = sessionStorage.getItem("setJson");
+    var job = JSON.parse(str);
+	console.log(job);
+	for(var i = 0; i < job.length; i++){
+		console.log(job[i].setId);
+		console.log(job[i].setImg);
+		console.log(job[i].setMoney);
+		console.log(job[i].setName);
+	}
+	var str = "";
+            for(var i=0;i<job.length;i++){
+                //console.log(listData[i].trade);
+
+                str +='<li>'
+                            +'<img src="job[i].setImg" class="col-xs-3 I_mg">'
+                            +'<div class="prt-rt col-xs-8">'
+                                +'<p class="rt-name">'+job[i].trade+'</p>'
+                                +'<div class="rt-info row">'
+                                    +'<p class="info-p col-xs-4">'+'<span class="price">'+'¥'+job[i].price +'</span>'+'</p>'
+                                    +'<div class="lt-rt col-xs-8">'
+                                        +'<input type="button" class="minus" value="-">'
+                                        +'<input type="text" class="result" value="0">'
+                                        +'<input type="button" class="add" value="+">'
+                                    +'</div>'
+                                +'</div>'
+                            +'</div>'
+                        +'</li>'
+            }
+            
+           str +='<li>'+
+		    			+'<img src="job[i].setImg" class="col-xs-3 I_mg">'
+		    			+'<div class="col-xs-5 div_text">'
+		    				+'<p>'+job[i].setName+'</p>'+
+		    				+'<span>'+'<img src="resources/img/人民币1.svg" width="20"/>'+job[i].setMoney+'</span>'
+		    			+'</div>'+
+						+'<div class="input-group col-xs-4">'
+							+'<button class="btn btn-default col-xs-3" type="button" onclick='jian(this);'>'+-+'</button>'
+						    +'<input type="number" class="text-center col-xs-5"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="">'
+						    +'<button class="btn btn-default col-xs-3" type="button" onclick='add(this);'>'+++'</button>'
+						+'</div>'
+		    		+'</li>'
+            
+            $('.shop-list').append(str);
+
+</script>
+</body>
+</html>

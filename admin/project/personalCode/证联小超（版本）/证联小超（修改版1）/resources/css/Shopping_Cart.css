@@ -1,0 +1,28 @@
+.shopping{margin-top: 5rem;margin-bottom: 8.5rem;}
+ul.list-unstyled li{border-bottom: 1px solid #e5e5e5;height: 6rem;line-height: 6rem;}
+ul.list-unstyled li:nth-last-child(1){border: none;}
+.I_mg{height: 6rem;padding: 0.5rem;}
+div.div_text{padding: 0;line-height: 6rem;height: 6rem;/*overflow: hidden;*/}
+div.div_text p{height: 1rem;margin-top: -0.5rem;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;}
+div.div_text span{font-family: arial;}
+div.div_text img{margin-top: -0.5rem;}
+/*加减*/
+.input-group{z-index: 0;height: 4rem;line-height: 4rem;padding-top: 2rem;}
+.input-group input{height: 3rem;border:none;padding: 0;line-height:3rem;font-size: 1.8rem;font-family: arial;}
+.input-group .btn{border-radius: 50%;border: none;color: #fff;height: 3rem;padding: 0;font-weight: bold;}
+.input-group .btn:nth-child(1){background-color: #ddd;}
+.input-group .btn:nth-child(3){background-color: #FF5614;}
+/*合计*/
+.footer-nav2{position: fixed;bottom: 2.6rem;left: 0;right: 0;background-color: #D4D4D4;}
+.footer-nav2 li{height: 4rem;line-height: 4rem;font-size: 2.4rem;color: #fff;padding-left:2rem;padding-right:0;letter-spacing: 0.7rem;}
+.footer-nav2 li img{margin-top: -0.5rem;}
+.footer-nav2 li:nth-child(2){padding: 0;}
+.footer-nav2 li input[type="number"]{background: none;border: none;color: #fff;height: 4rem;font-family: arial;font-size: 2.4rem;padding: 0 0 0 0.5rem;}
+/*结算*/
+button[type="submit"]{
+     height: 100%;
+    width: 100%;
+    font-weight: bold;
+    border: 0;
+    border-radius: 0;
+    margin-top: -0.5rem;}

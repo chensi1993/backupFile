@@ -1,0 +1,56 @@
+html {font-size: 62.5%;}
+body {
+	font-family: "思源黑体";
+	background-color: #fff;
+}
+.header .retn_bx a {
+	color: #fff;
+	text-decoration: none;
+}
+.header .retn_bx a:focus,
+.header .retn_bx a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.Z-ind {
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+}
+.header {
+	background: -webkit-gradient(linear, 0 100%, 100% 0, from(#FF7366), to(#FF9A64));
+	height: 4.4rem;
+	line-height: 3.8rem;
+}
+.retn_bx {
+	margin-top: 0.4rem;
+}
+.font_retn,.font_retn2 ,.font_retn3{
+	color: #fff;
+	font-size: 1.6rem;
+}
+.font_retn img,.font_retn2 img,.font_retn3 img {
+	margin-top: -0.4rem;
+}
+.headfs_bx {
+	font-size: 1.9rem;
+	color: #fff;
+	margin-top: 0.5rem;
+}
+/*页尾*/
+/*首页，购物车，我的，图标*/
+ul.footer-nav{margin: 0;}
+.footer-nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ECECEC;
+}
+.footer-nav li{
+    text-align: center;
+    padding: .6rem 0;
+}
+.footer-nav li img{
+    width: 2.4rem;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="author" content="zlzf-oyzl" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="resources/bootstrap-3.3.7/css/bootstrap.min.css"/>
+		<!--头部返回栏公共样式-->
+    	<link type="text/css" rel="stylesheet" href="resources/css/Public.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/Shopping_Cart.css"/>
+		<script src="resources/js/jquery-3.0.0.min.js"></script>
+		<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script src="resources/js/Shopping_Cart.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			 <!--头部返回栏-->
+		    <div class="row Z-ind">
+		        <div class="header">
+		            <div class="col-xs-3 retn_bx"></div>
+		            <div class="col-xs-6  text-center headfs_bx">证联小超</div>
+		            <div class="col-xs-3"></div>
+		        </div>
+		    </div>
+		    <!--content部分-->
+		    <div class="shopping">
+		    	<ul class="list-unstyled">
+		    	</ul>
+		    </div>
+		    <!--结算-->
+		    <ul class="footer-nav2 list-inline">
+		    	<li class="col-xs-4">合计<img src="resources/img/人民币.svg" class="text-right"/></li>
+		    	<li class="col-xs-4"><input type="number" class="text-left form-control Input" readonly="readonly" unselectable="on" onfocus="this.blur();"  value="0"></li>
+		    	<li class="col-xs-4"><a href="pay_accounts.html"><button class="btn btn-primary" type="submit">结&#160;&#160;算</button></a></li>
+		    </ul>
+		    <!--页尾-->
+		    <ul class="footer-nav list-inline row">
+			    <li class="col-xs-6"><a href="index.html"><img src="resources/img/home.svg"></a></li>
+			    <li class="col-xs-6"><img src="resources/img/gw.svg"></li>
+<!--			    <li class="col-xs-4"><img src="resources/img/my.svg"></li>-->
+			</ul>
+		</div>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">是否要删除</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" id="noBtn">否</button>
+						<button type="button" class="btn btn-primary" id="yesBtn">是</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+	</body>
+</html>

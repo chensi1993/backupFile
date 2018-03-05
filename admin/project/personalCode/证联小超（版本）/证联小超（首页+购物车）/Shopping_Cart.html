@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="author" content="zlzf-oyzl" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="resources/bootstrap-3.3.7/css/bootstrap.min.css"/>
+		<!--头部返回栏公共样式-->
+    	<link type="text/css" rel="stylesheet" href="resources/css/Public.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/Shopping_Cart.css"/>
+		<script src="resources/js/jquery-3.0.0.min.js"></script>
+		<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script src="resources/js/Shopping_Cart.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			 <!--头部返回栏-->
+		    <div class="row Z-ind">
+		        <div class="header">
+		            <div class="col-xs-3 retn_bx">
+		                <a href="javascript:void(history.back());" class="font_retn">
+		                    <img src="resources/img/v1return@3x.png" width="12" height="16"/>
+		                    <span>返回</span>
+		                </a>
+		            </div>
+		            <div class="col-xs-6  text-center headfs_bx">证联小超</div>
+		            <div class="col-xs-3"></div>
+		        </div>
+		    </div>
+		    <!--content部分-->
+		    <div class="shopping">
+		    	<ul class="list-unstyled">
+		    		<li>
+		    			<img src="resources/img/零食1.png" class="col-xs-3 I_mg"/>
+		    			<span class="text-left col-xs-4 Input">三只松鼠坚果套装</span>
+						<div class="input-group col-xs-5">
+							<button class="btn btn-default  col-xs-3" type="button" onclick='jian(this);'>-</button>
+						    <input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+						    <button class="btn btn-default  col-xs-3" type="button" onclick='add(this);'>+</button>
+						</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食2.jpg" class="col-xs-3 I_mg"/>
+			    		<span class="text-left col-xs-4 Input">金币巧克力</span>
+							<div class="input-group col-xs-5">
+							    <button class="btn btn-default col-xs-3" type="button" onclick='jian(this);'>-</button>
+							    <input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+							    <button class="btn btn-default col-xs-3" type="button" onclick='add(this);'>+</button>
+							</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食3.png" class="col-xs-3 I_mg"/>
+		    			<span class="text-left col-xs-4 Input">坚果套装</span>
+						<div class="input-group col-xs-5">
+							<button class="btn btn-default col-xs-3" type="button" onclick='jian(this);'>-</button>
+							<input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+							<button class="btn btn-default col-xs-3" type="button" onclick='add(this);'>+</button>
+						</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食1.png" class="col-xs-3 I_mg"/>
+		    			<span class="text-left col-xs-4 Input">三只松鼠坚果套装</span>
+						<div class="input-group col-xs-5">
+							<button class="btn btn-default  col-xs-3" type="button" onclick='jian(this);'>-</button>
+						    <input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+						    <button class="btn btn-default  col-xs-3" type="button" onclick='add(this);'>+</button>
+						</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食2.jpg" class="col-xs-3 I_mg"/>
+			    		<span class="text-left col-xs-4 Input">金币巧克力</span>
+							<div class="input-group col-xs-5">
+							    <button class="btn btn-default col-xs-3" type="button" onclick='jian(this);'>-</button>
+							    <input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+							    <button class="btn btn-default col-xs-3" type="button" onclick='add(this);'>+</button>
+							</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食3.png" class="col-xs-3 I_mg"/>
+		    			<span class="text-left col-xs-4 Input">坚果套装</span>
+						<div class="input-group col-xs-5">
+							<button class="btn btn-default col-xs-3" type="button" onclick='jian(this);'>-</button>
+							<input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+							<button class="btn btn-default col-xs-3" type="button" onclick='add(this);'>+</button>
+						</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食1.png" class="col-xs-3 I_mg"/>
+		    			<span class="text-left col-xs-4 Input">三只松鼠坚果套装</span>
+						<div class="input-group col-xs-5">
+							<button class="btn btn-default  col-xs-3" type="button" onclick='jian(this);'>-</button>
+						    <input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+						    <button class="btn btn-default  col-xs-3" type="button" onclick='add(this);'>+</button>
+						</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食2.jpg" class="col-xs-3 I_mg"/>
+			    		<span class="text-left col-xs-4 Input">金币巧克力</span>
+							<div class="input-group col-xs-5">
+							    <button class="btn btn-default col-xs-3" type="button" onclick='jian(this);'>-</button>
+							    <input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+							    <button class="btn btn-default col-xs-3" type="button" onclick='add(this);'>+</button>
+							</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食3.png" class="col-xs-3 I_mg"/>
+		    			<span class="text-left col-xs-4 Input">坚果套装</span>
+						<div class="input-group col-xs-5">
+							<button class="btn btn-default col-xs-3" type="button" onclick='jian(this);'>-</button>
+							<input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+							<button class="btn btn-default col-xs-3" type="button" onclick='add(this);'>+</button>
+						</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食1.png" class="col-xs-3 I_mg"/>
+		    			<span class="text-left col-xs-4 Input">三只松鼠坚果套装</span>
+						<div class="input-group col-xs-5">
+							<button class="btn btn-default  col-xs-3" type="button" onclick='jian(this);'>-</button>
+						    <input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+						    <button class="btn btn-default  col-xs-3" type="button" onclick='add(this);'>+</button>
+						</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食2.jpg" class="col-xs-3 I_mg"/>
+			    		<span class="text-left col-xs-4 Input">金币巧克力</span>
+							<div class="input-group col-xs-5">
+							    <button class="btn btn-default col-xs-3" type="button" onclick='jian(this);'>-</button>
+							    <input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+							    <button class="btn btn-default col-xs-3" type="button" onclick='add(this);'>+</button>
+							</div>
+		    		</li>
+		    		<li>
+		    			<img src="resources/img/零食3.png" class="col-xs-3 I_mg"/>
+		    			<span class="text-left col-xs-4 Input">坚果套装</span>
+						<div class="input-group col-xs-5">
+							<button class="btn btn-default col-xs-3" type="button" onclick='jian(this);'>-</button>
+							<input type="number" class="text-center col-xs-6"size='3' readonly="readonly" unselectable="on" onfocus="this.blur();" value="0">
+							<button class="btn btn-default col-xs-3" type="button" onclick='add(this);'>+</button>
+						</div>
+		    		</li>
+		    	</ul>
+		    </div>
+		    <!--结算-->
+		    <ul class="footer-nav2 list-inline">
+		    	<li class="col-xs-4">合计<img src="resources/img/人民币.svg" class="text-right"/></li>
+		    	<li class="col-xs-4"><input type="number" class="text-left form-control" readonly="readonly" unselectable="on" onfocus="this.blur();"  value="0"></li>
+		    	<li class="col-xs-4"><button class="btn btn-primary" type="submit">结&#160;&#160;算</button></li>
+		    </ul>
+		    <!--页尾-->
+		    <ul class="footer-nav list-inline row">
+				<li class="col-xs-4"><a href="index.html"><img src="resources/img/home.svg"></a></li>
+				<li class="col-xs-4"><a href="Shopping_Cart.html"><img src="resources/img/gw.svg"></a></li>
+				<li class="col-xs-4"><a href="pay_mine.html"><img src="resources/img/my.svg"></a></li>
+			</ul>
+		</div>
+	</body>
+</html>

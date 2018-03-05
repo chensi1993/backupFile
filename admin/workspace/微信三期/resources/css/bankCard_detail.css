@@ -1,0 +1,80 @@
+body{
+    font-family: '思源黑体';
+    background: #f4f4f4;
+    font-size: 62.5%;
+}
+/*银行卡详情*/
+
+.manage_li{
+    margin: 1rem 1rem 0 1rem;
+    border-radius: .6rem;
+    position: relative;
+}
+.manage_li .manage_img{
+    padding-top: 1.6rem;
+}
+.manage_li .manage_img img{
+    width: 4.5rem;
+    height: 4.5rem;
+}
+.manage_li .manage_detail{
+    color: #fff;
+    padding-left: .5rem;
+}
+.manage_li .right_img{
+    width: 4rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+.manage_li .manage_detail h3{
+    font-size: 1.6rem;
+}
+.manage_li .manage_detail .card_type{
+    font-size: 1.4rem;
+}
+.manage_li .manage_detail .card_number{
+    font-size: 2rem;
+}
+#merchants_bank{
+    background-image: linear-gradient(-90deg, #FC6D6D 0%, #FA4646 100%);
+    box-shadow: 4px 4px 10px 0px rgba(252,109,109,0.50);
+}
+
+/**/
+.detail_content{
+    margin: 3rem 0 6rem 0;
+}
+.detail_content .bankCard_li{
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+}
+.detail_content .bankCard_li label{
+    padding-top: .5rem;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    color: #333333;
+    white-space: nowrap;
+}
+.detail_content .bankCard_li input{
+    border: none;
+    height: 2.5rem;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    color: #666666;
+}
+#unbound{
+    border: none;
+    width: 75%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    letter-spacing: .2rem;
+    background-image: linear-gradient(-90deg, #FF986E 0%, #FF6468 100%);
+    border-radius: 4.1rem;
+    display: block;
+    margin: auto;
+}

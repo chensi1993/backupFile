@@ -1,0 +1,123 @@
+body{
+    background-color: #fff;
+}
+.container{
+    margin-top: 4rem;
+}
+.user-photo img{
+    width: 4rem;
+    display: block;
+    margin: auto;
+    padding: 4rem 0;
+}
+.user-phone{
+    font-size: 1.6rem;
+    color: #666;
+    padding: 1rem 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.user-phone label{
+    font-size: 1.8rem;
+    padding-right: 0;
+}
+.user-phone input{
+    border: none;
+    font-size: 1.6rem;
+    background: none;
+    -webkit-appearance:none;
+    appearance:none;
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    padding-right: 0;
+}
+/*2018-2-11增加---start*/
+.user-phone .right-img{
+    text-align: right;
+    display: none;
+}
+.user-phone .right-img img{
+    width: 2.2rem;
+}
+/*2018-2-11增加---end*/
+.order-list{
+    color: #666;
+}
+.order-list .order-title{
+    margin: 0 auto;
+    border-bottom: 1px solid #E5E5E5;
+}
+.order-title h3{
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+    font-weight: bold;
+}
+.order-title .right-img{
+    padding-top: 1rem;
+}
+.order-title .right-img img{
+    width: 2.2rem;
+    float: right;
+}
+.order-content{
+    background: #fff;
+    display: none;
+}
+.order-content .order-li{
+    overflow: hidden;
+    padding: .4rem 1.5rem;
+    font-size: 1.6rem;
+    color: #666;
+    border-bottom: 1px solid #E5E5E5;
+}
+.rotate{
+
+    transform-origin:center center;
+
+    transform: rotate(180deg);
+
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    -o-transform: rotate(180deg);
+
+    transition: transform 0.2s; //过度时间 可调
+
+-moz-transition: -moz-transform 0.2s;
+
+    -moz-transition: -moz-transform 0.2s;
+
+    -o-transition: -o-transform 0.2s;
+
+    -ms-transition: -ms-transform 0.2s;
+
+}
+
+.rotate1{
+
+    transform-origin:center center;
+
+    transform: rotate(0deg);
+
+    -webkit-transform: rotate(0deg);
+
+    -moz-transform: rotate(0deg);
+
+    -ms-transform: rotate(0deg);
+
+    -o-transform: rotate(0deg);
+
+    transition: transform 0.2s;
+
+    -moz-transition: -moz-transform 0.2s;
+
+    -moz-transition: -moz-transform 0.2s;
+
+    -o-transition: -o-transform 0.2s;
+
+    -ms-transition: -ms-transform 0.2s;
+
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--Android中UC和QQ浏览器无法触发dropload中scroll和resize-->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>自动提现</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="resources/css/automatic_cash.css">
+</head>
+<body>
+<div class="container">
+    <div class="automatic_center">
+        <div class="automatic_switch">
+            <div class="switch_left col-xs-8">开启自动提现</div>
+            <div class="switch_right col-xs-4 text-right">
+                <div class="checkbox">
+                    <input type="checkbox" name="items" id="automatic_inp"/>
+                    <label></label>
+                </div>
+            </div>
+        </div>
+        <div class="automatic_bankCard">
+            <div class="col-xs-3">提现到</div>
+            <div class="col-xs-7 btn btn-primary btn-lg" data-toggle="modal" data-target="#twoModal">招商银行(尾号5779储蓄卡)</div>
+            <div class="col-xs-2 btn btn-primary btn-lg" data-toggle="modal" data-target="#twoModal">&gt;</div>
+        </div>
+    </div>
+    <!--是否要关闭自动提现功能提示框-->
+    <div class="modal fade" id="oneModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" id="modal-inner" role="document">
+            <div class="modal-content">
+                <div class="modal-body"><p>是否要关闭自动提现功能，</p><p>关闭后今日收入结算到余额账户</p></div>
+                <div class="modal-footer row" id="footerBtn">
+                    <button type="button" id="cancels" class="btn btn-default col-xs-6" data-dismiss="modal">否</button>
+                    <button type="button" id="determine" class="btn btn-primary col-xs-6">是</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--更换银行卡弹框-->
+    <div class="modal fade" id="twoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body"><p>是否要更换到账银行卡</p></div>
+                <div class="modal-footer row">
+                    <button type="button" class="btn btn-default col-xs-6" data-dismiss="modal">否</button>
+                    <button type="button" class="btn btn-primary col-xs-6" id="changeCard">是</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="automatic_p">开启自动提现功能，T日收款，T+1日下午16：00前提现至选定银行卡，具体到账时间以银行为准。</p>
+    <input type="button" id="automatic_btn" value="确认" onclick="javascript:isCheck();">
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/automatic_cash.js"></script>
+</body>
+</html>

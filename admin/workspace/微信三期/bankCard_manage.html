@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--Android中UC和QQ浏览器无法触发dropload中scroll和resize-->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>银行卡管理</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!--引入银行卡管理样式-->
+    <link rel="stylesheet" href="resources/css/bankCard_manage.css">
+    <!--引入弹出提示框样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/style-alert.css">
+</head>
+<body>
+<div class="container">
+    <!--银行卡列表-->
+    <div class="manage_list">
+        <!--招商银行-->
+        <div class="manage_li background_one row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/zhaoshang@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>招商银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--民生银行-->
+        <div class="manage_li background_two row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/minsheng@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>民生银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--邮政储蓄-->
+        <div class="manage_li background_three row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/youzheng@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>邮政储蓄</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--农业银行-->
+        <div class="manage_li background_three row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/nongye@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>农业银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--中国银行-->
+        <div class="manage_li background_one row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/zgyinhang@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>中国银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--建设银行-->
+        <div class="manage_li background_four row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/jianshe@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>建设银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--交通银行-->
+        <div class="manage_li background_four row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/jiaotong@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>交通银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--中信银行-->
+        <div class="manage_li background_one row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/zhongxin@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>中信银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--光大银行-->
+        <div class="manage_li background_five row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/guangda@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>光大银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--广发银行-->
+        <div class="manage_li background_one row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/guangfa@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>广发银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--平安银行-->
+        <div class="manage_li background_six row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/pingan@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>平安银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--兴业银行-->
+        <div class="manage_li background_four row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/xingye@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>兴业银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--浦发银行-->
+        <div class="manage_li background_four row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/pufa@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>浦发银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--工商银行-->
+        <div class="manage_li background_one row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/gsyinhang@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>工商银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--北京银行-->
+        <div class="manage_li background_one row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/bjyinhang@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>北京银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--上海银行-->
+        <div class="manage_li background_four row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/shanghai@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>上海银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--渤海银行-->
+        <div class="manage_li background_four row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/bohai@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>渤海银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--江苏银行-->
+        <div class="manage_li background_four row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/jiangsu@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>江苏银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--青岛银行-->
+        <div class="manage_li background_seven row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/qingdao@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>青岛银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--华夏银行-->
+        <div class="manage_li background_one row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/huaxia@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>华夏银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--浙商银行-->
+        <div class="manage_li background_one row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/zheshang@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>浙商银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--徽商银行-->
+        <div class="manage_li background_one row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/huishang@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>徽商银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--天津银行-->
+        <div class="manage_li background_four row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/tianjing@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>天津银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+        <!--盛京银行-->
+        <div class="manage_li background_one row" onclick="javascript:bankCheck();">
+            <div class="manage_img col-xs-3">
+                <img src="resources/img/shengjing@3x.png">
+            </div>
+            <div class="manage_detail col-xs-9">
+                <h3>盛京银行</h3>
+                <p class="card_type">借记卡</p>
+                <p class="card_number">**** **** **** 9999</p>
+            </div>
+            <img class="right_img" src="resources/img/yinlian@3x.png">
+        </div>
+
+
+        <!--无银行卡提示信息-->
+        <p class="noCard_tips" style="display: none">当前无可用银行卡</p>
+    </div>
+    <!--添加银行卡-->
+    <div class="add_bankCard">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><img src="resources/img/jiahao.png">添加银行卡</button>
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">特别提醒</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>新增的银行卡，120小时以内</p>
+                        <p>不能提现到该卡</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="to_addCard" onclick="javascript:Checked();">朕知道了</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+    </div>
+    <!--弹出提示框-->
+    <div class='modal my-modal-alert' id='my-modal-alert'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-body' id='modal-body-alert'>
+                    <div id='modal_message'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/bankCard_manage.js"></script>
+<!--引入弹出提示框脚本-->
+<script src="resources/js/alert.js"></script>
+</body>
+</html>

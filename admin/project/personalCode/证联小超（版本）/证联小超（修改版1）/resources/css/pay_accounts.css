@@ -1,0 +1,27 @@
+.container{
+    margin-top: 4rem;
+}
+.accounts{
+    padding: 5rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.accounts p{
+    text-align: center;
+    font-size: 2.5rem;
+}
+#total{
+    margin-left: 1rem;
+    color: #ff5614;
+}
+.payBtn{
+    text-align: center;
+    padding-top: 8rem;
+}
+.payBtn button{
+    border: none;
+    margin: 0 2rem;
+    border-radius: .4rem;
+    padding: 1rem 2.5rem;
+    color: #fff;
+    background-color: #169bd5;
+}

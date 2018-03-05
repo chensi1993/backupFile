@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+        .list{
+            margin: 1rem 0;
+        }
+        .left .img{
+            width: 2rem;
+            height: 2rem;
+            background: #ff5614;
+            border-radius: 50%;
+        }
+        .selects{
+            /*background: #ff9d9f;*/
+            width: 2rem;
+            height: 2rem;
+            background: url("image/gou.png") no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row list">
+        <div class="col-xs-10 left">
+            <img src="" class="img">
+            <span>中国银行储蓄卡</span>
+        </div>
+        <div class="col-xs-2 right"><div ></div></div>
+    </div>
+    <div class="row list">
+        <div class="col-xs-10 left">
+            <img src="" class="img">
+            <span>中国建设银行储蓄卡</span>
+        </div>
+        <div class="col-xs-2 right"><div></div></div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<script>
+    $(function() {
+        $('.list:first-of-type').find('.right').children('div').addClass('selects');//默认选中第一张卡
+        $('.list').click(function(){
+            $(this).find('.right').children('div').addClass('selects');
+            $(this).siblings().find('.right').children('div').removeClass('selects');
+            window.location.href = '开关.html'
+        });
+    });
+</script>
+</body>
+</html>

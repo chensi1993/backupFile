@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link href="layer.css">
+</head>
+<body>
+<div>
+    <button type="button" onclick="clickOne()">提示</button>
+    <button type="button" onclick="clickTwo()">对话框</button>
+    <button type="button" onclick="clickThree()">3秒自动关闭</button>
+    <button type="button" onclick="clickFour()">设置不允许点遮罩关闭</button>
+    <button type="button" onclick="clickFive()">自定义一个全屏的页面层</button>
+</div>
+<script type="text/javascript" src="layer.js"></script>
+<script>
+    function clickOne(){
+        //提示
+        layer.open({
+            content: 'hello layer'
+            ,skin: 'msg'
+            ,time: 2 //2秒后自动关闭
+        });
+    }
+    function clickTwo(){
+        layer.open({
+            title: [
+                '我是标题',
+                'background-color:#8DCE16; color:#fff;'
+            ]
+            ,anim: 'up'
+            ,content: '展现的是全部结构'
+            ,btn: ['确认', '取消']
+        });
+    }
+    function clickThree(){
+        layer.open({
+            content: '通过style设置你想要的样式'
+            ,style: 'background-color:#09C1FF; color:#fff; border:none;' //自定风格
+            ,time: 3
+        });
+    }
+    function clickFour(){
+        layer.open({
+            content: '不允许点击遮罩关闭',
+            btn: '我知道了',
+            shadeClose: false,
+            yes: function(){
+                layer.open({
+                    content: '好的'
+                    ,time: 2
+                    ,skin: 'msg'
+                });
+            }
+        });
+    }
+    function clickFive(){
+        var pageii = layer.open({
+            type: 1
+            ,content: html
+            ,anim: 'up'
+            ,style: 'position:fixed; left:0; top:0; width:100%; height:100%; border: none; -webkit-animation-duration: .5s; animation-duration: .5s;'
+        });
+    }
+</script>
+</body>
+</html>

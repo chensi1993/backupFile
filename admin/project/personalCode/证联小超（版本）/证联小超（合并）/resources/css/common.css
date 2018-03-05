@@ -1,0 +1,117 @@
+/********************除了首页，头部和底部公用样式**********************************/
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '思源黑体',arial;
+    background: #f4f4f4;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    color: #666;
+}
+/*标题样式*/
+.shop-name{
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 1.2rem 0;
+    z-index: 999;
+    font-size: 1.8rem;
+    color: #fff;
+    background: #ff5614;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.shop-name img{
+    width: .8rem;
+    position: absolute;
+    left: 2rem;
+}
+/*公用的底部切换*/
+.footer-nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ECECEC;
+}
+.footer-nav li{
+    text-align: center;
+    padding: 1.2rem 0;
+}
+.footer-nav li img{
+    width: 2.5rem;
+}
+
+/*****************************首页*****************************************/
+/*结算和页尾*/
+.footer{position: fixed;bottom: 0;left: 0;right: 0;z-index: 999;}
+/*合计*/
+.footer .footer-nav2 {
+    /*bottom: 3.6rem;*/
+    background-color: #D4D4D4;
+}
+.footer-nav2 li {
+    line-height: 4rem;
+    font-size: 2.4rem;
+    color: #fff;
+    padding-right: 0;
+}
+.shopp img{padding-left:2.4rem;}
+/*购物车总数量*/
+#Total{
+    border-radius:50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.6rem;
+    background-color:red;
+    position: relative;
+    left:-2.5rem;
+    top:-0.8rem;
+    line-height: 2rem;
+    display: none;
+}
+.footer-nav2 li:nth-child(2) {
+    padding: 0;
+}
+.footer-nav2 li input[type="number"] {
+    background: none;
+    border: none;
+    color: #fff;
+    height: 4.5rem;
+    font-family: arial;
+    font-size: 2.4rem;
+    padding: 0rem;
+    /*margin-top: 0.3rem;*/
+}
+/*结算*/
+button[type="submit"] {
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    border: 0;
+    border-radius: 0;
+    padding: 1.35rem 0rem;
+    /*margin-top: 0.2rem;*/
+}
+/*底部切换*/
+.footer .footer-nav1{
+    /*border: 1px solid red;*/
+    background-color: #ECECEC;
+}
+.footer-nav1 li{
+    text-align: center;
+    padding: 1.2rem 0;
+}
+.footer-nav1 li img{
+    width: 2.5rem;
+}

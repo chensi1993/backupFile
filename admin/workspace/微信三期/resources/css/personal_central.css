@@ -1,0 +1,143 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '思源黑体';
+    background: #f4f4f4;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+}
+.container{
+    padding: 0;
+    overflow-x: hidden;
+}
+/*TOP个人信息*/
+.central_info{
+    /*height: 16.5%;*/
+    /*margin-left: 0;*/
+    /*margin-right: 0;*/
+    padding:2rem;
+    background-image: linear-gradient(-90deg, #FA3F43 0%, #F4837C 100%);
+}
+.central_info .info_jump{
+    color: #fff;
+    /*padding-top: 2.2rem;*/
+    /*padding-bottom: 2.2rem;*/
+    text-align: right;
+}
+.info_jump a{
+    color: #fff;
+    width: 100%;
+    line-height: 6rem;
+    display: inline-block;
+}
+.info_pic{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+}
+.info_pic img{
+    width: 100%;
+    height: 100%;
+
+}
+.info_pic span{
+    width: 4rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    background: url(../img/daka@3x.png) no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: -1.8rem;
+}
+.info_detail{
+    color: #fff;
+    font-size: 1.4rem;
+    padding-top: 1rem;
+    float: left;
+    margin-left: 3rem;
+}
+.info_detail span{
+    font-size: 1.2rem;
+}
+/*列表*/
+.central_content{
+    margin-top: 1rem;
+}
+.central_content .central_li{
+    padding: 1.5rem;
+    margin: 0;
+    background: #fff;
+}
+.central_content .central_li:nth-child(1){
+    border-bottom: 1px solid #ddd;
+}
+.central_content .central_li:nth-child(2){
+    margin-bottom: 1.5rem;
+}
+.central_content .central_li:nth-child(3){
+    border-bottom: 1px solid #ddd;
+}
+.central_li .central_left{
+    padding: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+.central_li .central_left img{
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 1rem;
+}
+.central_li .central_right{
+    padding: 0;
+    text-align: right;
+    color: #999;
+}
+#central_balance{
+    margin-right: .5rem;
+    font-size: 1.6rem;
+    color:#666 ;
+}
+/*底部切换*/
+.bigshot_switch{
+    border-top: 1px solid #ececec;
+    padding: .5rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #fff;
+}
+.bigshot_switch .col-xs-6{
+    text-align: center;
+}
+.bigshot_switch .switch_left img{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+.bigshot_switch .switch_right img{
+    width: 1.8rem;
+    height: 2.2rem;
+}
+.bigshot_switch .col-xs-6 p{
+    color: #999;
+    font-size: 1.2rem;
+    margin: 0;
+}
+#switch_li p{
+    color:#ff6468
+}

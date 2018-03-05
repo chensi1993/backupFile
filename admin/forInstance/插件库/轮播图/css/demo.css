@@ -1,0 +1,52 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.ig{
+    position: absolute;
+}
+#dlunbo{
+    position: absolute;
+    width: 500px;
+    height: 333px;
+    left:50%;
+    margin-left: -250px;
+    top: 50%;
+    margin-top: -166px;
+}
+#tabs{
+position: absolute;
+bottom: 10px;
+left: 210px;
+}
+.tab{
+    width: 14px;
+    height: 14px;
+    background-color: #999;
+    float: left;
+    margin-right: 4px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.btn{
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background: rgba(0,0,0,0.5);
+    color:#fff;
+    text-align:center;
+    line-height: 40px;
+    font-size: 28px;
+    top: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+}
+.btn1{
+    left: 0px;
+}
+.btn2{
+    right: 0px;
+}
+#tabs .bg{
+    background-color: #f00;
+}

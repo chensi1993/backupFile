@@ -1,0 +1,39 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '思源黑体';
+    background: #f4f4f4;
+}
+.passward_tips{
+    width: 80%;
+    /*height: 4.4rem;*/
+    text-align: center;
+    font-size: 1.5rem;
+    color: #666;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+.passward_btn{
+    overflow: hidden;
+    padding: 0 2.5rem;
+}
+.passward_btn button{
+    width: 40%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: .6rem;
+}
+.passward_btn .btn_left{
+    background: #FFFFFF;
+    border: 1px solid #FF6468;
+    color: #FF6468;
+    float: left;
+}
+.passward_btn .btn_right{
+    background-image: linear-gradient(-90deg, #FF986E 0%, #FF6468 100%);
+    color: #FFFFFF;
+    float: right;
+}

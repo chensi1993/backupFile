@@ -1,0 +1,115 @@
+html{font-size: 62.5%;}
+body{
+    font-family: "思源黑体";
+    background-color: #eeeeee;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+input,textarea{
+    outline:none;
+    font-size: 1.5rem;
+}
+/*更改textarea默认样式*/
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-size: 1.5rem;
+    color: #CCCCCC;
+     }
+input::-webkit-input-placeholder,textarea:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    font-size: 1.5rem;
+    color: #CCCCCC;
+       }
+input::-webkit-input-placeholder,textarea::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    font-size: 1.5rem;
+    color: #CCCCCC;
+       }
+input::-webkit-input-placeholder,textarea:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    font-size: 1.5rem;
+    color: #CCCCCC;
+        }
+#myForm{
+    font-family: arial;
+    /*margin-top: 4.4rem;*/
+}
+.select{
+    color: #ff6a19;
+    border-bottom: 2px solid #ff6a19;
+}
+.suggest_tips{
+    overflow: auto;
+    background: #fff;
+    color: #8C8C8C;
+    border-bottom: 1px solid #e6e6e6;
+}
+.suggest_tips li{
+    padding: 1.5rem 0;
+    font-size: 1.6rem;
+ }
+#myForm .suggest_textarea{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    resize: none;
+}
+.contact_way{
+    padding: 1rem 0;
+
+    overflow: auto;
+    background: #fff;
+}
+.contact_way label{
+    padding-top: 0.2rem;
+    margin-bottom: 0;
+    padding-right: 0;
+    font-size: 1.6rem;
+    color: #8C8C8C;
+    white-space: nowrap;
+}
+.contact_way input{
+    font-size: 1.5rem;
+    border: none;
+}
+#suggest_btn{
+    width: 86%;
+    display: block;
+    padding: 1rem 0;
+    margin: 4.5rem auto 0;
+    border: none;
+    background: #b6b6b6;
+    font-size: 1.5rem;
+    color: #FEFEFE;
+    letter-spacing: 0.1rem;
+}
+
+/*弹框模板样式*/
+.my-modal-alert{
+    /*display: block;*/
+    /*position: relative;*/
+}
+#my-modal-alert .modal-dialog{
+    width: 60%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+}
+#modal-body-alert{
+    /*height: 4rem;*/
+    /*line-height: 1rem;*/
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem;
+    background-color: #666;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    border-radius:0.4rem;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var arr=[
+        {name:"xiaohong",age:"16"},
+        {name:"xiaohong",age:"16"},
+        {name:"xiaohong",age:"16"},
+        {name:"xiaohong",age:"16"},
+        {name:"xiaohong",age:"16"},
+        {name:"dongfeng",age:"18"},
+        {name:"dawang",age:"22"},
+        {name:"dawang",age:"22"},
+        {name:"dawang",age:"22"},
+        {name:"dawang",age:"22"},
+        {name:"dawang",age:"22"},
+        {name:"dawang",age:"22"},
+        {name:"dawang",age:"22"},
+        {name:"dawang",age:"22"}
+    ];
+    function deleteRepeat(arr) {
+        for(var i=0;i<arr.length-1;i++){
+            var old=arr[i];
+            for(var j=i+1;j<arr.length;j++){
+                if(old.name==arr[j].name && old.age==arr[j].age){
+                    arr.splice(j,1);
+                    j--;
+                }
+            }
+        }
+        console.log(arr);
+        return arr;
+    }
+    var newArr=deleteRepeat(arr);
+</script>
+</body>
+</html>

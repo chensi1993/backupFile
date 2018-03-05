@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--Android中UC和QQ浏览器无法触发dropload中scroll和resize-->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>首页</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!--公用样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/common.css">
+    <link type="text/css" rel="stylesheet" href="resources/css/index.css">
+</head>
+<body>
+<h3 class="shop-name">证联小超</h3>
+<div class="shop-info row">
+    <!--左侧导航栏-->
+    <div class="nav-lf col-xs-3" id="nav-left">
+        <p>商品分类</p>
+        <div id='btn'>
+            <a href='javascript:void(0)' index='0' class='tab_btn curr_btn'>洽洽每日坚果</a>
+            <a href='javascript:void(0)' index='1' class='tab_btn'>双汇泡面拍档</a>
+            <a href='javascript:void(0)' index='2' class='tab_btn'>蜜饯果干</a>
+            <a href='javascript:void(0)' index='3' class='tab_btn'>康师傅桶装面</a>
+            <a href='javascript:void(0)' index='4' class='tab_btn'>卫龙辣条</a>
+            <a href='javascript:void(0)' index='5' class='tab_btn'>Miss林瓜子</a>
+            <a href='javascript:void(0)' index='6' class='tab_btn'>小浣熊干脆面</a>
+        </div>
+    </div>
+    <div class="container col-xs-9" id='tab'>
+        <!--洽洽每日坚果-->
+        <div class="shop-list section tab_div curr_div" id="st1">
+            <div class="section-li row" id="001">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Nut.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">混合果仁水果干</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">4.3</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--双汇泡面拍档-->
+        <div class="shop-list section tab_div" id="st2">
+            <div class="section-li row" id="002">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Sausage.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">原味香肠</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">0.81</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--蜜饯干果-->
+        <div class="shop-list section tab_div" id="st3">
+            <div class="section-li row" id="003">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry1.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">西域酸梅</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="004">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry2.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">加应子果干</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="005">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry3.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">山楂条</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="006">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry4.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">酸杏果干</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="007">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry5.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">盐津葡萄</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="008">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry6.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">杨梅果干</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="009">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry7.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">乌梅果干</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="010">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry8.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">青梅果干</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="011">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry9.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">雪梅</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="012">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry10.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">水晶杏干</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="013">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Dry11.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">樱桃果干</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">2.54</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--康师傅桶装面-->
+        <div class="shop-list section tab_div" id="st4">
+            <div class="section-li row" id="014">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Noodles1.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">红烧牛肉面</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">3.23</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="015">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Noodles2.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">麻辣牛肉面</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">3.23</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="016">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Noodles3.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">泡椒牛肉面</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">3.23</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--卫龙辣条-->
+        <div class="shop-list section tab_div" id="st5">
+            <div class="section-li row" id="017">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Hot1.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">卫龙豆皮</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">4.9</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="018">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Hot2.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">魔芋爽</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">15</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="019">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Hot3.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">亲嘴条</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">10</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="020">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Hot4.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">大面筋</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">7</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="021">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Hot5.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">小面筋</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">3</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--Miss林瓜子-->
+        <div class="shop-list section tab_div" id="st6">
+            <div class="section-li row" id="022">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Miss1.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">焦糖味</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">4.33</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="023">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Miss2.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">山核桃味</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">4.33</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="024">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Miss3.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">奶油味</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">4.33</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="025">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Miss4.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">五香味</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">4.33</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="026">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/Miss5.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">多味</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">4.33</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--小浣熊干脆面-->
+        <div class="shop-list section tab_div" id="st7">
+            <div class="section-li row" id="027">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/mian1.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">奥尔良烤翅味</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">0.96</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="028">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/mian2.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">香辣蟹味</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">0.96</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="029">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/mian3.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">麻辣香锅味</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">0.96</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="030">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/mian4.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">烤肉味</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">0.96</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-li row" id="031">
+                <div class="prt-lt col-xs-4">
+                    <img src="resources/images/mian5.jpg">
+                </div>
+                <div class="prt-rt col-xs-8">
+                    <p class="rt-name">意式红烩味</p>
+                    <div class="rt-info row">
+                        <p class="info-p col-xs-4">¥<span class="price">0.96</span></p>
+                        <div class="lt-rt col-xs-8">
+                            <button type="button" class="addBtn">加入购物车</button>
+                            <!--<input type="button" class="minus" value="-">-->
+                            <!--<input type="text" class="result" value="0">-->
+                            <!--<input type="button" class="add" value="+">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部切换-->
+<ul class="footer-nav row">
+    <li class="col-xs-6"><a href="index.html"><img src="resources/img/home.svg"></a></li>
+    <li class="col-xs-6" id="shopCart"><a href="#"><img src="resources/img/gw.svg"></a></li>
+</ul>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/index.js"></script>
+</body>
+</html>

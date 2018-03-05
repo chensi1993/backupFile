@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<div class="container">
+    <select id="leftBox" multiple="multiple" style="height: 200px; width: 100px;">
+        <!--<option value="1">a</option>-->
+        <!--<option value="2">b</option>-->
+        <!--<option value="3">c</option>-->
+        <!--<option value="4">d</option>-->
+    </select>
+    <input type="button" value="右移" onclick="move('leftBox','rightBox')"/>
+    <input type="button" value="左移" onclick="move('rightBox','leftBox')"/>
+    <!--<input type="button" value=">>" onclick="moveAll('leftBox','rightBox')"/>-->
+    <!--<input type="button" value="<<" onclick="moveAll('rightBox','leftBox')"/>-->
+    <select id="rightBox" multiple="multiple" style="height: 200px; width: 100px;">
+        <!--<option value="11">A</option>-->
+        <!--<option value="22">B</option>-->
+        <!--<option value="33">C</option>-->
+        <!--<option value="44">D</option>-->
+    </select>
+</div>
+<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $.ajax({
+            type: 'GET',
+            url: 'index.json',
+            dataType: 'json',
+            success: function(data){
+                var dataleft = data.left;
+                var dataRight = data.right;
+                var resultLeft = "";
+                var resultRight = "";
+
+                for(var i=0;i<dataleft.length;i++){
+
+                    resultLeft +='<option value="">'+ dataleft[i].title +'</option>';
+                }
+                for(var i=0;i<dataRight.length;i++){
+
+                    resultRight +='<option value="">'+ dataRight[i].title +'</option>';
+                }
+                $("#leftBox").append(resultLeft);
+                $("#rightBox").append(resultRight);
+
+
+            }
+        })
+    });
+    // 移动id为from的列表中的选中项到id为to的列表中
+    function move(from,to) {
+        // 获取移动源
+        var fromBox = document.getElementById(from);
+        // 获取移动目的地
+        var toBox = document.getElementById(to);
+        // 当移动源存在选中项时
+        while(fromBox.selectedIndex != -1){
+            // 将移动源中的选中项添加到移动目的地的末尾
+            toBox.appendChild(fromBox.options[fromBox.selectedIndex]);
+        }
+    }
+
+    // 移动id为from的列表中的所有项到id为to的列表中
+    function moveAll(from,to) {
+        // 获取移动源
+        var fromBox = document.getElementById(from);
+        // 获取移动目的地
+        var toBox = document.getElementById(to);
+        // 当移动源存在选中项时
+        while(fromBox.options.length > 0){
+            // 将移动源中的第一项添加到移动目的地的末尾
+            toBox.appendChild(fromBox.options[0]);
+        }
+    }
+</script>
+</body>
+</html>

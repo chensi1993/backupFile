@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>银行卡验证</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="resources/css/bankCard_verification.css">
+    <!--引入弹出提示框样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/style-alert.css">
+</head>
+<body>
+<div class="container">
+    <form class="card-horizontal" role="form" action="" method="post">
+        <div class="card_content">
+            <!--卡号-->
+            <div class="card-group row">
+                <label for="card_number" class="card_lab col-xs-3">卡号</label>
+                <div class="card_li col-xs-9">
+                    <input type="text" class="card_inp" id="card_number" placeholder="请输入银行卡号" pattern="[0-9]*" oninput="if(value.length>23)value=value.slice(0,23)">
+                </div>
+            </div>
+            <!--姓名-->
+            <div class="card-group row">
+                <label for="card_name" class="card_lab col-xs-3">姓名</label>
+                <div class="card_li col-xs-9">
+                    <input type="text" class="card_inp" id="card_name" placeholder="请输入真实姓名">
+                </div>
+            </div>
+            <!--身份证号-->
+            <div class="card-group row">
+                <label for="Id_number" class="card_lab col-xs-3">身份证号</label>
+                <div class="card_li col-xs-9">
+                    <input type="text" class="card_inp" id="Id_number" placeholder="请输入证件号" pattern="[0-9]*" oninput="if(value.length>18)value=value.slice(0,18)">
+                </div>
+            </div>
+            <!--手机号-->
+            <div class="card-group row">
+                <label for="phone_number" class="card_lab col-xs-3">手机号</label>
+                <div class="card_li col-xs-9">
+                    <input type="tel" class="card_inp" id="phone_number" placeholder="" value="13355677788" readonly="readonly">
+                </div>
+            </div>
+        </div>
+        <input type="button" id="card_btn" value="下一步" onclick="javascript:isCheck();">
+    </form>
+    <!--弹出提示框-->
+    <div class='modal my-modal-alert' id='my-modal-alert'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-body' id='modal-body-alert'>
+                    <div id='modal_message'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/bankCard_verification.js"></script>
+<!--引入弹出提示框脚本-->
+<script src="resources/js/alert.js"></script>
+</body>
+</html>

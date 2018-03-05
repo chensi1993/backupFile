@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--Android中UC和QQ浏览器无法触发dropload中scroll和resize-->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title></title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="resources/css/swiper.min.css">
+
+    <!-- styles -->
+    <style>
+        html, body {
+            font-size: 62.5%;
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+
+        }
+        body {
+            background: #fff;
+            font-family: "思源黑体", Arial;
+            font-size: 1.6rem;
+            color:#000;
+            margin: 0;
+            padding: 0;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide .swiper-img{
+            width: 100%;
+            height: 28.5rem;
+            margin-top: 7rem;
+
+        }
+        .swiper-slide .tips{
+            margin: 2rem 0 5rem 0;
+        }
+        .swiper-slide .tips p{
+            color: #FF7A66;
+            text-align: center;
+            margin: 0;
+        }
+        .swiper-slide .tips p:nth-child(1){
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .swiper-slide .tips p:nth-child(2){
+            font-size: 1.6rem;
+        }
+        .tips p>span{
+            padding: .15rem;
+        }
+        .swiper-slide .guide-page{
+            width: 15%;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 3.5rem;
+            left: 0;
+            right: 0;
+        }
+        #linkBtn{
+            background: #FFFFFF;
+            border: 1px solid #FF7A66;
+            border-radius: 100px;
+            font-size: 1.8rem;
+            color: #FF7A66;
+            padding: 1rem 0;
+            text-align: center;
+            letter-spacing: .1rem;
+            margin: auto;
+            position: absolute;
+            bottom: 3.5rem;
+            left: 0;
+            right: 0;
+            width: 45%;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img class="swiper-img" src="resources/img/guide1.png">
+            <div class="tips">
+                <p>证联宝</p>
+                <p><span>资金不闲置</span><span>余额能赚钱</span></p>
+            </div>
+            <img class="guide-page" src="resources/img/guidepage1.png">
+        </div>
+        <div class="swiper-slide">
+            <img class="swiper-img" src="resources/img/guide2.png">
+            <div class="tips">
+                <p>证券账户保证金</p>
+                <p>独创多种应用方式</p>
+            </div>
+            <img class="guide-page" src="resources/img/guidepage2.png">
+        </div>
+        <div class="swiper-slide">
+            <img class="swiper-img" src="resources/img/guide3.png">
+            <div class="tips">
+                <p>消费支付</p>
+                <p>支持所有银联商家</p>
+            </div>
+            <button id="linkBtn" type="button" onclick="linkBtn()">立即体验</button>
+        </div>
+    </div>
+</div>
+<!-- Swiper JS -->
+<script src="resources/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    //调用swiper方法
+    var swiper = new Swiper('.swiper-container');
+
+//    唤起APP
+    function linkBtn(){
+
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+        var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if (isAndroid) {
+            //这个是安卓操作系统
+            window.location.href = AndroidStart.nativeUrl();
+        }
+        if (isIOS) {
+            //这个是ios操作系统
+            window.location.href ="https://www.baidu.com/" ;
+            nativeIos();
+        }
+    }
+</script>
+</body>
+</html>

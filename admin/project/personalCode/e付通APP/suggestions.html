@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--Android中UC和QQ浏览器无法触发dropload中scroll和resize-->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>意见反馈</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!--弹框插件-->
+    <link type="text/css" rel="stylesheet" href="resources/css/suggestions.css">
+</head>
+<body>
+<div class="container">
+    <!--content部分-->
+    <form id="myForm" class="row" action="" method="post">
+        <ul class="suggest_tips">
+            <li class="col-xs-4 text-center select" value="1">反馈意见</li>
+            <li class="col-xs-4 text-center" value="2">错误反馈</li>
+            <li class="col-xs-4 text-center" value="3">优化建议</li>
+        </ul>
+        <textarea name="suggest" id="textWord" class="suggest_textarea" rows="9" placeholder="请输入您的宝贵意见和建议"></textarea>
+        <div class="contact_way">
+            <label class="col-xs-3">联系方式</label>
+            <input class="col-xs-9" id="contactVal" type="text" placeholder="请输入您的手机号或邮箱">
+        </div>
+        <input type="button" id="suggest_btn" value="提交" onclick="clickMe()">
+    </form>
+
+    <!--弹出提示框-->
+    <div class='modal my-modal-alert' id='my-modal-alert'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-body' id='modal-body-alert'>
+                    <div id='modal_message'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/suggestions.js"></script>
+</body>
+</html>

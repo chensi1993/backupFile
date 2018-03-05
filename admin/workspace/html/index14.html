@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="wrap">
+    <div class="box1">
+        <span class="trigger">trigger</span>
+        <div class="effect"></div>
+    </div>
+    <div class="box2">
+        <span class="trigger">trigger</span>
+        <div class="effect"></div>
+    </div>
+    <div class="box3">
+        <span class="trigger">trigger</span>
+        <div class="effect"></div>
+    </div>
+</div>
+<script src="../js/jquery-3.0.0.min.js"></script>
+<script>
+    function effect(node){
+        $(node).on('mouseenter','.trigger',function(){
+            var $this=$(this);
+            $this.parent().find('.effect').addClass('after')
+        });
+        $(node).on('mouseout','.trigger',function(){
+            var $this=$(this);
+            $this.parent().find('.effect').removeClass('after')
+        })
+    }
+    effect('.wrap');
+</script>
+</body>
+</html>

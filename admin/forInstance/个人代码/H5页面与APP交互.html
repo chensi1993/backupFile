@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<script type="text/javascript">-->
+        <!--var nwv=null;-->
+        <!--// 监听plusready事件-->
+        <!--document.addEventListener( "plusready", function(){-->
+            <!--// 扩展API加载完毕，现在可以正常调用扩展API-->
+            <!--// 获取当前Webview窗口的UIWebview实例对象-->
+            <!--nwv = plus.ios.currentWebview();-->
+            <!--// ...-->
+        <!--}, false );-->
+        <!--// 使用Native.js调用Webview的loadUrl方法跳转页面-->
+        <!--function loadUrl(){-->
+            <!--// 导入UIWebview、NSURLRequest、NSURL类-->
+            <!--var Webview = plus.ios.importClass("UIWebview");-->
+            <!--var NSURLRequest = plus.ios.import('NSURLRequest');-->
+            <!--var NSURL = plus.ios.import('NSURL');-->
+            <!--// 获取当前Webview对象的实例-->
+            <!--var wv = plus.ios.currentWebview();-->
+            <!--// 创建请求对象-->
+            <!--var req = NSURLRequest.requestWithURL(NSURL.URLWithString('http://www.dcloud.io/'));-->
+            <!--// 跳转页面-->
+            <!--plus.ios.invoke(wv,"loadRequest:",req);-->
+            <!--// 释放对象(可选)-->
+            <!--plus.ios.deleteObject(req);-->
+            <!--plus.ios.deleteObject(wv);-->
+        <!--}-->
+    <!--</script>-->
+</head>
+<body>
+
+<!--获取当前Webview窗口对象的native层UIWebview实例对象<br/>-->
+<!--<button onclick="loadUrl()">Native.js跳转页面</button>-->
+<!--<script type="text/javascript">-->
+    <!--function sum(a,b){-->
+        <!--return a+b;-->
+    <!--}-->
+    <!--function s(){-->
+        <!--var result =window.android.back();-->
+        <!--document.getElementById("p").innerHTML=result;-->
+    <!--}-->
+
+<!--</script>-->
+<!--<button onclick="s()">调用本地方法</button>-->
+<!--<a href="file:///android_asset/test2.html">点击</a>-->
+<!--<p id="p"></p>-->
+
+
+<!--<script type="text/javascript">-->
+    <!--function jumpToAppPages(){-->
+        <!--toActivity.OpenLinkH5("https://www.baidu.com");-->
+    <!--}-->
+<!--</script>-->
+
+
+<script>
+
+//    function getRequest(){
+//
+//        var url="https://www.baidu.com/s?wd=360&rsv_spt=1&rsv_iqid=0xaf1f9ec6000038d6&issp=1";
+//        //var url=window.location.search;
+//
+//        if(url.indexOf("?")!=-1){
+//
+//            var str = url.substr(1);
+//            strs = str.split("&");
+//            var key=new Array(strs.length);
+//            var value=new Array(strs.length);
+//            for(i=0;i<strs.length;i++){
+//
+//                key[i]=strs[i].split("=")[0];
+//                value[i]=unescape(strs[i].split("=")[1]);
+//                console.log(key[i]+"="+value[i]);
+//            }
+//        }
+//
+//    }
+//    getRequest();
+//    var Request = new Object();
+//    var Request = getRequest();
+//    var wd,rsv_spt;
+//    wd = Request("wd");
+//    rsv_spt = Request["rsv_spt"];
+//    console.log(wd,rsv_spt);
+
+
+
+
+function GetRequest() {
+    var url = "?wd=360&rsv_spt=1&rsv_iqid=0xaf1f9ec6000038d6&issp=1"; //获取url中"?"符后的字串
+//    var url = location.search; //获取url中"?"符后的字串
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for(var i = 0; i < strs.length; i ++) {
+            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+        }
+    }
+    return theRequest;
+}
+
+    var Request = new Object();
+    Request = GetRequest();
+    var wd,rsv_spt;
+    wd = Request["wd"];
+    console.log(wd);
+</script>
+
+
+</body>
+</html>

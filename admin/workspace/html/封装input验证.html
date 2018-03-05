@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .input_ul{
+            width: 300px;
+        }
+        .input_ul li{
+            width: 300px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .error{
+            position: absolute;
+            top: 20px;
+            left: 0;
+            font-size: 12px;
+            color: #f3001d;
+            display: none;
+        }
+        .get_code{
+            width: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="input">
+    <form action="">
+        <ul class="input_ul">
+            <li>
+                <label for="">用户名</label>
+                <input type="text" class="user">
+                <p class="error">手机号输入不对</p>
+            </li>
+            <li>
+                <input type="text" class="validate">
+                <input type="button" class="get_code" value="获取验证码">
+                <p class="error"></p>
+            </li>
+            <li>
+                <label for="">密码</label>
+                <input type="text" class="pass_code">
+                <p class="error"></p>
+            </li>
+            <li>
+                <label for="">确认密码</label>
+                <input type="text" class="repass_code">
+                <p class="error"></p>
+            </li>
+            <li>
+                <input type="button" class="btn" value="提交">
+            </li>
+        </ul>
+    </form>
+</div>
+<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+<script>
+    //封装表单验证库
+    var codeVal = {
+        //手机验证
+        phone:function(_this,html,html1){
+            var reg = /^1[3|5|7|8][0-9]{9}$/;
+            if(_this.val() == ''){
+                _this.siblings('.error').html(html).show();
+                return false;
+            }else if(!reg.test(_this.val())){
+                _this.siblings('.error').html(html1).show();
+                return false;
+            }else{
+                _this.siblings('.error').hide();
+                return true;
+            }
+        },
+        //验证码
+        codev:function(_this,html,html1){
+            var reg = /^[0-9]{6}$/;
+            if(_this.val() == ''){
+                _this.siblings('.error').html(html).show();
+                return false;
+            }else if(!reg.test(_this.val())){
+                _this.siblings('.error').html(html1).show();
+                return false;
+            }else{
+                _this.siblings('.error').hide();
+                return true;
+            }
+        },
+        //验证密码
+        passwordval:function(_this,html,html1){
+            //6-16位字母数字下划线组成
+            var reg = /^[a-z0-9A-Z]{6}$/;
+            if(_this.val() == ''){
+                _this.siblings('.error').html(html).show();
+                return false;
+            }else if(!reg.test(_this.val())){
+                _this.siblings('.error').html(html1).show();
+                return false;
+            }else{
+                _this.siblings('.error').hide();
+                return true;
+            }
+        },
+        repassval:function(_this,html,html1,repass){
+            //6-16位字母数字下划线组成
+            if(_this.val() == ''){
+                _this.siblings('.error').html(html).show();
+                return false;
+            }else if(_this.val() != repass){
+                _this.siblings('.error').html(html).show();
+                return false;
+            }else{
+                _this.siblings('.error').hide();
+                return true;
+            }
+        },
+        //倒计时
+        setItem:function(_this){
+            var time = 60;
+            var timer = setInterval(func,1000);
+            function func(){
+                time--;
+                _this.val(time+'s');
+                _this.attr('disabled','true');
+
+                if(time == 0){
+                    _this.val('重新获取');
+                    clearInterval(timer);
+                    _this.removeAttr('disabled','true');
+                }
+            }
+        }
+    };
+
+    $(function(){
+        //倒计时
+        $('.user').blur(function(){
+            codeVal.phone($(this),'请输入手机号');
+        });
+
+        //获取验证码
+        $('.get_code').click(function(){
+            var user = $('.user').val();
+            var codeture = codeVal.phone($('.user'),'请输入手机号','手机号格式不正确');
+            console.log(codetrue);
+            if(codeture == false){
+                return false;
+            }else{
+                codeVal.setItem($(this));
+            }
+            alert('正在请求ajax');
+        })
+
+        $('.btn').click(function(){
+            var user = $('.user').val();
+            var code = $('.validate').val();
+            var pass_code = $('.pass_code').val();
+            var repass_code = $('.repass_code').val();
+            var phoneture = codeVal.phone($('.user'),'请输入手机号','手机号格式不正确');
+            var codevture = codeVal.codev($('.validate'),'请输入验证码','验证码格式不正确');
+            var passture = codeVal.passwordval($('.pass_code'),'请输入密码','密码格式不正确');
+            var repassture = codeVal.repassval($('.repass_code'),'请输入确认密码','确认密码不对',pass_code);
+            console.log(codevture);
+            if(phoneture == false || codevture == false || passture == false || repassture == false){
+                return false;
+            }
+            alert('正在发送所有请求');
+        })
+    })
+</script>
+</body>
+</html>

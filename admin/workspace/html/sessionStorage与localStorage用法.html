@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>本地存储SessionStorage</title>
+    <script type="text/javascript">
+        //  1 SessionStorage：
+        //　　将数据保存在session对象中，所谓session是指用户在浏览某个网站时，从进入网站到浏览器关闭所经过的这段时间会话，也就是用户浏览这个网站所花费的时间就是session的生命周期。session对象可以用来保存在这段时间内所要求保存的任何数据。
+
+        //  此对象主要有两个方法：
+        //  保存数据：sessionStorage.setItem(Key, value);
+        //  读取数据：sessionStorage.getItem(Key);
+        //  Key：表示你要存入的键名称，此名称可以随便命名，可以按照变量的意思来理解。
+        //  Value：表示值，也就是你要存入Key中的值，可以按照变量赋值来理解。
+        window.onload = function()
+        {
+            alert("当你关闭此页面或者关闭浏览器的时候，sessionStorage中保存的数据才会消失，也就是说重新打开此页面的时候，点击获取数据，将不会显示任何数据，刷新页面无效。\r\n由此可以证明，sessionStorage的生命周期为，某个用户浏览网站时，从进入到离开的这段时间。")
+            //首先获得body中的3个input元素
+            var msg = document.getElementById("msg");
+            var getData = document.getElementById("getData");
+            var setData = document.getElementById("setData");
+            setData.onclick = function(){//存入数据
+                if(msg.value){
+                    sessionStorage.setItem("data", msg.value);
+                    alert("信息已保存到data字段中");
+                }else{
+                    alert("信息不能为空");
+                }
+            }
+            getData.onclick = function(){//获取数据
+                var msg = sessionStorage.getItem("data");
+
+                if(msg){
+                    alert("data字段中的值为：" + msg);
+                    var p1= document.getElementById("p1");
+                    p1.innerHTML = msg;
+                }else{
+                    alert("data字段无值！");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="msg" type="text"/>
+<input id="setData" type="button" value="保存数据"/>
+<input id="getData" type="button" value="获取数据"/>
+<p id="p1"></p>
+</body>
+</html>

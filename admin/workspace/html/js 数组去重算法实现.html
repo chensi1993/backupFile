@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //遍历数组法
+    function unique(arr){
+        var newArr = [];
+        for(var i=0;i<arr.length;i++){
+            if(newArr.indexOf(arr[i]) == -1) n.push(arr[i]);
+        }
+        return newArr;
+    }
+//    判断浏览器是否支持indexOf
+    if(!Array.prototype.indexOf){
+        Array.prototype.indexOf = function(item){
+            var result = -1, a_item = null;
+            if (this.length == 0){
+                return result;
+            }
+            for(var i = 0, len = this.length; i < len; i++){
+                a_item = this[i];
+                if (a_item === item){
+                    result = i;
+                    break;
+                }
+            }
+            return result;
+        }
+    }
+
+
+//    优化遍历数组法
+    function unique5(array){
+        var r = [];
+        for(var i = 0, l = array.length; i < l; i++) {
+            for(var j = i + 1; j < l; j++)
+                if (array[i] === array[j]) j = ++i;
+            r.push(array[i]);
+        }
+        return r;
+    }
+</script>
+</body>
+</html>

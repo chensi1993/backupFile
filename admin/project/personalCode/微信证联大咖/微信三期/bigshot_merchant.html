@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--Android中UC和QQ浏览器无法触发dropload中scroll和resize-->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>商户管理</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!--引入加载更多样式-->
+    <link rel="stylesheet" href="resources/css/dropload.css">
+    <!--商户管理css样式-->
+    <link rel="stylesheet" href="resources/css/bigshot_merchant.css">
+</head>
+<body>
+<div class="container">
+    <!--签约商户费率状态选择下拉框-->
+    <div class="merchant_status row">
+        <h3 id="status_click">费率状态<img src="resources/img/jiantou.png"></h3>
+        <!--下拉框-->
+        <div class="status_list">
+            <ul class="status_ul">
+                <li onclick="">全部</li>
+                <li onclick="">未设费率</li>
+                <li onclick="">同意</li>
+                <li onclick="">待同意</li>
+                <li onclick="">不同意</li>
+            </ul>
+
+        </div>
+    </div>
+    <!--费率状态全部内容-->
+    <div class="merchant_center">
+        <p class="merchant_num">签约商户：15家</p>
+        <div class="content">
+            <div class="merchant_contain" id="merchant_contain">
+                <!--该商户未添加门店-->
+                <div class="merchant_list row" id="notAdd">
+                    <div class="col-xs-8 list_left">
+                        <h3>张敏</h3>
+                        <p>签约于<span>-- -- --</span></p>
+                    </div>
+                    <div class="col-xs-4 list_right">
+                        <span>该商户未添加门店</span>
+                    </div>
+                </div>
+                <!--设置费率-->
+                <div class="merchant_list row" id="setUp">
+                    <div class="col-xs-8 list_left">
+                        <h3>张敏</h3>
+                        <p>签约于<span>-- -- --</span></p>
+                    </div>
+                    <div class="col-xs-4 list_right">
+                        <button id="set_rates">设置费率</button>
+                    </div>
+                </div>
+                <!--未同意-->
+                <div class="merchant_list row" id="disAgree">
+                    <div class="col-xs-8 list_left">
+                        <h3>张敏</h3>
+                        <p>签约于<span>-- -- --</span></p>
+                    </div>
+                    <div class="col-xs-4 list_right">
+                        <button>3.00%。</button>
+                        <p>未同意</p>
+                    </div>
+                </div>
+                <!--待同意-->
+                <div class="merchant_list row" id="pending">
+                    <div class="col-xs-8 list_left">
+                        <h3>张敏</h3>
+                        <p>签约于<span>-- -- --</span></p>
+                    </div>
+                    <div class="col-xs-4 list_right">
+                        <button>3.00%。</button>
+                        <p>待同意</p>
+                    </div>
+                </div>
+                <!--已同意-->
+                <div class="merchant_list row" id="agree">
+                    <div class="col-xs-8 list_left">
+                        <h3>张敏</h3>
+                        <p>签约于<span>2017-05-15</span></p>
+                    </div>
+                    <div class="col-xs-4 list_right">
+                        <button>3.00%。</button>
+                        <p>已同意</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--费率设置状态-->
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">费率设置成功</div>
+                <!--<div class="modal-body">费率设置失败</div>-->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<!--加载更多脚本-->
+<script type="text/javascript" src="resources/js/dropload.min.js"></script>
+<script type="text/javascript" src="resources/js/bigshot_merchant.js"></script>
+<script>
+    $(function () {
+        $('#myModal').modal({
+            keyboard: true
+        });
+        setInterval(function(){
+                $('#myModal').modal('hide');
+        },2000);//2000为2秒钟
+
+    });
+
+</script>
+</body>
+</html>

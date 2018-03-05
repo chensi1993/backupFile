@@ -1,0 +1,201 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '思源黑体';
+}
+/*头部关联部分*/
+.band_top{
+    height: 26.5rem;
+    padding-top: 8rem;
+    color: #fff;
+    background: url("../img/guanlian@3x.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.band_top h3{
+    margin: 0 auto;
+    font-size: 1.8rem;
+    font-weight: normal;
+    padding-bottom: 2rem;
+    letter-spacing: .05rem;
+}
+.band_top .band-word p{
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    letter-spacing: .05rem;
+}
+.band_top .band-word .agree{
+    font-size: 1.2rem;
+}
+
+/*点击取消关联部分*/
+#cancel{
+    line-height: 7rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #FF6569;
+    letter-spacing: .05rem;
+    width: 6.7rem;
+    height: 6.7rem;
+    background: #FFFFFF;
+    border-radius: 50%;
+    border-color: #fff;
+    padding: 0;
+    box-shadow: 2px 2px 34px 0px rgba(255,113,114,0.47);
+    position: absolute;
+    top: 23rem;
+    left: 50%;
+    margin-left: -3.5rem;
+}
+#myModal,#myModals{
+    /*margin-top: 55%;*/
+    padding-top: 50%;
+}
+#myModal .modal-dialog {
+    margin: 6rem;
+}
+.modal-dialog .modal-content{
+    border-radius: 10px;
+}
+.modal-footer button{
+    border: none;
+}
+.modal-footer .btn-default{
+    color: #999;
+}
+.modal-footer .btn-primary,.modal-footer .btn-primary:hover{
+    background: none;
+    color: #333;
+    margin: 0;
+}
+#determine,#determines{
+    margin: 0;
+}
+#footerBtn,#code-row{
+    margin: 0;
+    padding: 1rem;
+}
+
+.modal-footer .btn+.btn{
+    margin: 0;
+}
+#code-row{
+    border: none;
+}
+.modal-body{
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #333333;
+    letter-spacing: .05rem;
+}
+
+/*状态栏的定位*/
+/*.modal{margin-top: 25%;}*/
+/*密码框*/
+.pwd-box{overflow:hidden;position: relative;border: 1px solid #979797;margin-top: 2rem; border-radius: 3px;}
+.pwd-box input[type="tel"]{width:99%;height: 3.5rem;color: transparent;position: absolute;top: 0;left: 0;border: none;font-size: 1.8rem;opacity: 0;z-index: 1;letter-spacing: 5rem;text-align: left;}
+.fake-box input{height: 3.5rem;border: none;border-right: 1px solid #979797;font-size: 1.8rem;border-radius: 0;}
+/*2017.6.30修改-----start*/
+/*.fake-box input:nth-last-child(1){border:none;}*/
+.fake-box  div:nth-child(6)>input{border-right: none;}
+/*2017.6.30修改-----end*/
+
+/*底部滑动部分*/
+.band_bottom{
+    padding-top: 50%;
+   /*2016.6.29新增样式*/
+    /*position: relative;*/
+}
+
+/*2016.6.29新增初始滑动样式---start*/
+@media screen and (max-width: 320px) {
+    .band_bottom{
+        padding-top: 42%;
+    }
+}
+.tips{
+    font-size: 1.2rem;
+    margin: .8rem auto;
+    text-align: center;
+    /*padding: 0 1.5rem;*/
+    color: #666666;
+}
+.tips p{
+    padding: 0;
+    text-align: center;
+    /*width: 21rem;*/
+    margin: 0 auto;
+    letter-spacing: .05rem;
+    line-height: 1.4rem;
+}
+/*************************滑动样式***********************************************/
+.slideunlock-wrapper{
+    /*width: 21rem;*/
+    position: relative;
+    /*padding: 50px;*/
+    /*background: #ECF0F1;*/
+    margin: 0 auto;
+}
+.slideunlock-slider{
+    /*padding:20px;*/
+    position: relative;
+    /*border-radius: 2px;*/
+    /*background-color: #FDEB9C;*/
+    overflow: hidden;
+    text-align: center;
+
+    /*2017.6.29添加*/
+    border-radius: 9.1rem;
+    background-color: #ddd;
+    color: #fff;
+    padding: 0.85rem 1.85rem;
+
+
+}
+.slideunlock-slider.success{
+    /*background-color: #E5EE9F;*/
+    background-image: linear-gradient(-90deg, #FF6468 0%, #FF986E 100%);
+    /*width: 100%;*/
+}
+.slideunlock-label{
+    /*width: 40px;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*height: 100%;*/
+    /*background: #E67E22;*/
+    z-index: 999;
+    /*border-radius: 2px;*/
+    cursor: pointer;
+
+    /*2017.6.29添加*/
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 9.1rem;
+    background: url("../img/huadonganniu@3x.png") no-repeat;
+    background-size: 100% 100%;
+}
+.slideunlock-label-tip{
+    z-index: 9;
+}
+/*@media screen and (max-width: 640px) {*/
+    /*.slideunlock-wrapper{*/
+        /*width: 64%;*/
+    /*}*/
+/*}*/
+
+#reset-btn{
+    margin: 20px 0 10px 0;
+}
+
+p{
+    padding: 0 10px;
+    word-wrap: break-word;
+}
+
+.ui-loader{
+    display: none;
+}
+/*2016.6.29新增初始滑动样式---end*/

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--Android中UC和QQ浏览器无法触发dropload中scroll和resize-->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>添加银行卡</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!--引入添加银行卡样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/bankCard_add.css">
+    <!--引入弹出提示框样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/style-alert.css">
+</head>
+<body>
+<div class="container">
+    <p class="add_tips">请绑定持卡人本人银行卡</p>
+    <form class="add_content" role="form" action="" method="post">
+        <!--持卡人-->
+        <div class="add_group row" id="cardMan">
+            <label for="add_cardholder" class="col-xs-2 add_label">持卡人</label>
+            <div class="col-xs-10 add_right">
+                <input type="text" class="add_input input_other" id="add_cardholder" readonly="readonly" onfocus="this.blur()" value="阿里">
+            </div>
+        </div>
+        <div class="add_list">
+            <!--卡号-->
+            <div class="add_group row">
+                <label for="add_cardnumber" class="col-xs-2 add_label">卡号</label>
+                <div class="col-xs-10 add_right">
+                    <input type="text" class="add_input input_other" id="add_cardnumber" placeholder="请输入银行卡号" pattern="[0-9]*" oninput="if(value.length>23)value=value.slice(0,23)">
+                </div>
+            </div>
+            <!--银行-->
+            <div class="add_group row">
+                <label for="add_bank" class="col-xs-2 add_label">银行</label>
+                <div class="col-xs-10 add_right" id="add_bCard">
+                    <input type="hidden" class="add_input" id="add_bank" value="">
+                    <div class="add_select">
+                        <select name="test" id="opTio">
+                            <option value="0">请选择银行行别</option>
+                            <option value="1">招商银行</option>
+                            <option value="2">民生银行</option>
+                            <option value="3">邮政储蓄</option>
+                            <option value="4">农业银行</option>
+                            <option value="5">中国银行</option>
+                            <option value="6">建设银行</option>
+                            <option value="7">交通银行</option>
+                            <option value="8">中信银行</option>
+                            <option value="9">光大银行</option>
+                            <option value="10">广发银行</option>
+                            <option value="11">平安银行</option>
+                            <option value="12">兴业银行</option>
+                            <option value="13">浦发银行</option>
+                            <option value="14">工商银行</option>
+                            <option value="15">北京银行</option>
+                            <option value="16">上海银行</option>
+                            <option value="17">渤海银行</option>
+                            <option value="18">江苏银行</option>
+                            <option value="19">青岛银行</option>
+                            <option value="20">华夏银行</option>
+                            <option value="21">浙商银行</option>
+                            <option value="22">徽商银行</option>
+                            <option value="23">天津银行</option>
+                            <option value="24">盛京银行</option>
+                        </select>
+                    </div>
+
+                    <span class="jump_to">&gt;</span>
+                </div>
+            </div>
+            <!--手机号-->
+            <div class="add_group row">
+                <label for="add_phone" class="col-xs-2 add_label">手机号</label>
+                <div class="col-xs-10 add_right">
+                    <input type="text" class="add_input input_other" id="add_phone" pattern="[0-9]*" oninput="if(value.length>11)value=value.slice(0,11)" placeholder="请输入银行预留手机号">
+                </div>
+            </div>
+            <!--验证码-->
+            <div class="add_group row" id="phone_code">
+                <label for="add_code" class="col-xs-2 add_label">验证码</label>
+                <div class="col-xs-10 add_right">
+                    <input type="text" class="add_input" id="add_code" placeholder="请输入短信验证码" pattern="[0-9]*" oninput="if(value.length>6)value=value.slice(0,6)">
+                    <input type="button" onclick="javascript:getVerCode();" class="code_btn" id="getVerCodeBtn" value="获取验证码">
+                </div>
+            </div>
+        </div>
+        <p class="pecial_reminder">特别提醒：新增的银行卡，120小时内不能提现到该卡</p>
+        <div class="add_button">
+            <input type="button" id="add_submit" onclick="javascript:isCheck();" value="提交">
+        </div>
+    </form>
+    <!--弹出提示框-->
+    <div class='modal my-modal-alert' id='my-modal-alert'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-body' id='modal-body-alert'>
+                    <div id='modal_message'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/bankCard_add.js"></script>
+<!--引入弹出提示框脚本-->
+<script src="resources/js/alert.js"></script>
+</body>
+</html>

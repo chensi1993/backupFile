@@ -1,0 +1,125 @@
+/**
+ * 移动端滑动验证代码
+ */
+.stage{position:relative;height:4.4rem;}
+.slider{position:absolute;height:4.4rem;text-align: center;box-shadow:0 0 3px #999;background-color:#D0D0D0;left:2rem;right:2rem;border-radius: 9.1rem;}
+.label {
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #fff), color-stop(.4, #fff), color-stop(.5, white), color-stop(.6, #fff), color-stop(1, #fff));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: slidetounlock 3s infinite;
+    -webkit-text-size-adjust: none;
+    line-height: 4.4rem;
+    height: 4.4rem;
+    font-size: 1.5rem;
+    padding:0;
+    width: 100%;
+    color: #aaa;
+    /*新增样式*/
+    display: inline-block;
+}
+@keyframes slidetounlock
+{
+    0%     {background-position:-200px 0;}
+    100%   {background-position:200px 0;}
+}
+@-webkit-keyframes slidetounlock
+{
+    0%     {background-position:-200px 0;}
+    100%   {background-position:200px 0;}
+}
+.button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.4rem;
+    height: 4.4rem;
+
+    background: url("../images/huadonganniu@3x.png") no-repeat;
+    background-size: 100% 100%;
+    /*background-color: #fff;*/
+    transition: left 0s;
+    -webkit-transition: left 0s;
+    border-radius: 9.1rem;
+}
+.button-on{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.4rem;
+    height: 4.4rem;
+       /*background-color: #fff;*/
+    background: url("../images/huadonganniu@3x.png") no-repeat;
+    background-size: 100% 100%;
+    transition: left 1s;
+    -webkit-transition: left .5s;
+    border-radius: 9.1rem;
+}
+.track{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    transition: width 0s;
+    -webkit-transition: width 0s;
+}
+.track-on{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    transition: width 1s;
+    -webkit-transition: width .5s;
+    border-radius: 9.1rem;
+}
+.icon  {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top:10px;
+    left:20px;
+    font-family: sans-serif;
+}
+.icon:before{
+    content:'>>';
+    color:#ccc;
+    line-height:32px;
+}
+.spinner {
+    width: 32px;
+    height: 32px;	
+	/*background: url('ok.png') no-repeat;*/
+    position: relative;
+    top:10px;
+    left:10px;
+    display: none;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 40% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
+.bg-green {
+    line-height: 4.4rem;
+    height: 4.4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    /*background-color: #78c430;*/
+    background-image: linear-gradient(-90deg, #FF6468 0%, #FF986E 100%);
+    border-radius: 9.1rem;
+    color: #FFFFFF;
+    letter-spacing:.05rem;
+}

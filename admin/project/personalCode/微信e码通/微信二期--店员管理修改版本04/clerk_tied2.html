@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>关联店铺</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!--关联店铺css样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/clerk_tied2.css">
+    <style type="text/css">
+		*,
+		*:before,
+		*:after {	
+		  -moz-box-sizing: border-box;
+		       box-sizing: border-box;
+		}
+		html{
+			font-size: 62.5%;
+		}
+		body {
+		  /*background-color: #C0C0C0;*/
+		}
+		.button {
+		  display: block;
+		  position: absolute;
+		  /*width: 240px;
+		  height: 80px;*/
+		 width: 26rem;
+		 height: 4.4rem;
+		  /*top: 50%;*/
+		 bottom: 10%;
+		  left: 50%;
+		  -webkit-transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%);
+		  /*background: -webkit-linear-gradient(top, #00FFFF 0%, #00FF00 100%);*/
+		  /*background: linear-gradient(to bottom, #00FF00 0%, #00FFFF 100%);*/
+		  border-radius: 40px;
+		  /*box-shadow: 0 0 0 1px rgba(136, 136, 136, 0.5);*/
+		  cursor: pointer;
+		  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+		.button span {
+		  position: absolute;
+		  display: block;
+		}
+		.button span:first-of-type {
+  z-index: 100;
+  /*top: 4px;
+  right: 4px;
+  width: 160px;
+  height: 72px;*/
+  /*background:url(../images/huadonganniu@3x.png) no-repeat ;
+  background-image: 100% 100%;*/
+     top: 4px;
+    /*right: 4px;*/
+   right: .4rem;
+    width: 15rem;
+    height: 4.4rem;
+ background: #999;
+  /*background: -webkit-linear-gradient(top, #2c3e50 0%, #1e2a36 100%);*/
+  /*background: linear-gradient(to bottom, #2c3e50 0%, #1e2a36 100%);*/
+  /*box-shadow: 0 6px 4px rgba(255, 255, 255, 0.1) inset, 0 2px 0px rgba(255, 255, 255, 0.2) inset, 0 -6px 0px rgba(0, 0, 0, 0.2) inset, 0 -2px 0px rgba(0, 0, 0, 0.2) inset, 0 2px 2px rgba(0, 0, 0, 0.4), -4px 2px 8px rgba(0, 0, 0, 0.4), 2px 0 1px rgba(242, 201, 197, 0.5) inset;*/
+  border-radius: 36px;
+  /*-webkit-transition: right 400ms cubic-bezier(1, 0, 0, 1), box-shadow 400ms ease;
+          transition: right 400ms cubic-bezier(1, 0, 0, 1), box-shadow 400ms ease;*/
+}
+.button span:nth-last-of-type(-n+2) {
+  z-index: 10;
+  top: 4px;
+  /*width: 116px;
+  height: 72px;*/
+     width: 12.6rem;
+    height: 4.4rem;
+  -webkit-transition: opacity 800ms ease 100ms;
+          transition: opacity 800ms ease 100ms;
+}
+.button span:nth-last-of-type(-n+2):after {
+  position: absolute;
+  top: 26px;
+  line-height: 1;
+  font-family: "思源黑体";
+  /*font-weight: 800;*/
+  font-size: 1.6rem;
+  color: white;
+  /*text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 20px #ffffff;*/
+}
+.button span:nth-of-type(2) {
+  /*left: 4px;*/
+  /*background: red;*/
+ left: .4rem;
+     background-image: linear-gradient(-90deg, #FF6468 0%, #FF986E 100%);
+  /*background: -webkit-linear-gradient(top, #c0392b 0%, #d65548 100%);
+  background: linear-gradient(to bottom, #c0392b 0%, #d65548 100%);*/
+  border-top-left-radius: 36px;
+  border-bottom-left-radius: 36px;
+  /*box-shadow: 4px 4px 12px 4px rgba(0, 0, 0, 0.5) inset, 0 -2px 8px rgba(0, 0, 0, 0.4) inset;*/
+}
+.button span:nth-of-type(2):after {
+  content: "关闭收款通知";
+  left: 18px;
+}
+.button span:last-of-type {
+  right: 4px;
+  background: lightgreen;
+  /*background: -webkit-linear-gradient(top, #2ecc71 0%, #7ee2a8 100%);
+  background: linear-gradient(to bottom, #2ecc71 0%, #7ee2a8 100%);*/
+  border-top-right-radius: 36px;
+  border-bottom-right-radius: 36px;
+  /*box-shadow: -4px 4px 12px 4px rgba(0, 0, 0, 0.5) inset, 0 -2px 8px rgba(0, 0, 0, 0.4) inset;*/
+  opacity: 0.2;
+}
+.button span:last-of-type:after {
+  content: "打开收款通知";
+  right: 22px;
+}
+.button input[type="checkbox"] {
+  display: none;
+}
+.button input[type="checkbox"]:checked ~ span:first-of-type {
+  right: 10.6rem;
+  /*box-shadow: 0 6px 4px rgba(255, 255, 255, 0.1) inset, 0 2px 0px rgba(255, 255, 255, 0.2) inset, 0 -6px 0px rgba(0, 0, 0, 0.2) inset, 0 -2px 0px rgba(0, 0, 0, 0.2) inset, 0 2px 2px rgba(0, 0, 0, 0.4), 4px 2px 8px rgba(0, 0, 0, 0.4), -2px 0 1px rgba(209, 245, 224, 0.5) inset;*/
+}
+.button input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+  opacity: 0.2;
+}
+.button input[type="checkbox"]:checked ~ span:last-of-type {
+  opacity: 1;
+}
+	</style>
+</head>
+<body>
+<div class="container">
+    <!--头部关联部分-->
+    <div class="row band_top text-center">
+        <h3>成功关联到小莫的店</h3>
+        <div class="band-word" id="bandWord">
+            <p>请耐心等待老板确认</p>
+            <p class="agree">待同意</p>
+        </div>
+    </div>
+
+    <!--点击取消关联弹框-->
+    <button type="button" id="cancel" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        取消关联
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" id="modal-inner" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    是否取消关联
+                </div>
+                <div class="modal-footer row" id="footerBtn">
+                    <button type="button" class="btn btn-default col-xs-6" data-dismiss="modal">否</button>
+                    <button type="button" id="determine" class="btn btn-primary col-xs-6" data-toggle="modal" data-target="#myModals">是</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--弹出退款授权码-->
+    <!-- Modal -->
+    <div class="modal fade" id="myModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    请输入退款授权码
+                    <div class="pwd-box">
+                        <input type="tel" maxlength="6" class="pwd-input" id="pwd-input">
+                        <div class="fake-box" id="fake-box">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                            <input class="col-xs-2 text-center" type="password" readonly="" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer row" id="code-row">
+                    <button type="button" id="btnReturn" class="btn btn-default col-xs-6" data-dismiss="modal">返回</button>
+                    <button type="button" id="determines" class="btn btn-primary col-xs-6">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--滑动-->
+    <div class="band_bottom row">
+        <div class="col-xs-1"></div>
+        <label class="button col-xs-1">
+		  <input type="checkbox" value="">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</label>
+        <div class="col-xs-1"></div>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-1.11.1.min.js"></script>
+<!--<script type="text/javascript" src="resources/js/jquery.mobile-1.4.5.min.js"></script>-->
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/zepto.min.js"></script>
+<!--底部滑动脚本-->
+<!--<script type="text/javascript" src="resources/js/jquery.slideunlock.js"></script>-->
+<script type="text/javascript" src="resources/js/clerk_tied2.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '思源黑体';
+}
+.band_top{
+    height: 26.5rem;
+    padding-top: 8rem;
+    color: #fff;
+    background: url("../images/guanlian@3x.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.band_top h3{
+    margin: 0 auto;
+    font-size: 1.8rem;
+    font-weight: normal;
+    padding-bottom: 2rem;
+    letter-spacing: .05rem;
+}
+.band_top p{
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    letter-spacing: .05rem;
+}
+.band_top .agree{
+    font-size: 1.2rem;
+}
+/*关联按钮*/
+.bottom{
+    padding-top: 8rem;
+}
+.bottom .slide{
+    position: relative;
+    width: 20rem;
+    height: 3.5rem;
+    background: #D0D0D0;
+    border-radius: 100px;
+    margin: auto;
+    line-height: 3.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    letter-spacing: .05rem;
+}
+.bottom .tips{
+    font-size: 1.2rem;
+    margin: .5rem auto;
+    text-align: center;
+    color: #666666;
+}
+.tips p{
+    padding: 0;
+    text-align: center;
+    width: 21rem;
+    margin: 0 auto;
+}
+#cancel{
+    line-height: 7rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #FF6569;
+    letter-spacing: .05rem;
+    width: 7rem;
+    height: 7rem;
+    background: #FFFFFF;
+    border-radius: 50%;
+    border-color: #fff;
+    padding: 0;
+    box-shadow: 2px 2px 34px 0px rgba(255,113,114,0.47);
+    position: absolute;
+    top: 23rem;
+    left: 50%;
+    margin-left: -3.5rem;
+}
+#myModal,#myModals{
+    margin-top: 55%;
+}
+#myModal .modal-dialog {
+    margin: 6rem;
+}
+.modal-dialog .modal-content{
+    border-radius: 10px;
+}
+.modal-footer button{
+    border: none;
+}
+.modal-footer .btn-default{
+    color: #999;
+}
+.modal-footer .btn-primary,.modal-footer .btn-primary:hover{
+    background: none;
+    color: #333;
+    margin: 0;
+}
+#determine,#determines{
+    margin: 0;
+}
+#footerBtn,#code-row{
+    margin: 0;
+    padding: 1rem;
+}
+
+.modal-footer .btn+.btn{
+    margin: 0;
+}
+#code-row{
+    border: none;
+}
+.modal-body{
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #333333;
+    letter-spacing: .05rem;
+}
+
+/*滑动*/
+/*#label{*/
+    /*background: url(../images/huadonganniu@3x.png) no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*width: 3.5rem;*/
+    /*height: 3.5rem;*/
+    /*display: inline-block;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+/*}*/
+
+
+#drag{
+    position: relative;
+    width: 20rem;
+    height: 3.5rem;
+    background: #D0D0D0;
+    border-radius: 100px;
+    margin: auto;
+    line-height: 3.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    letter-spacing: .05rem;
+}
+#drag .handler{
+    cursor: move;
+    border: none;
+    background: url(../images/huadonganniu@3x.png) no-repeat;
+    background-size: 100% 100%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#drag .drag_bg{
+    background-image: linear-gradient(-90deg, #FF6468 0%, #FF986E 100%);
+    border-radius: 100px;
+    height: 3.5rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>注册</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!--引入注册css样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/register.css">
+    <script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="resources/js/register.js"></script>
+</head>
+<body>
+<div class="container">
+    <!--logo-->
+    <img class="register_logo" src="resources/img/emtlogo@3x.png">
+    <!--列表-->
+    <form action="" method="post">
+        <div class="register_list">
+            <div class="register_li" id="register_number">
+                <label class="number_lab">
+                    <img src="resources/img/phone@3x.png">
+                </label>
+                <input type="text" pattern="[0-9]*" id="number_inp" placeholder="请输入手机号" oninput="if(value.length>11)value=value.slice(0,11)">
+            </div>
+            <div class="register_li" id="register_other">
+                <label class="code_lab">
+                    <img src="resources/img/yanzhengma@3x.png">
+                </label>
+                <input id="code_inp" placeholder="请输入手机验证码" pattern="[0-9]*" oninput="if(value.length>6)value=value.slice(0,6)">
+                <input type="button" onclick="javascript:getVerCode();" id="getVerCodeBtn" value="获取验证码">
+            </div>
+            <div class="register_agree">
+                <!--<img id="agree_img" src="resources/img/agree@3x.png">-->
+                <input class="checkbox" id="agree_img" type="checkbox">
+                <label class="label1" for="agree_img"><a href="">同意签署《用户注册协议》和《隐私权政策》</a></label>
+            </div>
+            <div class="register_li" id="register_referee">
+                <label class="referee_lab">
+                    <img src="resources/img/phone@3x.png">
+                </label>
+                <input type="text" pattern="[0-9]*" id="referee_inp" placeholder="请输入推荐人手机号（选填）" oninput="if(value.length>11)value=value.slice(0,11)">
+            </div>
+            <!--8.23添加---start-->
+            <p class="phone_error"><img src="resources/img/look@3x.png"><span>推荐人手机号错误或不存在</span></p>
+            <!--8.23添加---end-->
+        </div>
+        <!--下一步-->
+        <div class="referee_submit">
+            <input type="button" id="register_btn" value="下一步" onclick="javascript:isCheck();">
+            <p>已有账号？<a href="Sign_in.html">马上登录</a></p>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

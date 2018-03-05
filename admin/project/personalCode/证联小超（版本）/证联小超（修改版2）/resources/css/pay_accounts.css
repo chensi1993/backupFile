@@ -1,0 +1,62 @@
+.container{
+    margin-top: 4rem;
+}
+.accounts{
+    background-color: #fff;
+    padding: 3rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.accounts p{
+    text-align: center;
+    font-size: 2.5rem;
+}
+#total{
+    margin-left: 1rem;
+    color: #ff5614;
+}
+.order-content .order-li{
+    overflow: hidden;
+    padding: .4rem 0;
+    font-size: 1.6rem;
+    color: #666;
+    background: #fff;
+    text-align: center;
+}
+.order-li li{
+    line-height: 4rem;
+}
+
+.payBtn{
+    text-align: center;
+    padding-top: 8rem;
+}
+.payBtn button{
+    font-size: 1.6rem;
+    border: none;
+    margin: 0 2rem;
+    border-radius: .4rem;
+    padding: 1rem 2.5rem;
+    color: #fff;
+    background-color: #169bd5;
+}
+.payBtn .btn-danger{
+    background-color: #d9534f;
+}
+/*模态框样式*/
+.modal-dialog{
+    margin: 4rem;
+    top: 14rem;
+}
+.modal-dialog .modal-content .modal-body{
+    padding: 2.5rem;
+}
+.modal-footer{
+    padding: 0;
+}
+.modal-footer .btn+.btn{
+    margin: 0;
+}
+.modal-footer button{
+    border: none;
+    padding: 1rem 0;
+}

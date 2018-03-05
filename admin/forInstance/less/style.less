@@ -1,0 +1,43 @@
+//@green:#801f77;
+//@light_green:#801f77 + #333;
+//@dark_green:#801f77 - #333;
+//@white:#fff;
+//header{
+//  background:@light_green ;
+//}
+//main{
+//  background:@green;
+//}
+//footer{
+//  background:@dark_green ;
+//}
+
+
+//基本混合
+//.font_hn{
+//  color: red;
+//  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+//}
+//h1{
+//  font-size: 28px;
+//  .font_hn;
+//}
+//h2{
+//  font-size: 24px;
+//  .font_hn;
+//}
+
+//不带输出的混合，类名后面使用
+.font_hn(){
+  color: #ff5614;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+h1{
+  font-size: 28px;
+  .font_hn;
+}
+h2{
+  font-size: 24px;
+  .font_hn;
+}
+//带选择器的混合

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*.div{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: lightgreen;*/
+            /*cursor: pointer;*/
+        /*}*/
+        /*外容器*/
+        .img
+        {
+            position:relative;
+            display:inline-block;
+            vertical-align:top;
+
+            /*最大不能超过屏幕*/
+            max-width: 100%;
+        }
+        /*这个是为了使用padding做占位, 也是为了把高给挤下去*/
+        .img i
+        {
+            display:block;
+            background-color:#f7f7f7;
+        }
+        /*设置图片, 使用绝对定位*/
+        .img img
+        {
+            position:absolute;
+            left:0;
+            top:0;
+            display: block;
+            width: 100%;
+
+            /*设置高会把图片强制拉满容器, 解决图片比例不对(要求是1:1, 实际是2:1)的显示缺陷badcase*/
+
+            /*height: 100%;*/
+        }
+
+        .imgs
+        {
+            background-color: #f7f7f7;
+            height: 0;
+            overflow: hidden;
+        }
+        .imgs img
+        {
+            vertical-align: top;
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="div" onmouseout="onOut(this)" onmouseover="onOver(this)"></div>-->
+<!--<script>-->
+    <!--function onOver(ooj){-->
+        <!--ooj.innerHTML = 'Hello';-->
+    <!--}-->
+    <!--function onOut(ooj){-->
+        <!--ooj.innerHTML = 'World';-->
+    <!--}-->
+<!--</script>-->
+<!--<form>-->
+    <!--<input type="text" onchange="changeDemo(this)">-->
+<!--</form>-->
+<!--<script>-->
+    <!--function changeDemo(bg){-->
+        <!--alert("hello,内容改变了")-->
+    <!--}-->
+<!--</script>-->
+
+    <!--使用固定宽+图片比例处理响应式-->
+<!--<div class="img" style="width: 400px;">-->
+    <!--<i style="padding-bottom: 100%;"></i>-->
+    <!--<img src="https://dummyimage.com/1000x1000">-->
+<!--</div>-->
+
+    <!--使用绝对宽+高/宽比制作响应式图片-->
+    <div class="imgs" style="padding-bottom: 100%;">
+        <img src="https://dummyimage.com/300x300" alt="">
+    </div>
+</body>
+</html>

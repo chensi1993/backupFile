@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div class="div1">
+
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+<script>
+    $(function(){
+        var html = '';
+        for(var i = 1 ; i < 5; i++){
+            html += '<div id=abc'+i+'>'+'遍历'+'</div>';
+        }
+        $(".div1").append(html);
+    });
+</script>
+</body>
+</html>

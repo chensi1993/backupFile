@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="39px" viewBox="0 0 25 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>fenx_slice</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-8" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-559.000000, -292.000000)">
+            <g id="fenx" transform="translate(559.000000, 292.000000)">
+                <rect id="Rectangle-5" stroke="#FFFFFF" x="1.12988281" y="1.16308594" width="23.0654898" height="36.8740234" rx="4"></rect>
+                <g id="Group-4" transform="translate(12.572583, 20.000000) rotate(-270.000000) translate(-12.572583, -20.000000) translate(-0.927417, 17.000000)" fill="#FFFFFF">
+                    <circle id="Oval" cx="2.69892578" cy="3.07872579" r="2.69892578"></circle>
+                    <circle id="Oval-Copy" cx="13.4946289" cy="3.07872579" r="2.69892578"></circle>
+                    <circle id="Oval-Copy-2" cx="24.290332" cy="3.07872579" r="2.69892578"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

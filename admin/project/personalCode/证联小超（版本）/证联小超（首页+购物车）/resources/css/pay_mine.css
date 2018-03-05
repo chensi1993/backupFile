@@ -1,0 +1,102 @@
+.user-info{
+	margin-bottom: 1rem;
+    padding: 2rem 0;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+.user-info .user-img img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+.user-info h3{
+    padding-left: 0;
+    font-size: 1.8rem;
+   
+}
+.order-list .order-title{
+    font-size: 2rem;
+    /*text-align: center;*/
+    color: #333;
+    background: #fff;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-bottom: 1px solid #E5E5E5;
+}
+.order-title img{
+    width: 2.2rem;
+    float: right;
+}
+.order-content{
+    background: #fff;
+    display: none;
+}
+.order-content .order-li{
+    overflow: hidden;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #666;
+    border-bottom: 1px solid #E5E5E5;
+}
+.order-li .link-to{
+    text-align: right;
+    padding-top: 1.6rem;
+}
+.order-li .link-to img{
+    width: 2.2rem;
+}
+.order-li .pay_status{
+    color: #ff5612;
+}
+.rotate{
+
+    transform-origin:center center;
+
+    transform: rotate(180deg);
+
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    -o-transform: rotate(180deg);
+
+    transition: transform 0.2s; //过度时间 可调
+
+-moz-transition: -moz-transform 0.2s;
+
+    -moz-transition: -moz-transform 0.2s;
+
+    -o-transition: -o-transform 0.2s;
+
+    -ms-transition: -ms-transform 0.2s;
+
+}
+
+.rotate1{
+
+    transform-origin:center center;
+
+    transform: rotate(0deg);
+
+    -webkit-transform: rotate(0deg);
+
+    -moz-transform: rotate(0deg);
+
+    -ms-transform: rotate(0deg);
+
+    -o-transform: rotate(0deg);
+
+    transition: transform 0.2s;
+
+    -moz-transition: -moz-transform 0.2s;
+
+    -moz-transition: -moz-transform 0.2s;
+
+    -o-transition: -o-transform 0.2s;
+
+    -ms-transition: -ms-transform 0.2s;
+
+}

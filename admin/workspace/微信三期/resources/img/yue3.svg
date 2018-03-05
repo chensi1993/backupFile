@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>yue3_slice</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="个人中心&amp;余额" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-38.000000, -400.000000)">
+            <g id="yue3" transform="translate(38.000000, 400.000000)">
+                <path d="M29.4136739,7.27511333 C29.1726522,6.90540278 28.6759331,6.80154516 28.3067805,7.04143369 C27.936499,7.28301554 27.8315106,7.778597 28.0730967,8.14830755 C29.5954279,10.4845395 30.4003387,13.1989487 30.4003387,15.9997178 C30.4003387,23.9397456 23.9401679,30.4003669 15.9994355,30.4003669 C8.05926762,30.4003669 1.59966133,23.9397456 1.59966133,15.9997178 C1.59966133,8.05968991 8.05926762,1.59963311 15.9994355,1.59963311 C18.5597968,1.59963311 21.0727439,2.27922318 23.2667749,3.56502566 C23.6472165,3.78685199 24.1377267,3.66098107 24.3618147,3.27941721 C24.5847739,2.89785335 24.4572074,2.40791632 24.0762012,2.18439666 C21.636633,0.755225513 18.8431525,0 15.9994355,0 C7.17702674,0 0,7.17746459 0,15.9997178 C0,24.8225354 7.17702674,32 15.9994355,32 C24.8224088,32 32,24.8225354 32,15.9997178 C32,12.8879403 31.1059056,9.87098936 29.4136739,7.27511333" id="Fill-1" fill="#070101"></path>
+                <g id="Group-2" transform="translate(11.000000, 9.000000)" fill="#FF6468">
+                    <rect id="Rectangle-2" transform="translate(7.181981, 3.181981) rotate(-45.000000) translate(-7.181981, -3.181981) " x="3.68198052" y="2.18198052" width="7" height="2" rx="1"></rect>
+                    <rect id="Rectangle-2" transform="translate(3.181981, 3.181981) scale(-1, 1) rotate(-45.000000) translate(-3.181981, -3.181981) " x="-0.318019485" y="2.18198052" width="7" height="2" rx="1"></rect>
+                    <rect id="Rectangle-2-Copy" x="-7.81597009e-14" y="5" width="10" height="2" rx="1"></rect>
+                    <rect id="Rectangle-2-Copy-2" x="-7.81597009e-14" y="9" width="10" height="2" rx="1"></rect>
+                    <rect id="Rectangle-2-Copy-3" transform="translate(5.000000, 10.000000) rotate(-270.000000) translate(-5.000000, -10.000000) " x="-7.81597009e-14" y="9" width="10" height="2" rx="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

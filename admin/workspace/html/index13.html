@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="refresh" content="5" />
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body onload="onLoad()">
+<div id="div1">
+	你好啊
+</div>
+<script>
+	timer = 0;      
+    function onLoad(){      
+         document.addEventListener("visibilitychange",stateChanged);      
+         document.addEventListener("webkitvisibilitychange", stateChanged);      
+         document.addEventListener("msvisibilitychange", stateChanged);      
+    }
+    
+    function stateChanged(){      
+         console.log(document.webkitVisibilityState);      
+         if(document.hidden || document.webkitHidden || document.msHidden){      
+              //new tab or window minimized    
+              timer = new Date().getTime();      
+         }      
+         else {      
+              alert('You were away for ' + (new Date().getTime()-timer)/1000+ ' seconds.')      
+         }      
+    }
+//  function newTime(){
+//      var myDate = new Date();
+//      myDate.getHours();       //获取当前小时数(0-23)
+//      myDate.getMinutes();     //获取当前分钟数(0-59)
+//      myDate.getSeconds();     //获取当前秒数(0-59)
+//      var timer = myDate.getHours() + ':' +myDate.getMinutes() + ':'+ myDate.getSeconds();
+//      document.getElementById('div1').innerHTML = timer;
+//      console.log(timer);
+//  }
+</script>
+</body>
+</html>

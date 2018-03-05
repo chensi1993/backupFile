@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--Android中UC和QQ浏览器无法触发dropload中scroll和resize-->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>商户收款指南</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <style>
+        .container{
+            padding: 0;
+        }
+        .container img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="resources/img/shanghushoukuan_01.jpg">
+    <img src="resources/img/shanghushoukuan_02.jpg">
+    <img src="resources/img/shanghushoukuan_03.jpg">
+    <img data-url="resources/img/shanghushoukuan_04.jpg" src="resources/img/pix.png" />
+    <img data-url="resources/img/shanghushoukuan_05.jpg" src="resources/img/pix.png" />
+    <img data-url="resources/img/shanghushoukuan_06.jpg" src="resources/img/pix.png" />
+    <img data-url="resources/img/shanghushoukuan_07.jpg" src="resources/img/pix.png" />
+    <img data-url="resources/img/shanghushoukuan_08.jpg" src="resources/img/pix.png" />
+    <img data-url="resources/img/shanghushoukuan_09.jpg" src="resources/img/pix.png" />
+    <img data-url="resources/img/shanghushoukuan_10.jpg" src="resources/img/pix.png" />
+    <img data-url="resources/img/shanghushoukuan_11.jpg" src="resources/img/pix.png" />
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script>
+    $(function(){
+        var $wd = $(window),
+                $img = $('img'),
+                imgTop,          //图片距离顶部高度
+                scTop,           //滚动条高度
+                wH;             //窗口高度
+        wH = $wd.height();         //获得可视浏览器的高度
+        $wd.scroll( function() {
+            scTop = $wd.scrollTop();       //获取滚动条到顶部的垂直高度
+            $img.each(function(){
+                imgTop =  $(this).offset().top;
+                if(imgTop - wH < scTop &&     //图片必须出现在窗口底部上面
+                        imgTop - wH > 0 &&        //排除首页图片
+                        $(this).attr('src') != $(this).data('url')){          //排除已经加载过的图片
+                    $(this).attr({
+                        src: $(this).data('url')
+                    });
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

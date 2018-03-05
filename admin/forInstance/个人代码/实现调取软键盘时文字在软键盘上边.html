@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style>
+    	html,body{
+    		/*height: 100%;*/
+    		margin: 0;
+    	}
+    	div{
+    		overflow-y:scroll ;
+    		-webkit-overflow-scrolling: touch;
+    		/*position: relative;
+    		height: 100%;*/
+    	}
+        p{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input id="inp" placeholder="请输入金额"> 
+</div>
+<p>这段在软键盘上边</p>
+<script src="js/jquery-3.0.0.min.js"></script>
+<script>
+////	alert($('body').scrollTop());
+//	alert($(screen).height());
+//	
+//	$('#inp').bind('focus',function(){ 
+////		alert($('body').scrollTop());
+//		alert($(screen).height());
+////		$('p').css('bottom', '300px'); 
+//	}).bind('blur',function(){  
+////         $('p').css('bottom','0');
+//      });  
+
+
+
+
+
+
+//var winHeight = window.innerHeight;
+//alert(winHeight);
+//
+//window.addEventListener('resize', function(event){
+//  winHeight = window.innerHeight;
+//  alert(winHeight);
+//});
+
+
+
+////键盘弹起时为键盘高度，未弹起时为0
+////alert(window.keyboard.height)
+//	alert($(window).height());
+//// 通过键盘弹起事件获取
+//window.on('keyboardup', function (e) {
+////	alert(e.height);
+//	alert($(window).height());
+//})
+//// 键盘收起事件
+//window.on('keyboarddown', function (e) {
+////	alert(e.height); // 0
+//	alert($(window).height());
+//})
+
+
+
+
+
+
+
+//var u = navigator.userAgent;
+//var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+//if(isiOS){
+//	$(document).on('focusin', function () {
+//	//软键盘弹出的事件处理
+//		$('p').css('bottom', '300px');
+//		alert(h);
+//	});
+//
+//	$(document).on('focusout', function () {
+//	//软键盘收起的事件处理
+//		$('p').css('bottom', '0');
+//	});
+//
+//}
+//
+//var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+//$(window).on('resize', function () {
+//var nowClientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+//if (clientHeight > nowClientHeight) {
+//    //键盘弹出的事件处理
+//    $('p').css('bottom', '300px');
+//}
+//else {
+//    //键盘收起的事件处理
+//    $('p').css('bottom', '0');
+//}
+//});
+
+
+
+
+
+$(function () {
+        $('input').on('click', function () {
+            var target = this;
+            // 使用定时器是为了让输入框上滑时更加自然
+            setTimeout(function () {
+            	
+                target.scrollIntoView(false);
+            });
+        })
+});
+</script>
+</body>
+</html>

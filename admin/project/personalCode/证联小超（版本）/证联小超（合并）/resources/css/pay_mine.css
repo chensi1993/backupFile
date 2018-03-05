@@ -1,0 +1,53 @@
+.user-info{
+	/*margin-bottom: 1rem;*/
+    padding: 2rem 0;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+.user-info .user-img img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+.user-info h3{
+    padding-left: 0;
+    font-size: 1.8rem;
+   
+}
+.user-info .right-to img{
+    width: 2.2rem;
+    margin-top: 1rem;
+}
+.order-list{
+    font-size: 1.8rem;
+
+    color: #333;
+    background: #fff;
+    border-bottom: 1px solid #E5E5E5;
+}
+.order-list .order-li{
+    padding: .5rem 0;
+    text-align: center;
+}
+.order-list .order-li:first-child{
+    line-height: 3.5rem;
+}
+.order-list .order-li:last-child{
+    border-left: 1px solid #E5E5E5;
+}
+.order-list .order-li p{
+    margin: 0;
+}
+#coupon-num{
+    font-size: 1.4rem;
+}
+.order-list .order-title{
+    font-size: 1.8rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.order-title img{
+    width: 2.2rem;
+    float: right;
+}

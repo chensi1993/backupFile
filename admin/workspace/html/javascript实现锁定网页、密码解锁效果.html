@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+<div id="dvContent">内容<br />内容<br />内容<br />内容<br />内容<br />内容</div>
+
+<div id="dvPassword" style="display:none">输入密码：
+    <input type="password" id="txtPwd" onkeydown="entercheck()" />
+    <input type="button" value="确定" onclick="check()"/>
+</div>
+<script>
+    if (document.cookie.indexOf('lock=1') != -1) ShowContent(false); //用cookie保存是否为锁定状态，刷新后判断是否存在锁定的cookie;lock=1表示锁定
+    var delay = 10 * 1000,timer;//10s后锁定，修改delay为你需要的时间，单位毫秒
+    function startTimer() {
+        clearTimeout(timer); //执行定时器之前先清除定时器
+        timer = setTimeout(TimerHandler, delay); //TimerHandler:要调用的函数后要执行的 JavaScript 代码串;delay:在执行代码前需等待的毫秒数。
+    }
+
+    function TimerHandler() {
+        document.cookie = 'lock=1';
+        document.onmousemove = null;//锁定后移除鼠标移动事件
+        ShowContent(false);
+    }
+
+    function ShowContent(show) {
+        document.getElementById('dvContent').style.display = show ? 'block' : 'none';
+        document.getElementById('dvPassword').style.display = show ? 'none' : 'block';
+    }
+
+    function check() {
+        //接口通过value值调取
+        if (document.getElementById('txtPwd').value == '123') {
+            document.cookie = 'lock=0';
+            ShowContent(true);
+            startTimer(); //重新计时
+            document.onmousemove = startTimer; //重新绑定鼠标移动事件
+        }
+        else alert('密码不正确！！');
+    }
+
+    //点击enter键提交表单
+    function entercheck(){
+        var event = window.event || arguments.callee.caller.arguments[0];
+        if (event.keyCode == 13)
+        {
+            check();
+        }
+    }
+
+    window.onload = function () {
+        document.cookie = 'lock=0';
+        document.onmousemove = startTimer;
+        startTimer();
+        console.log(timer);
+    }
+</script>
+<!--<script src="../js/common.js"></script>-->
+</body>
+</html>

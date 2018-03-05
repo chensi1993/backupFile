@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style>
+        body {
+            margin:0;
+            padding: 20px;
+        }
+        .btn {
+            border: none;
+            outline: none;
+            font-size: inherit;
+            border-radius: 4px;
+            padding: 1em;
+            width: 100%;
+            margin: 1em 0;
+            color: #fff;
+            background-color: #ff5777;
+        }
+        .container {
+            position:fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1001;
+            display: none;
+        }
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, .3);
+        }
+        .content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            z-index: 2;
+            background-color: #f6f6f6;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- 这里多添加一些，直至出现滚动条 -->
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <p>页面</p>
+    <button class ="btn">打开蒙层</button>
+</div>
+
+<div class="container">
+    <div class ="layer"></div>
+    <div class="content">
+        <!-- 这里多添加一些，直至出现滚动条 -->
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+        <p>蒙层</p>
+    </div>
+</div>
+<script>
+    var btnNode = document.querySelector('.btn');
+    var containerNode = document.querySelector('.container');
+    var layerNode = document.querySelector('.layer');
+    var contentNode = document.querySelector('.content');
+    var startY = 0;
+
+    // 记录开始滑动的坐标，用于判断滑动方向
+    var status = 0;
+
+    // 0：未开始，1：已开始，2：滑动中
+    // 打开蒙层
+    btnNode.addEventListener('click', function() {
+        containerNode.style.display = 'block';
+    },false);
+    // 蒙层部分始终阻止默认行为
+    layerNode.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+    }, false);
+    // 核心部分
+    contentNode.addEventListener('touchstart', function(e) {
+        status = 1;
+        startY = e.targetTouches[0].pageY;
+    }, false);
+    contentNode.addEventListener('touchmove', function(e) {
+
+        // 判定一次就够了
+
+        if(status !== 1)return;
+        status = 2;
+        var t = e.target || e.srcElement;
+        var py = e.targetTouches[0].pageY;
+        var ch = t.clientHeight;
+        // 内容可视高度
+        var sh = t.scrollHeight;
+        // 内容滚动高度
+        var st = t.scrollTop;
+        // 当前滚动高度
+
+        // 已经到头部尽头了还要向上滑动，阻止它
+
+        if(st === 0 && startY < py) {
+            e.preventDefault()
+        }
+
+        // 已经到低部尽头了还要向下滑动，阻止它
+
+        if((st === sh - ch) && startY > py) {
+            e.preventDefault()
+        }
+    }, false);
+    contentNode.addEventListener('touchend', function(e) {
+        status = 0
+    }, false);
+</script>
+</body>
+</html>

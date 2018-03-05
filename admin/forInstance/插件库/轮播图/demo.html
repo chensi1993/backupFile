@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="css/demo.css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script>
+        var i = 0;
+        var timer;
+        $(function () {
+            $(".ig").eq(0).show().siblings().hide();//页面打开之后，第一张图片显示，其余的图隐藏
+            beginLunbo();
+            $(".tab").hover(function () {
+                clearInterval(timer);//清除定时器
+                i = $(this).index();//获取到当前鼠标放上去的对象的索引值，并赋值给i
+                showPicTab();
+            }, function () {
+                beginLunbo();
+            });
+
+            $(".btn1").click(function () {
+                clearInterval(timer);
+                i--;
+                if (i == -1) {
+                    i = 5;
+                }
+                showPicTab();
+                beginLunbo();
+            });
+            $(".btn2").click(function () {
+                clearInterval(timer);
+                i++;
+                if (i == 6) {
+                    i = 0;
+                }
+                showPicTab();
+                beginLunbo();
+            });
+        });
+
+        function showPicTab() {
+            $(".ig").eq(i).fadeIn(300).siblings().fadeOut(300);
+            $(".tab").eq(i).addClass("bg").siblings().removeClass("bg");
+        }
+        function beginLunbo() {
+//            timer = setInterval(function () {
+                i++;//i自增1
+                if (i == 6) {
+                    i = 0;
+                }
+                showPicTab();
+//            }, 3000);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="dlunbo">
+        <div id="igs">
+            <div class="ig"><img src="img/v1guide1@3x.png"></div>
+            <div class="ig"><img src="img/v1guide2@3x.png"></div>
+            <div class="ig"><img src="img/v1guide3@3x.png"></div>
+        </div>
+        <div id="tabs">
+            <div class="tab bg"></div>
+            <div class="tab"></div>
+            <div class="tab"></div>
+        </div>
+    </div>
+</body>
+
+</html>

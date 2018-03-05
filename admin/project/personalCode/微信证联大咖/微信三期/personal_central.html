@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>个人中心</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!--个人中心css样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/personal_central.css">
+</head>
+<body>
+<div class="container">
+    <!--TOP个人信息-->
+    <div class="central_info row">
+        <div class="col-xs-10 cf">
+            <div class="info_pic">
+                <img src="resources/img/photo@3x.png">
+                <span>大咖</span>
+            </div>
+            <div class="info_detail">
+                <p>瓦尼<span>（老板）</span></p>
+                <p id="info_phone">13666662238</p>
+            </div>
+        </div>
+        <div class="col-xs-2 info_jump">
+            <a href=""><span>&gt;</span></a>
+        </div>
+    </div>
+    <!--列表-->
+    <div class="central_content">
+        <div class="central_li row">
+            <a href="">
+                <div class="col-xs-8 central_left">
+                    <img src="resources/img/yue3.svg"><span>余额</span>
+                </div>
+                <div class="col-xs-4 central_right"><span id="central_balance">100.00元</span>&gt;</div>
+            </a>
+        </div>
+        <div class=" central_li row">
+            <a href="bankCard_manage.html">
+                <div class="col-xs-8 central_left">
+                    <img src="resources/img/bankcard4.svg"><span>银行卡</span>
+                </div>
+                <div class="col-xs-4 central_right">&gt;</div>
+            </a>
+        </div>
+        <div class="central_li row">
+            <a href="personal_security.html">
+                <div class="col-xs-8 central_left">
+                    <img src="resources/img/security5.svg"><span>安全中心</span>
+                </div>
+                <div class="col-xs-4 central_right">&gt;</div>
+            </a>
+        </div>
+        <div class="central_li row">
+            <a href="">
+                <div class="col-xs-8 central_left">
+                    <img src="resources/img/help6.svg"><span>帮助中心</span>
+                </div>
+                <div class="col-xs-4 central_right">&gt;</div>
+            </a>
+        </div>
+    </div>
+    <!--底部切换-->
+    <ul class="bigshot_switch row">
+        <li class="switch_left col-xs-6">
+            <a href="bigshot_area.html">
+                <img src="resources/img/zuanshi@3x.png">
+                <p>大咖专区</p>
+            </a>
+        </li>
+        <li class="switch_right col-xs-6" id="switch_li">
+            <a href="personal_central.html">
+                <img src="resources/img/onmine@3x.png">
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/js/personal_central.js"></script>
+</body>
+</html>

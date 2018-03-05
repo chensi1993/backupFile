@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .demo{
+            /*width:40%;*/
+            margin:20px auto;
+            /*border:1px solid #ccc;*/
+            position:relative;
+            padding:20px;
+
+        }
+        .demo > ul >li {
+            position:relative;
+            list-style:none;
+            height:25px;
+            overflow:hidden;
+
+
+        }
+
+        /*文字自下而上出现*/
+        .item >div{
+            position: absolute;
+            height:18px;
+            top: 25px;
+            animation:textToTop 0.2s linear;
+            -webkit-animation:textToTop 0.2s linear;
+
+            animation-fill-mode:forwards;
+            -webkit-animation-fill-mode:forwards;
+            -moz-animation-fill-mode:forwards;
+        }
+
+
+        .item:nth-child(2) >div {
+            animation-delay:2s;
+        }
+        .item:nth-child(3) >div {
+            animation-delay:4s;
+        }
+        .item:nth-child(4) >div {
+            animation-delay:6s;
+        }
+        .item:nth-child(5) >div {
+            animation-delay:8s;
+        }
+        /*文字上色*/
+        .item >div::before{
+            content:attr(data-letters);
+            position:absolute;
+            width:0;
+            z-index:2;
+            color:orange;
+            overflow:hidden;
+            white-space: nowrap;
+            animation:textToColor 1.2s linear;
+            animation-fill-mode:forwards;
+            -webkit-animation-fill-mode:forwards;
+            -moz-animation-fill-mode:forwards;
+        }
+
+        .item:nth-child(2) >div::after,
+        .item:nth-child(2) >div::before{
+            animation-delay: 2.5s;
+        }
+        .item:nth-child(3) >div::after,
+        .item:nth-child(3) >div::before{
+            animation-delay: 4.5s;
+        }
+        .item:nth-child(4) >div::after,
+        .item:nth-child(4) >div::before{
+            animation-delay: 6.5s;
+        }
+        .item:nth-child(5) >div::after,
+        .item:nth-child(5) >div::before{
+            animation-delay: 8.5s;
+        }
+        /*文字下方的下划线*/
+        .item >div::after{
+            content:'';
+            width:0;
+            position:absolute;
+            bottom:-7px;
+            left:0;
+            height:2px;
+            background:orange;
+            animation:textLine 1.2s linear;
+            animation-fill-mode:forwards;
+            -webkit-animation-fill-mode:forwards;
+            -moz-animation-fill-mode:forwards;
+        }
+
+
+        /*文字自下而上出现*/
+
+        @keyframes textToTop{
+
+            0%{
+                top:25px;
+            }
+            100%{
+                top:0;
+            }
+        }
+
+        /*文字上色*/
+
+        @keyframes textToColor{
+            0%{
+                width:0;
+            }
+            100%{
+                width:100%;
+            }
+        }
+        /*文字下方的下划线*/
+        @keyframes textLine {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="demo">
+    <ul>
+        <li class="item"><div data-letters="晚餐，记得吃清淡一些">晚餐，记得吃清淡一些</div></li>
+        <li class="item"><div data-letters="香烟，记得尽量少抽一些">香烟，记得尽量少抽一些</div></li>
+        <li class="item"><div data-letters="不要睡的太晚，抱怨着黑眼圈">不要睡的太晚，抱怨着黑眼圈</div></li>
+        <li class="item"><div data-letters="k歌，把你喜欢的唱一遍">k歌，把你喜欢的唱一遍</div></li>
+        <li class="item"><div data-letters="吃饭，绿色的要多吃一些">吃饭，绿色的要多吃一些</div></li>
+    </ul>
+</div>
+</body>
+</html>

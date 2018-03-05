@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--Android中UC和QQ浏览器无法触发dropload中scroll和resize-->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="zlzf-cs" />
+    <title>申请收款，马上赚钱</title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <style>
+        body{
+            font-family: '思源黑体';
+            background: #fff;
+            font-size: 62.5%;
+        }
+        a,a:link,a:visited,a:hover,a:active{
+            text-decoration: none;
+            color: #fff;
+        }
+        .container{
+            padding: 0;
+            position: relative;
+        }
+        .share_top{
+            height: 23rem;
+            background: url("resources/img/yaoqinghaoyou@3x.jpg") no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+        }
+        .share_top img{
+            width: 23%;
+            height: 1.8rem;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+        .share_content{
+            /*background: url("resources/img/dibupj@3x.png") no-repeat;*/
+            background-size: 100% 100%;
+            background-color: #FFF4E5;
+            padding: 2.5rem 1.5rem;
+            position: relative;
+        }
+        .share_content .content_top{
+            background: #FFFFFF;
+            border-radius: .4rem;
+            padding-top: .1rem;
+            margin-bottom: 3rem;
+        }
+        .share_content .content_top img{
+            width: 36%;
+            height: 2.8rem;
+            margin: 1rem auto;
+            display: block;
+        }
+        .share_content .content_top p{
+            font-size: 1.3rem;
+            color: #FB957C;
+            text-indent: 2em;
+            line-height: 2rem;
+            padding: 0 2rem 2rem 2rem;
+        }
+
+        .share_content .content_center{
+            background: url("resources/img/xuxiankuang@3x.png") no-repeat;
+            background-size: 100% 100%;
+            padding: 1rem;
+            position: relative;
+            z-index: 999;
+        }
+        .share_content .content_center .center_title{
+            background: url("resources/img/zhuyaogong@3x.png") no-repeat;
+            background-size: 100% 100%;
+            font-size: 1.5rem;
+            color: #FFFFFF;
+            width: 10rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            text-align: center;
+            position: absolute;
+            top: -3rem;
+            left: 36%;
+        }
+        .content_center .center_li{
+            margin: 1rem;
+            background: url("resources/img/step2@3x.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .content_center .center_li h3:nth-child(1){
+            font-size: 1.5rem;
+            color: #fff;
+            display: inline-block;
+            margin: 1rem 1rem .5rem 1rem;
+        }
+        .content_center .center_li h3:nth-child(2){
+            font-size: 1.5rem;
+            color: #FB957C;
+            margin-top: 0;
+            padding: 0 1rem 0 2.5rem;
+        }
+        .content_center .center_li p{
+            font-size: 1.2rem;
+            color: #FB957C;
+            padding: 0 1rem 0 2.5rem;
+            display: inline-block;
+        }
+        .share_content .share_btn{
+            text-align: center;
+            margin-top: 4rem;
+            position: relative;
+            z-index: 999;
+        }
+        .share_content .share_btn button{
+            background: #FF6468;
+            box-shadow: 0 0 19px 0 rgba(252,148,126,0.45);
+            border-radius: 9.7rem;
+            width: 55%;
+            border: none;
+            font-size: 2rem;
+            color: #FFFFFF;
+            padding: 1rem;
+        }
+        .share_content .share_bg{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 16rem;
+        }
+        .share_bottom{
+            background: #FDA998;
+            padding: 1.5rem 2rem;
+        }
+        .share_bottom h3{
+            font-size: 1.5rem;
+            color: #FFFFFF;
+            text-align: center;
+        }
+        .share_bottom p:nth-child(2){
+            text-indent: 2em;
+            margin-bottom: 1.5rem;
+        }
+        .share_bottom p{
+            font-size: 1.3rem;
+            color: #FFFFFF;
+            line-height: 1.8rem;
+            margin: 0;
+        }
+        /*下载提示框*/
+        #shareIt {
+            -webkit-user-select: none;
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+            text-align: center;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        #shareIt img {
+            max-width: 100%;
+        }
+        #shareIt p{
+            font-size: 1.6rem;
+            color: #fff;
+            text-align: right;
+            padding-right: 3rem;
+        }
+        #shareIt .share_text{
+            margin: 7.5rem 0 0 0;
+        }
+        #shareIt .arrow {
+            position: absolute;
+            right: 5%;
+            top: 1%;
+            width: 6.5rem;
+        }
+        #shareImg{
+            width: 1.5rem;
+            margin: .5rem;
+        }
+        #browserImg{
+            width: 11rem;
+            margin: 0 .5rem;
+        }
+
+
+
+        /*.shareTo{*/
+            /*width: 2.2rem;*/
+            /*margin: 0 .5rem;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="share_top">
+        <img src="resources/img/emtlogo2@3x.png">
+    </div>
+    <div class="share_content">
+        <div class="content_top">
+            <img src="resources/img/emtlogo3@3x.png">
+            <p>证联e码通是专为商户打造的一款支付极简、快速安全的收款APP，为商户提供一站式收银、资金及账务管理解决方案。手机安装APP注册并提交资料申请，审核通过即可使用。商户可定制专属营销活动；扫码用户亦可同时享受奖励金、鼓励金、银联折扣等优惠活动。</p>
+        </div>
+        <div class="content_center">
+            <h3 class="center_title">【主要功能】</h3>
+            <div class="center_li">
+                <h3>1</h3>
+                <h3>聚合主流支付 ：</h3>
+                <p>集支付宝、微信、银联以及符合银联标准的app扫码支付于一体；</p>
+            </div>
+            <div class="center_li">
+                <h3>2</h3>
+                <h3>电子化可视账单：</h3>
+                <p>多维度分析收款情况，方便商户全面了解经营状况；</p>
+            </div>
+            <div class="center_li">
+                <h3>3</h3>
+                <h3>统一账务管理：</h3>
+                <p>商户可多门店入网，统一账务管理；各门店可分账查询；</p>
+            </div>
+            <div class="center_li">
+                <h3>4</h3>
+                <h3>分享有礼：</h3>
+                <p>一键分享邀请商户来挣钱，享受躺赚的乐趣。</p>
+            </div>
+        </div>
+        <div class="share_btn">
+            <!--<button type="button" onclick="checked()">点我注册</button>-->
+            <button type="button" class="share_btn" id="click_upload">点我下载</button>
+        </div>
+        <img src="resources/img/dibupj@3x.png" class="share_bg">
+    </div>
+    <div class="share_bottom">
+        <h3>关于证联</h3>
+        <p>证联支付有限责任公司（简称证联）注册于珠海市横琴新区、实缴资本1亿元人民币，2011年8月获得中国人民银行第二批《支付业务许可证》，相继加入中国支付清算协会、中国证券业协会、珠海市横琴新区金融业协会、珠海市横琴新区科技企业协会，并荣获广东省高新技术企业称号。</p>
+        <p>联系我们：<a href="tel:400-660-0961">400-660-0961</a></p>
+        <p>客服时间：9:00-21:00</p>
+        <p>公司网址：<a href="http://www.zlrt.com.cn">www.zlrt.com.cn</a></p>
+        <p>地址：北京市海淀区复兴路21号海育大厦8层</p>
+    </div>
+
+    <!--下载提示框-->
+    <div id="shareIt">
+        <img class="arrow" src="resources/img/jiantouzhiy.svg">
+        <p class="share_text">请点击右上角<img id="shareImg" src="resources/img/fenx.svg">按钮</p>
+        <p>请用<img id="browserImg" src="resources/img/liulanq.svg"></p>
+
+        <!--<p class="share_text">请点击右上角<img id="shareImg" src="resources/img/fenx.svg">按钮</p>-->
+        <!--<p>将它<img class="shareTo" src="resources/img/zhuanfa.svg">給指定好友</p>-->
+        <!--<p>或分享到<img class="shareTo" src="resources/img/pengyouq.svg"></p>-->
+
+    </div>
+</div>
+
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script>
+    function checked(){
+
+    }
+    //    下载提示框
+    //记录是否阻止滚动
+    var disableScroll = false;
+
+    //如果弹出对话框时，底层的视图就不让滚动了
+    document.addEventListener('touchmove', function(e) {
+        if(disableScroll){
+            e.preventDefault();
+        }
+    }, false);
+    //点击下载按钮弹出遮罩层
+    $("#click_upload").on("click",function(){
+        $("#shareIt").show();
+        //禁止滚动
+        disableScroll = true;
+    });
+    //点击任意地方隐藏遮罩层
+    $("#shareIt").on("click",function(){
+        $("#shareIt").hide();
+        //允许滚动
+        disableScroll = false;
+    })
+</script>
+</body>
+</html>

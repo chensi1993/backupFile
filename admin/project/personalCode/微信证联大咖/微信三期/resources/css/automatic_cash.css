@@ -1,0 +1,188 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '思源黑体';
+    background: #f4f4f4;
+}
+.automatic_center{
+    margin: 1rem 0;
+    background: #fff;
+    box-shadow: 2px 2px 5px 0 rgba(208,208,208,0.50);
+    border-radius: .6rem;
+}
+.automatic_switch,.automatic_bankCard{
+    height: 4.8rem;
+    line-height: 4.8rem;
+
+}
+.automatic_switch{
+    font-size: 1.5rem;
+    color: #333333;
+}
+.automatic_bankCard{
+    border-top: 1px solid #ececec;
+    display: none;
+}
+.automatic_bankCard div:nth-child(1){
+    color: #666666;
+}
+.automatic_bankCard div:nth-child(2){
+    font-size: 1.4rem;
+    color: #999999;
+    white-space: nowrap;
+    background: transparent;
+    border: none;
+    line-height: 4.8rem;
+    padding: 0;
+}
+.automatic_bankCard div:nth-child(3){
+    background: transparent;
+    border: none;
+    line-height: 4.8rem;
+    color: #999999;
+    padding: 0 16px;
+    text-align: right;
+}
+/*开关样式*/
+.checkbox {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+.checkbox:after, .checkbox:before {
+    -webkit-font-feature-settings: normal;
+    -moz-font-feature-settings: normal;
+    font-feature-settings: normal;
+    -webkit-font-kerning: auto;
+    -moz-font-kerning: auto;
+    font-kerning: auto;
+    -webkit-font-language-override: normal;
+    -moz-font-language-override: normal;
+    font-language-override: normal;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-weight: normal;
+    text-rendering: auto;
+}
+.checkbox label {
+    background: #fff;
+    height: 3rem;
+    width: 5.1rem;
+    padding: 0;
+    position: relative;
+    top: 1rem;
+    display: inline-block;
+    border-radius: 46px;
+    border: 1px solid rgba(0,0,0,0.10);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.checkbox label:after {
+    background: #fff;
+    top: 0;
+    width: 2.8rem;
+    height: 2.8rem;
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    left: 0;
+    z-index: 2;
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.10), 0 3px 3px 0 rgba(0,0,0,0.05);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.checkbox input[type=checkbox]{
+    margin: 0;
+}
+.checkbox input {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    width: 100%;
+    height: 3rem;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkbox input:hover + label:after {
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.checkbox input:checked + label:after {
+    left: 2.2rem;
+}
+.checkbox input:checked + label {
+    background: #ff6468;
+}
+.checkbox input:checked + label:after {
+    background: #fff;
+    left: 2.2rem;
+}
+.automatic_p{
+    font-size: 1.3rem;
+    color: #666666;
+    margin-bottom: 14rem;
+}
+/*弹框公用样式*/
+.modal-body{
+    padding: 2rem 1.5rem;
+}
+.modal-body p{
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: .05rem;
+    color: #666666;
+    margin: 0;
+}
+.modal-dialog .modal-content {
+    border-radius: 10px;
+}
+.modal .modal-dialog{
+    margin: 16rem 3rem 0 3rem;
+}
+.modal-footer{
+    margin: 0;
+}
+.modal-footer button {
+    border: none;
+    font-size: 1.6rem;
+    color: #666;
+}
+.modal-footer .btn-default {
+    color: #999;
+}
+.modal-footer .btn-primary, .modal-footer .btn-primary:hover {
+    background: #fff;
+    color: #333;
+    margin: 0;
+}
+.modal-footer .btn+.btn {
+    margin: 0;
+}
+.btn-primary:active:hover{
+    background: transparent;
+    border: none;
+    color: #999;
+    box-shadow: none;
+}
+/*开馆弹框样式*/
+#footerBtn{
+    margin: 0;
+    padding: 1.2rem 0;
+}
+/*确认按钮*/
+#automatic_btn{
+    display: none;
+    border: none;
+    width: 80%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    letter-spacing: .2rem;
+    background-image: linear-gradient(-90deg, #FF986E 0%, #FF6468 100%);
+    border-radius: 4.1rem;
+    margin-left: 10%;
+}

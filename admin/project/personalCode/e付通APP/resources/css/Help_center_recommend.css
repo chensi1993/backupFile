@@ -1,0 +1,46 @@
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+}
+.panel-default{
+    border-color: #fff;
+    background: #fff;
+    border-radius: 0.6rem;
+}
+.recommend_content{
+    margin:5.4rem 0 2rem 0;
+}
+.recommend_content .recommend_issue h4{
+    font-size: 1.5rem;
+    color: #666666;
+    letter-spacing: 0;
+    padding: 1rem 0;
+    line-height: 1.8rem;
+    display: inline-block;
+    width: 100%;
+}
+
+.recommend_issue h4 img{
+    width: 1.6rem;
+    height: 1rem;
+}
+.panel-title a{
+    padding: 0 0.8rem;
+    display: block;
+}
+.panel-collapse{
+    padding: 0 1rem;
+}
+.recommend_content p{
+    font-size: 1.3rem;
+    color: #999999;
+    border-top: 1px solid #e5e5e5;
+    line-height: 1.8rem;
+    padding: 1rem 0;
+    margin: 0;
+}
+.recommend_content h3{
+    font-size: 1.3rem;
+    margin-left: 1.5rem;
+    color: #999999;
+    letter-spacing: 0;
+}

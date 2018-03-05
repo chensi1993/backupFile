@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+<!--我们有一个总价格-->
+<!--我们有一个单价-->
+<!--还有一个数量-->
+<div ng-controller="firstctrl">
+    firstCtrl <input type="text" ng-model="total" ng-change="parent()">
+    <div ng-controller="sencondctrl">
+    secondCtrl    名称 {{product.name}}
+        单价 {{product.price}}
+        <input type="text" ng-model="product.count" ng-change="son()">
+    </div>
+</div>
+<script src="angular.js"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    app.controller('firstctrl', function ($scope) {
+        $scope.total = 50;
+        $scope.parent = function () {
+            //第一个参数是广播的名字
+            //第二个参数是广播的内容
+            $scope.$broadcast('total',$scope.total);
+        };
+        $scope.$on('count',function (ev,data) {
+            $scope.total = data;
+        })
+        //我们的controller不能复用，想controller之间交换，要通过事件的形式
+    });
+    app.controller('sencondctrl', function ($scope) {
+        $scope.product = {
+            name:'飞机',
+            price:'10',
+            count:5
+        };
+        /*
+          第一个参数是监听的名字
+          第二个是回掉函数 里面的第二个参数是我们要的内容
+        * */
+        $scope.$on('total', function (ev,data) {
+            $scope.product.count=data/$scope.product.price;
+        });
+        //子控制器像父控制器发射事件
+        $scope.son = function () {
+            var total = $scope.product.price*$scope.product.count;
+            $scope.$emit('count',total);
+        };
+
+    });
+
+    /*
+    * 父控制器和子控制器进行交互要通过父控制器向下广播 通过$broadcast事件
+    * 监听方法是$on
+    * 子控制器如果向父控制器传递内容 要通过$emit事件
+    *
+    * */
+</script>
+<!--rootScope.$on
+rootScope.$broadcast
+<div ng-contoller="sibing1">
+    scope.name = 500;
+</div>
+<div ng-contoller="sibing2">
+    $on
+    scope.age = 500;
+</div>-->
+</body>
+</html>
