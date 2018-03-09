@@ -29,26 +29,56 @@
         <p>总金额<span id="total">￥0</span></p>
     </div>
     <!--订单商品详情-->
-    <div class="order-content">
+    <div class="order-content row">
         <ul class="order-li row">
-            <li class="col-xs-5">商品1</li>
+            <li class="col-xs-5">混合果仁水果干付费</li>
             <li class="col-xs-2">x1</li>
             <li class="col-xs-5">￥0</li>
         </ul>
         <ul class="order-li row">
-            <li class="col-xs-5">商品2</li>
+            <li class="col-xs-5">混合果仁水果干</li>
             <li class="col-xs-2">x1</li>
             <li class="col-xs-5">￥0</li>
         </ul>
         <ul class="order-li row">
-            <li class="col-xs-5">商品3</li>
+            <li class="col-xs-5">混合果仁水果干</li>
+            <li class="col-xs-2">x1</li>
+            <li class="col-xs-5">￥0</li>
+        </ul>
+        <ul class="order-li row">
+            <li class="col-xs-5">混合果仁水果干</li>
+            <li class="col-xs-2">x1</li>
+            <li class="col-xs-5">￥0</li>
+        </ul>
+        <ul class="order-li row">
+            <li class="col-xs-5">混合果仁水果干</li>
+            <li class="col-xs-2">x1</li>
+            <li class="col-xs-5">￥0</li>
+        </ul>
+        <ul class="order-li row">
+            <li class="col-xs-5">混合果仁水果干</li>
+            <li class="col-xs-2">x1</li>
+            <li class="col-xs-5">￥0</li>
+        </ul>
+        <ul class="order-li row">
+            <li class="col-xs-5">混合果仁水果干</li>
+            <li class="col-xs-2">x1</li>
+            <li class="col-xs-5">￥0</li>
+        </ul>
+        <ul class="order-li row">
+            <li class="col-xs-5">混合果仁水果干</li>
+            <li class="col-xs-2">x1</li>
+            <li class="col-xs-5">￥0</li>
+        </ul>
+        <ul class="order-li row">
+            <li class="col-xs-5">混合果仁水果干</li>
             <li class="col-xs-2">x1</li>
             <li class="col-xs-5">￥0</li>
         </ul>
     </div>
     <div class="payBtn">
-        <button class="btn-danger" id="cancelBtn" onclick="cancelBtn()">取消</button>
-        <button class="btn btn-primary btn-lg" data-toggle="modal"  id="payBtn" onclick="payBtn()">支付</button>
+        <input type="button" class="btn-danger" id="cancelBtn" onclick="cancelBtn()" value="取消">
+        <input type="button" class="btn btn-primary" data-toggle="modal"  id="payBtn" onclick="payBtn()" value="支付">
     </div>
 </div>
 <!--模态框-->
@@ -57,8 +87,8 @@
         <div class="modal-content">
             <div class="modal-body text-center">未登录状态下，订单历史记录有可能丢失，是否登录？</div>
             <div class="modal-footer">
-                <button type="button" id="signBtn" class="btn btn-default col-xs-6" data-dismiss="modal" onclick="signBtn()">登录</button>
-                <button type="button" id="yesBtn" class="btn btn-danger col-xs-6">继续支付</button>
+                <input type="button" id="signBtn" class="btn btn-default col-xs-6" data-dismiss="modal" onclick="signBtn()" value="登录">
+                <input type="button" id="yesBtn" class="btn btn-danger col-xs-6" value="继续支付">
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

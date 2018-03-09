@@ -4,6 +4,7 @@
 //点击购物车将选取的数据传入购物车
 var setJson = [];
 $(function () {
+
     $(".addBtn").click(function () {
         add_shoppingcart(this);
         $("#Total").show();
@@ -83,59 +84,48 @@ function add_shoppingcart(btn) {
     var name = $(btn).parent(".lt-rt").parent(".rt-info").prev(".rt-name").html(); //商品名称
     var price = $(btn).parent(".lt-rt").prev(".info-p").find(".price").html(); //商品单价
 
-
-
-    var postData = {
-        "shopId" : shopId,
-        "name" : name,
-        "price" : price
-    };
-    $.ajax({
-        type : 'POST',
-        url : 'http://test.zqpay.com:8888/zlzf-wechat/onlineShop/openOnlineShop.do?shopId=S00001381 ',
-        dataType : "json",
-        contentType : 'application/json',
-        data : JSON.stringify(postData),
-        error : function() {
-            alert('请求失败 ');
-        },
-        success : function(data) {
-            alert(data);
-
-            //在添加之前确定该商品在购物车中是否存在,若存在,则数量+1,若不存在则创建行
-            var $trs = $("#goods>tr");
-            for (var i = 0; i < $trs.length; i++) {
-                var $gtds = $trs.eq(i).children();
-                var gName = $gtds.eq(0).html();
-                if (name == gName) {//若存在
-                    var num = parseInt($gtds.eq(2).children().eq(1).val());
-                    $gtds.eq(2).children().eq(1).val(++num);//数量+1
-                    //金额从新计算
-                    $gtds.eq(2).children().eq(3).val((price * num).toFixed(2));
-                    total();
-                    return;//后面代码不再执行
-                }
-            }
-            var li =
-                "<tr id=" + shopId + ">" +
-                "<td class='Name'>" + name + "</td>" +
-                "<td>" + price + "</td>" +
-                "<td align='center'>" +
-                "<input type='button' class='minus btn' value='-' onclick='jian(this);'/> " +
-                "<input type='number' class='result' size='3' value='1'/> " +
-                "<input type='button' class='add btn' value='+' onclick='add(this);'/>" +
-                "<input type='hidden' name='money' value=" + price + " />" +
-                "</td>" +
-                "</tr>";
-            //追加到#goods后面
-            $("#goods").append($(li));
-            //总计功能
+//在添加之前确定该商品在购物车中是否存在,若存在,则数量+1,若不存在则创建行
+    var $trs = $("#goods>tr");
+    for (var i = 0; i < $trs.length; i++) {
+        var $gtds = $trs.eq(i).children();
+        var gName = $gtds.eq(0).html();
+        if (name == gName) {//若存在
+            var num = parseInt($gtds.eq(2).children().eq(1).val());
+            $gtds.eq(2).children().eq(1).val(++num);//数量+1
+            //金额从新计算
+            $gtds.eq(2).children().eq(3).val((price * num).toFixed(2));
             total();
+            return;//后面代码不再执行
         }
-    });
+    }
+    var li =
+        "<tr id=" + shopId + ">" +
+        "<td class='Name'>" + name + "</td>" +
+        "<td>" + price + "</td>" +
+        "<td class='center' align='center'>" +
+        "<input type='button' class='minus btn' value='-' onclick='jian(this);'/> " +
+        "<input type='number' class='result' size='3' value='1' onfocus='onFocus(this);' onblur='onBlur(this);'/> " +
+        "<input type='button' class='add btn' value='+' onclick='add(this);'/>" +
+        "<input type='hidden' name='money' value=" + price + " />" +
+        "</td>" +
+        "</tr>";
+    //追加到#goods后面
+    $("#goods").append($(li));
+    //总计功能
+    total();
 
 }
 
+function onFocus(foc){
+    var shopNum =$(foc).val();
+    console.log(shopNum);
+}
+function onBlur(blu){
+    var shopNum =$(blu).val();
+    var price = $(blu).parent().prev().html();
+    console.log(shopNum);
+    console.log(price);
+}
 //增加"+"功能
 function add(btn) {
     //购物车数据改变

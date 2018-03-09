@@ -1,10 +1,18 @@
 /********************除了首页，头部和底部公用样式**********************************/
 html{
     font-size: 62.5%;
+    /*2018.3.9增加*/
+    height: 100%;
 }
 body{
     font-family: '思源黑体',arial;
     background: #f4f4f4;
+    /*2018.3.8增加*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 ul,li{
     list-style: none;
