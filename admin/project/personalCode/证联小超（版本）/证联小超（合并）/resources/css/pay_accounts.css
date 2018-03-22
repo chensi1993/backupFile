@@ -10,7 +10,7 @@
 }
 .accounts{
     background-color: #fff;
-    padding: 3rem 0;
+    padding: 1.2rem 0;
     border-bottom: 1px solid #e5e5e5;
 }
 .accounts p{
@@ -23,17 +23,15 @@
 }
 /*2018.3.7增加*/
 .order-content{
-    max-height: 24rem;
+    max-height: 20rem;
     /* 解决iPhone中overflow:scroll;滑动速度慢或者卡的问题*/
     -webkit-overflow-scrolling : touch;
     overflow-y: scroll;
     overflow-x: hidden;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1rem;
     background: #fff;
-    /*z-index: 9;*/
 }
 .order-content .order-li{
-    /*overflow: hidden;*/
     padding: .4rem 0;
     margin: 0;
     font-size: 1.6rem;
@@ -47,7 +45,18 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
+/*备注信息*/
+.remarks-info p{
+    font-size: 1.6rem;
+}
+#textInfo{
+    font-size: 1.5rem;
+    width: 100%;
+    color: #666;
+    border-radius: .5rem;
+    border-color: #e5e5e5;
+    padding: .4rem;
+}
 .payBtn{
     text-align: center;
     /*2018.3.8增加*/
@@ -86,3 +95,4 @@
     border: none;
     padding: 1rem 0;
 }
+

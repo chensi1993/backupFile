@@ -1,0 +1,15 @@
+.my-modal-alert{
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 20rem;
+}
+.my-modal-alert .modal-body{
+    text-align: center;
+    font-size: 1.6rem;
+    padding: .5rem;
+    color: #fff;
+    background-color: #666;
+    opacity: .8;
+    border-radius:0.4rem;
+
+}

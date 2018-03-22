@@ -1,0 +1,88 @@
+.index_body{
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+.container{
+    margin-top: 4rem;
+}
+.accounts{
+    background-color: #fff;
+    padding: 3rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.accounts p{
+    text-align: center;
+    font-size: 2.5rem;
+}
+#total{
+    margin-left: 1rem;
+    color: #ff5614;
+}
+/*2018.3.7增加*/
+.order-content{
+    max-height: 24rem;
+    /* 解决iPhone中overflow:scroll;滑动速度慢或者卡的问题*/
+    -webkit-overflow-scrolling : touch;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 3.5rem;
+    background: #fff;
+    /*z-index: 9;*/
+}
+.order-content .order-li{
+    /*overflow: hidden;*/
+    padding: .4rem 0;
+    margin: 0;
+    font-size: 1.6rem;
+    color: #666;
+    text-align: center;
+}
+.order-li li{
+    line-height: 4rem;
+    /*2018.3.9增加*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.payBtn{
+    text-align: center;
+    /*2018.3.8增加*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 7rem;
+}
+.payBtn input{
+    font-size: 1.6rem;
+    border: none;
+    margin: 0 2rem;
+    border-radius: .4rem;
+    padding: 1rem 2.5rem;
+    color: #fff;
+    background-color: #169bd5;
+}
+.payBtn .btn-danger{
+    background-color: #d9534f;
+}
+/*模态框样式*/
+.modal-dialog{
+    margin: 4rem;
+    top: 14rem;
+}
+.modal-dialog .modal-content .modal-body{
+    padding: 2.5rem;
+}
+.modal-footer{
+    padding: 0;
+}
+.modal-footer .btn+.btn{
+    margin: 0;
+}
+.modal-footer input{
+    border: none;
+    padding: 1rem 0;
+}

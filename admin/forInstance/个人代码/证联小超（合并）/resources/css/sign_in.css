@@ -1,0 +1,122 @@
+input,textarea{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.container{
+    margin-top: 4rem;
+}
+.phone_num{
+    padding: 1rem 0;
+}
+
+#phone_val{
+    /*font-size: 1.5rem;*/
+    /*color: #666;*/
+    /*border: none;*/
+    /*background: none;*/
+    /*line-height: 0;*/
+
+}
+.phone-info{
+    background: #fff;
+    padding: 1rem 1.5rem 1rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.phone-info label{
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    color: #333333;
+    text-align: center;
+    margin: 0;
+    padding-left: 0;
+    white-space: nowrap;
+}
+.phone-info input{
+    font-size: 1.6rem;
+    color: #666;
+    padding-left: 0;
+    border: none;
+    background: none;
+    -webkit-appearance:none;
+    appearance:none;
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.phone-info input::-webkit-input-placeholder{
+    font-size: 1.6rem;
+    color: #999999;
+}
+.phone-info input::-moz-placeholder{
+    font-size: 1.6rem;
+    color: #999999;
+}
+.phone-info input:-ms-input-placeholder{
+    font-size: 1.6rem;
+    color: #999999;
+}
+.phone-info .numberInp{
+    height: 4rem;
+    line-height: 4rem;
+}
+.sign-tips{
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    /*color: #999;*/
+}
+.sign-tips a{
+    text-decoration: underline;
+    color: #ff5614;
+
+}
+#getVerCodeBtn{
+    font-size: 1.4rem;
+    background: #FF6468;
+    border-radius: .6rem;
+    color: #FFFFFF;
+    padding: .6rem .5rem;
+    margin-top: .6rem;
+}
+#phone_button{
+    border: none;
+    width: 75%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    letter-spacing: .2rem;
+    background-image: linear-gradient(-90deg, #FF986E 0%, #FF6468 100%);
+    border-radius: 4.1rem;
+    display: block;
+    margin: 6rem auto;
+}
+.other-sign{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5rem;
+    /*border-top: 1px solid #e5e5e5;*/
+    /*padding: .5rem 0;*/
+}
+.other-sign span{
+    color: #999;
+}
+.other-sign img{
+    width: 4rem;
+    display: block;
+    margin: 0 auto;
+}
+.other-sign .other-col{
+    border-top: 1px solid #e5e5e5;
+}
+.other-sign .other-center{
+    position: relative;
+    padding-top: 1.5rem;
+}
+.other-sign .other-center span{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.8rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
