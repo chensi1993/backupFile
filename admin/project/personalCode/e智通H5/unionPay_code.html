@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--禁止iPhone手机上数字转换为拨号链接-->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="zlzf-cs" />
+    <title></title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="resources/css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="resources/css/password.css"/>
+</head>
+<body>
+<div class="container">
+    <!--top-->
+    <div class="page-top row">
+        <div class="top-image col-xs-2"></div>
+        <h3 class="col-xs-8">开通银联二维码支付</h3>
+        <div class="top-image col-xs-2"></div>
+    </div>
+    <!--password-->
+    <div class="pay-password">
+        <p>已发送验证码到您的手机</p>
+        <input class="phoneNum" type="text" value="177****8888" readonly="readonly"/>
+        <div class="ftc_wzsf">
+            <div class="srzfmm_box">
+                <ul class="mm_box">
+                    <li class="col-xs-2"><span>——</span></li>
+                    <li class="col-xs-2"><span>——</span></li>
+                    <li class="col-xs-2"><span>——</span></li>
+                    <li class="col-xs-2"><span>——</span></li>
+                    <li class="col-xs-2"><span>——</span></li>
+                    <li class="col-xs-2"><span>——</span></li>
+                </ul>
+            </div>
+            <div class="numb_box">
+                <div class="xiaq_tb">
+                    <img src="resources/img/jftc_14.jpg" height="10"></div>
+                <ul class="nub_ggg">
+                    <li><a href="javascript:void(0);" class="zf_num">1</a></li>
+                    <li><a href="javascript:void(0);" class="zj_x zf_num">2</a></li>
+                    <li><a href="javascript:void(0);" class="zf_num">3</a></li>
+                    <li><a href="javascript:void(0);" class="zf_num">4</a></li>
+                    <li><a href="javascript:void(0);" class="zj_x zf_num">5</a></li>
+                    <li><a href="javascript:void(0);" class="zf_num">6</a></li>
+                    <li><a href="javascript:void(0);" class="zf_num">7</a></li>
+                    <li><a href="javascript:void(0);" class="zj_x zf_num">8</a></li>
+                    <li><a href="javascript:void(0);" class="zf_num">9</a></li>
+                    <li><a href="javascript:void(0);" class="zf_empty"></a></li>
+                    <li><a href="javascript:void(0);" class="zj_x zf_num">0</a></li>
+                    <li><a href="javascript:void(0);" class="zf_del"><img src="resources/img/chahao.png" alt=""/></a></li>
+                </ul>
+            </div>
+        </div>
+        <input class="verifiBtn" id="getVerCodeBtn" type="button" value="获取验证码" onclick="javascript:getVerCode();"/>
+        <div class="account-agree">
+            <!--<img id="agree-img" src="resources/img/agree@3x.png">-->
+            <input class="checkbox" id="agree-img" type="checkbox">
+            <label class="label1" for="agree-img"><a href="">同意开通<span id="change-color">银联二维码协议</span></a></label>
+        </div>
+        <input type="button" id="account-btn" value="立即开通" onclick="javascript:isCheck();">
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/js/unionPay_code.js"></script>
+<script type="text/javascript" src=""></script>
+</body>
+</html>

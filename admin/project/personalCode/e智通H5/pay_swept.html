@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--禁止iPhone手机上数字转换为拨号链接-->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="zlzf-cs" />
+    <title></title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="resources/css/common.css"/>
+    <!--条形码插件-->
+    <link rel="stylesheet" href="resources/css/barCode.css"/>
+    <link rel="stylesheet" href="resources/css/pay_swept.css"/>
+</head>
+<body>
+<div class="container">
+    <!--top-->
+    <div class="page-top row">
+        <div class="top-image col-xs-2"><a href=""><img src="resources/img/v1return.png" alt=""/>返回</a></div>
+        <h3 class="col-xs-8">向商家付款</h3>
+        <div class="top-image col-xs-2"></div>
+    </div>
+    <!--center-->
+    <div class="swept-content">
+        <!--<input type="button" value ="生成" onclick="createBarcode('div128','12345678','B');"/>-->
+        <!--条形码-->
+        <div class="swept-barcode barcode2" id="div128">
+
+        </div>
+        <!--二维码-->
+        <div class="swept-QRcode">
+            <div  id="code"></div>
+            <img class="pay-logo" src="resources/img/v1yunshanfu.png" alt=""/>
+        </div>
+        <input type="hidden" class="input" id="inputTxt" value="555555">
+        <!--<input type="button" id="txt_btn" value="生成二维码">-->
+        <!--自动更新-->
+        <div class="swept-update">
+            <img src="resources/img/v1refresh.png" alt=""/>
+            <p>付款码及数字每分钟更新，请当面使用请勿截屏</p>
+
+        </div>
+        <!--资金账号-->
+        <div class="swept-number">
+            <span>资金账号</span>(8888)<span></span>
+        </div>
+    </div>
+    <!--扫一扫-->
+    <div class="swept-scan">
+        <a href=""><img src="resources/img/v1saoyisao2.png" alt=""/></a>
+    </div>
+    <!--bottom-->
+    <div class="page-bottom">
+        <span class="col-xs-3"></span>
+        <div class="col-xs-6"><span>由证联支付提供技术支持</span></div>
+        <span class="col-xs-3"></span>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<!--生成条形码js-->
+<script type="text/javascript" src="resources/js/barCode.js"></script>
+<!--生成二维码js-->
+<script type="text/javascript" src="resources/js/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="resources/js/pay_swept.js"></script>
+</body>
+</html>

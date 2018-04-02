@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6.screen</title>
+	</head>
+	<body>
+		<div id="box">后退到6.screen.html文件</div>
+	</body>
+</html>
+<script type="text/javascript">
+	box.onclick = function(){
+		window.history.back();
+	}
+	console.log(window.screen);
+	//screen 物理屏幕的基本信息,他是 window 下的一种属性
+	
+	//物理屏幕的宽度
+	console.log(window.screen.width);
+	
+	//物理屏幕的高度
+	console.log(window.screen.height);
+	
+	//屏幕可用的高度
+	console.log(window.screen.availHeight);
+	
+	//屏幕可用的宽度
+	console.log(window.screen.availWidth);
+</script>

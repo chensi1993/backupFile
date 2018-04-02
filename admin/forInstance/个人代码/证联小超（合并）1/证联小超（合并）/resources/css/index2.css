@@ -46,6 +46,9 @@
 }
 #btn a{
     border-bottom: 1px solid #e5e5e5;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 .tab_btn {
     padding: 1.2rem 0;
@@ -167,4 +170,8 @@ table {
 table th, table td {
     padding:0.5rem;
     background-color:#fff;  
+}
+/*解决元素滚动时，定位元素闪动*/
+.shop-name,.nav-lf,.footer{
+    -webkit-transform: translate3d(0,0,0);
 }

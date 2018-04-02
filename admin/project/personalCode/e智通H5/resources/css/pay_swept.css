@@ -1,0 +1,78 @@
+body{
+    background: #4995EF;
+}
+.swept-content{
+    width: 95%;
+    background: #fff;
+    margin: 2.5rem auto;
+    /*padding-top: 1.5rem;*/
+    border-radius: .4rem;
+}
+.swept-content .swept-barcode{
+    width: 90%;
+    height: 9rem;
+    margin: 0 auto;
+    padding: 2rem;
+    /*background: #7ee2a8;*/
+
+}
+.swept-content .swept-QRcode{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 1.5rem auto;
+
+}
+.swept-content .swept-QRcode>table{
+    width: 100%;
+    height: 100%;
+}
+.swept-content .swept-QRcode .QRcode-img{
+    width: 100%;
+    height: 100%;
+}
+.swept-content .swept-QRcode .pay-logo{
+    position: absolute;
+    top: 40%;
+    width: 5rem;
+    height: auto;
+    left: 35%;
+    z-index: 999;
+}
+.swept-barcode label{
+    display: none;
+}
+
+.swept-content .swept-update{
+    padding: 0 1rem;
+}
+.swept-content .swept-update img{
+    width: 2rem;
+    height: 2rem;
+}
+.swept-content .swept-update p{
+    font-size: 1.2rem;
+    color: #666666;
+    display: inline-block;
+}
+.swept-content .swept-number{
+    text-align: center;
+    font-size: 1.4rem;
+    color: #666666;
+    padding: 1.5rem 0;
+    background: #f3f3f3;
+    border-bottom-left-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+}
+.swept-scan img{
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+    display: block;
+}
+.page-bottom{
+    color: #fff;
+}
+.page-bottom .col-xs-3 {
+    border-top: 1px solid #fff;
+}

@@ -11,15 +11,16 @@ $(function () {
         classIndex = $(this).index();
         $(this).addClass("curr_btn").siblings().removeClass("curr_btn");
 
-        var params ={};
+        //var params ={
+        //};
         $.ajax({
-            type:"POST",
+            type:"GET",
             url:"resources/js/index2.json",
             contentType:"application/json; charset=utf-8",
             dataType:"json",
-            data:JSON.stringify(params),
+            async : true,
+            //data:JSON.stringify(params),
             success:function(data){
-                //alert(data);
                 var goodsList = data.goodsList;
                 //var shopData = data.shopData;
                 var shopData = data.shopData;
@@ -352,7 +353,8 @@ function total() {
         V_al += vaL;
     }
     //写入总计栏
-    $(".Input").val(formatCurrency(amount));
+
+    $(".Input").val(amount.toFixed(2));
     $("#Total").val(V_al);
     if (V_al < 1) {
         $("#Total").hide();

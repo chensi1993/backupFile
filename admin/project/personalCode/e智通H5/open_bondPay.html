@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--禁止iPhone手机上数字转换为拨号链接-->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="zlzf-cs" />
+    <title></title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="resources/css/common.css"/>
+    <!--引入弹出提示框样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/style-alert.css">
+    <link rel="stylesheet" href="resources/css/open_bondPay.css"/>
+</head>
+<body>
+<div class="container">
+    <!--top-->
+    <div class="page-top row">
+        <div class="top-image col-xs-2"><a href=""><img src="resources/img/v1return.png" alt=""/>返回</a></div>
+        <h3 class="col-xs-8">开通保证金支付</h3>
+        <div class="top-image col-xs-2"></div>
+    </div>
+    <p class="info-tips">请输入已添加过的资金账号</p>
+    <!--info-->
+    <form class="account-horizontal" action="" method="post">
+        <div class="account-content row">
+            <!--证券公司-->
+            <div class="account-group row">
+                <label for="account-company" class="account-lab col-xs-3">证券公司</label>
+                <div class="account-li col-xs-9">
+                    <input type="text" class="account-inp" id="account-company" readonly="readonly" unselectable="on" onfocus="this.blur()" value="华创证券">
+                </div>
+            </div>
+            <!--资金账号-->
+            <div class="account-group row">
+                <label for="account-number" class="account-lab col-xs-3">资金账号</label>
+                <div class="account-li col-xs-9">
+                    <input type="text" class="account-inp font-color" id="account-number" value="" placeholder="**** 2222(请输入完整资金账号)">
+                </div>
+            </div>
+            <!--姓名-->
+            <div class="account-group row">
+                <label for="account-name" class="account-lab col-xs-3">姓名</label>
+                <div class="account-li col-xs-9">
+                    <input type="text" class="account-inp" id="account-name" placeholder="*胖(请输入完整姓名)">
+                </div>
+            </div>
+            <!--身份证号-->
+            <div class="account-group row">
+                <label for="Id-number" class="account-lab col-xs-3">身份证号</label>
+                <div class="account-li col-xs-9">
+                    <input type="text" class="account-inp" id="Id-number" placeholder="请输入证件号" pattern="[0-9]*" oninput="if(value.length>18)value=value.slice(0,18)">
+                </div>
+            </div>
+            <!--手机号-->
+            <div class="account-group row">
+                <label for="phone-number" class="account-lab col-xs-3">手机号</label>
+                <div class="account-li col-xs-9">
+                    <input type="tel" class="account-inp" id="phone-number" placeholder="请输入手机号" value="" oninput="if(value.length>11)value=value.slice(0,11)">
+                </div>
+            </div>
+            <!--验证码-->
+            <div class="account-group row" id="">
+                <label for="getVerCodeBtn" class="account-lab col-xs-3">验证码</label>
+                <div class="account-li col-xs-9">
+                    <input class="code_inp" id="iphoneCode" placeholder="请输入验证码" pattern="[0-9]*" oninput="if(value.length>6)value=value.slice(0,6)">
+                    <input class="code_inp" type="button" onclick="javascript:getVerCode();" id="getVerCodeBtn" value="获取验证码">
+                </div>
+            </div>
+        </div>
+        <div class="account-agree">
+            <input class="checkbox" id="agree-img" type="checkbox">
+            <label class="label1" for="agree-img"><a href="">同意开通<span id="change-color">保证金支付协议、开通三类账户协议</span></a></label>
+        </div>
+        <input type="button" id="account-btn" value="确认" onclick="javascript:isCheck();">
+    </form>
+    <!--bottom-->
+    <div class="page-bottom">
+        <span class="col-xs-3"></span>
+        <div class="col-xs-6"><span>由证联支付提供技术支持</span></div>
+        <span class="col-xs-3"></span>
+    </div>
+    <!--弹出提示框-->
+    <div class='modal my-modal-alert' id='my-modal-alert'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-body' id='modal-body-alert'>
+                    <div id='modal_message'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/common.js"></script>
+<!--引入弹出提示框脚本-->
+<script src="resources/js/alert.js"></script>
+<script type="text/javascript" src="resources/js/open_bondPay.js"></script>
+</body>
+</html>

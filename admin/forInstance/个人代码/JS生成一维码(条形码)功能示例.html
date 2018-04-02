@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/barCode.css"/>
+</head>
+<body>
+<input type="button" value ="生成" onclick="createBarcode('div128','12345678','B');"/>
+<div class="barcode2" id="div128"></div>
+<div class="barcode2" id="div1"></div>
+</body>
+<script type="text/javascript" src="js/barCode.js"></script>
+<script>
+    (function(divId) {
+        var divElement ,oldOnLoad = window.onload ;
+        function getTimeString() {
+            var pad = function(n) { return n < 10 ? '0' + n.toString(10) : n.toString(10); }
+                    ,dt = new Date();
+            return [pad(dt.getHours()), pad(dt.getMinutes()), pad(dt.getSeconds())].join(':');
+        }
+        function UpdateClock() {
+            var timeText = getTimeString();
+            divElement.innerHTML = code128(timeText);
+        }
+        window.onload = function() {
+            divElement = document.getElementById(divId);
+            UpdateClock();
+            setInterval(UpdateClock, 1000);
+            if (typeof oldOnLoad == 'function') oldOnLoad.apply(this, arguments);
+        }
+    })('div1');
+
+
+</script>
+</html>

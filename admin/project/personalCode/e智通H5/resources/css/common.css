@@ -1,0 +1,113 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: PingFangSC-Regular;
+    background: #efeff4;
+}
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: #494949;
+}
+/*top*/
+.page-top{
+    height: 4rem;
+    line-height: 4rem;
+    background: #fff;
+}
+.page-top .top-img,.page-top .top-image{
+    padding-right: 0;
+    padding-left: 1rem;
+    font-size: 1.6rem;
+    color: #494949;
+}
+.page-top .top-img img{
+    width: 1.8rem;
+}
+
+.page-top .top-image img{
+    width: 1rem;
+}
+.page-top h3{
+    line-height: 4rem;
+    opacity: 0.9;
+    font-size: 1.8rem;
+    color: #353535;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0;
+}
+/*同意按钮*/
+#agree-img{
+    vertical-align: middle;
+    display: inline-block;
+    visibility: hidden;
+    width: 6%;
+    margin: 0;
+}
+.account-agree .label1 {
+    position: relative;
+    font-weight: normal;
+}
+.account-agree .label1>a {
+    margin-left: 1rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    color: #BEBEBE;
+}
+.account-agree input[type='checkbox']:checked + .label1:after {
+    background: url(../img/v1gouxuan.png) no-repeat;
+    background-size: 100% 100%;
+    width: 1.7rem;
+    height: 1.7rem;
+}
+.account-agree .label1:after {
+    position: absolute;
+    top: .2rem;
+    left: -1.4rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: url(../img/v1gouxuankuang.png) no-repeat;
+    background-size: 100% 100%;
+    content: '';
+}
+#account-btn{
+    border: none;
+    width: 90%;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    letter-spacing: .2rem;
+    display: block;
+    margin: 2rem auto;
+    background: #ADCBF2;
+    border-radius: .5rem;
+}
+/*bottom*/
+.page-bottom{
+    margin: 0 2.5rem;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.page-bottom{
+    font-size: 1.2rem;
+    color: #666666;
+}
+.page-bottom .col-xs-3{
+    border-top: 1px solid #666;
+}
+.page-bottom .col-xs-6{
+    padding: 0;
+    position: relative;
+}
+.page-bottom .col-xs-6 span{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: -0.8rem;
+}
