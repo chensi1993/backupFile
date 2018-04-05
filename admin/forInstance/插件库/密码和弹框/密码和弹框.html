@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="resources/css/alert.css"/>
+		<script src="resources/js/jquery-3.0.0.min.js"></script>
+		<script src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script src="resources/js/cashier2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">开始演示模态框</button>
+			<div class="row modal fade" id="myModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog js-css-Payment">
+					<div class="modal-content js-Payment-Money">
+						<div class="modal-header">
+							<button type="button" class="css-fol-left close" data-dismiss="modal" aria-hidden="true"><
+							</button>
+							<h4 class="modal-title text-center">
+								请输入支付密码
+							</h4>
+						</div>
+						<div class="row css-Payment">
+							<div class="col-xs-1"></div>
+							<ul class="list-unstyled mm_box col-xs-10">
+								<li class="col-xs-2"></li>
+								<li class="col-xs-2"></li>
+								<li class="col-xs-2"></li>
+								<li class="col-xs-2"></li>
+								<li class="col-xs-2"></li>
+								<li class="col-xs-2"></li>
+				            </ul>
+				            <div class="col-xs-1"></div>
+						</div>
+						<p class="text-right css-Payment-p"><a href="#">忘记支付密码?</a></p>
+						<ul class="row list-unstyled nub_ggg">
+			                <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">1</a></li>
+			                <li class="col-xs-4 zj_x"><a href="javascript:void(0);" class="zf_num">2</a></li>
+			                <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">3</a></li>
+			                <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">4</a></li>
+			                <li class="col-xs-4 zj_x"><a href="javascript:void(0);" class="zf_num">5</a></li>
+			                <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">6</a></li>
+			                <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">7</a></li>
+			                <li class="col-xs-4 zj_x"><a href="javascript:void(0);" class="zf_num">8</a></li>
+			                <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">9</a></li>
+			                <li class="col-xs-4"><a href="javascript:void(0);" class="zf_empty">清空</a></li>
+			                <li class="col-xs-4 zj_x"><a href="javascript:void(0);" class="zf_num">0</a></li>
+			                <li class="col-xs-4"><a href="javascript:void(0);" class="zf_del"><img src="resources/img/Delete.svg"/></a></li>
+			            </ul>
+					</div><!--/.modal-content -->
+				</div><!-- /.modal-dialog -->
+				<!--弹框（三种）-->
+				<!--后端调三个弹框分别.js-Payment5,.js-Payment6,.js-Tim '.show()'打开-->
+				<div class="modal-dialog text-center js-css-alert">
+					<!--密码不正确，还可以输入5次-->
+					<div class="modal-content js-Payment5">
+						<div class="modal-body text-center">
+							支付密码不正确，您还可以输入5次
+						</div>
+						<div class="modal-footer">
+							<button type="button"class="col-xs-6 btn btn-default list-inline "data-dismiss="modal">重新输入</button>
+							<button type="button"class="col-xs-6 btn btn-default list-inline">忘记密码</button>
+						</div>
+					</div>
+					<!--密码不正确已6次，点击忘记密码 -->
+					<div class="modal-content js-Payment6">
+						<div class="modal-body text-center">
+							支付密码不正确，已错误6次，<br />请点击忘记密码进行找回
+						</div>
+						<button type="button" class="btn btn-default css-Btn">朕知道了</button>
+					</div>
+					<!--支付时间超时-->
+					<div class="modal-content js-Tim">
+						<div class="modal-body text-center">
+							支付时间超时
+						</div>
+						<button type="button" class="btn btn-default css-Btn">确定</button>
+					</div>
+				</div>
+			</div><!-- /.modal -->
+		</div>
+	</body>
+</html>

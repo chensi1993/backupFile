@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="keywords" content="" />
+	    <meta name="description" content="" />
+	    <meta name="format-detection" content="telephone=no" />
+	    <meta http-equiv="Cache-Control" content="no-siteapp">
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="author" content="zlzf-cs" />
+	    <title>证联大咖</title>
+	    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+	    <link rel="stylesheet" type="text/css" href="resources/css/Log_in.css"/>
+	    <script src="resources/js/jquery-3.0.0.min.js"></script>
+		<script src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script src="resources/js/Log_in.js"></script>
+	</head>
+	<body>
+		<div class="container sty">
+			<p class="row p_time text-center">名额已锁定，请在<span id="timeShow">15分00秒</span>内完成登录并<br/>实名认证，否则该名额将自动取消</p>
+			<button type="button" class="row btn btn-lg back-color">去登录</button>
+			<button type="button" class="row btn btn-lg font-size">取消名额</button>
+		</div>
+		<!--弹框-->
+		<div class="container">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				 <!--class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"-->
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body text-center">
+							登录超时
+							<p>登录有效时间已过，<br/>名额已被取消，请重新再抢</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="col-xs-6 btn list-inline But-style">朕知道了</button>
+							<button type="button" class="col-xs-6 btn list-inline But-style2">去登录</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

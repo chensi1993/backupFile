@@ -1,4 +1,9 @@
-
+html,body{
+    height: 100%;
+}
+.container{
+    height: 100%;
+}
 /*label*/
 .page-label{
     padding: 2rem 0;
@@ -92,4 +97,59 @@
     width: 100%;
     font-size: 1.8rem;
     color: #508CF1;
+}
+/*我的信息*/
+.content-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 999;
+}
+.myInfo{
+    height: 100%;
+
+}
+.myInfo .info-left{
+    height: 100%;
+    background: #f8f8f8;
+}
+.myInfo .info-left h3{
+    font-size: 1.7rem;
+    color: #000000;
+}
+.info-left .info-list{
+    margin-top: 1.5rem;
+}
+.info-left .info-list p{
+    font-size: 1.2rem;
+    color: #AAAAAA;
+    margin: 0;
+}
+.info-left .info-list .info-li{
+    background: #fff;
+    padding: 1.5rem;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1.6rem;
+    color: #666666;
+}
+.info-left .info-list .info-top{
+    border-top: none;
+}
+.info-list .info-li span{
+    padding: 0;
+}
+.info-list .info-li span:nth-child(1){
+
+}
+.info-list .info-li span:nth-child(2)>img{
+    width: .6rem;
+    height: auto;
+}
+.myInfo .info-right{
+    height: 100%;
+    background: #999;
+    opacity: 0.6;
 }

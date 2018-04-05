@@ -9,10 +9,17 @@
     <!--禁止iPhone手机上数字转换为拨号链接-->
     <meta name="format-detection" content="telephone=no" />
     <meta name="author" content="zlzf-cs" />
+    <!--页面设置成无缓存，解决定时器不准-->
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
     <title></title>
     <!--引入bootstrap样式-->
     <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="resources/css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="resources/css/common_mqpay.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/alert.css"/>
+    <!--引入弹出提示框样式-->
+    <link type="text/css" rel="stylesheet" href="resources/css/style-alert.css">
     <!--条形码插件-->
     <link rel="stylesheet" href="resources/css/barCode.css"/>
     <link rel="stylesheet" href="resources/css/pay_swept.css"/>
@@ -27,7 +34,6 @@
     </div>
     <!--center-->
     <div class="swept-content">
-        <!--<input type="button" value ="生成" onclick="createBarcode('div128','12345678','B');"/>-->
         <!--条形码-->
         <div class="swept-barcode barcode2" id="div128">
 
@@ -60,10 +66,99 @@
         <div class="col-xs-6"><span>由证联支付提供技术支持</span></div>
         <span class="col-xs-3"></span>
     </div>
+
+    <!--弹出层支付密码-->
+    <div class="row modal fade" id="myModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog js-css-Payment">
+            <div class="modal-content js-Payment-Money">
+                <div class="modal-header">
+                    <button type="button" class="css-fol-left close" data-dismiss="modal" aria-hidden="true"><
+                    </button>
+                    <h4 class="modal-title text-center">
+                        请输入支付密码
+                    </h4>
+                </div>
+                <div class="css-money">
+                    <div class="css-money-top">
+                        <img src="resources/img/v1mxshanghu@2x.png" alt=""/><span id="shop-name">沙县小吃</span>
+                    </div>
+                    <p id="shop-money">100.00元</p>
+                </div>
+                <div class="row css-Payment">
+                    <div class="col-xs-1"></div>
+                    <ul class="list-unstyled mm_box col-xs-10">
+                        <li class="col-xs-2"></li>
+                        <li class="col-xs-2"></li>
+                        <li class="col-xs-2"></li>
+                        <li class="col-xs-2"></li>
+                        <li class="col-xs-2"></li>
+                        <li class="col-xs-2"></li>
+                    </ul>
+                    <div class="col-xs-1"></div>
+                </div>
+                <p class="text-right css-Payment-p"><a href="#">忘记支付密码?</a></p>
+                <ul class="row list-unstyled nub_ggg">
+                    <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">1</a></li>
+                    <li class="col-xs-4 zj_x"><a href="javascript:void(0);" class="zf_num">2</a></li>
+                    <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">3</a></li>
+                    <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">4</a></li>
+                    <li class="col-xs-4 zj_x"><a href="javascript:void(0);" class="zf_num">5</a></li>
+                    <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">6</a></li>
+                    <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">7</a></li>
+                    <li class="col-xs-4 zj_x"><a href="javascript:void(0);" class="zf_num">8</a></li>
+                    <li class="col-xs-4"><a href="javascript:void(0);" class="zf_num">9</a></li>
+                    <li class="col-xs-4"><a href="javascript:void(0);" class="zf_empty">清空</a></li>
+                    <li class="col-xs-4 zj_x"><a href="javascript:void(0);" class="zf_num">0</a></li>
+                    <li class="col-xs-4"><a href="javascript:void(0);" class="zf_del"><img src="resources/img/Delete.svg"/></a></li>
+                </ul>
+            </div><!--/.modal-content -->
+        </div><!-- /.modal-dialog -->
+        <!--弹框（三种）-->
+        <!--后端调三个弹框分别.js-Payment5,.js-Payment6,.js-Tim '.show()'打开-->
+        <div class="modal-dialog text-center js-css-alert">
+            <!--密码不正确，还可以输入5次-->
+            <div class="modal-content js-Payment5">
+                <div class="modal-body text-center">
+                    支付密码不正确，您还可以输入5次
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="col-xs-6 btn btn-default list-inline " data-dismiss="modal">重新输入</button>
+                    <button type="button" class="col-xs-6 btn btn-default list-inline">忘记密码</button>
+                </div>
+            </div>
+            <!--密码不正确已6次，点击忘记密码 -->
+            <div class="modal-content js-Payment6">
+                <div class="modal-body text-center">
+                    支付密码不正确，已错误6次，<br />请点击忘记密码进行找回
+                </div>
+                <button type="button" class="btn btn-default css-Btn">朕知道了</button>
+            </div>
+            <!--支付时间超时-->
+            <div class="modal-content js-Tim">
+                <div class="modal-body text-center">
+                    支付时间超时
+                </div>
+                <button type="button" class="btn btn-default css-Btn">确定</button>
+            </div>
+        </div>
+    </div><!-- /.modal -->
+    <!--弹出提示框-->
+    <div class='modal my-modal-alert' id='my-modal-alert'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-body' id='modal-body-alert'>
+                    <div id='modal_message'></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 <!--生成条形码js-->
 <script type="text/javascript" src="resources/js/barCode.js"></script>
+<!--引入弹出提示框脚本-->
+<script src="resources/js/alert.js"></script>
 <!--生成二维码js-->
 <script type="text/javascript" src="resources/js/jquery.qrcode.min.js"></script>
 <script type="text/javascript" src="resources/js/pay_swept.js"></script>

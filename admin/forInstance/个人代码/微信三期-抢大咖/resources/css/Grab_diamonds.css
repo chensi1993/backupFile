@@ -1,0 +1,63 @@
+html{font-size: 62.5%;}
+			body{font-family: 'SourceHanSansCN-Regular';color: #FAEE65;}
+	    	.container{background: url("../img/zuanshidaka@3x.png") no-repeat;background-size: 100% 100%;}
+	    	/*header*/
+	    	.head-size{margin-top: 16rem;}
+	    	.p-text-size{font-size: 1.8rem;letter-spacing: 0.1rem;}
+	    	.ul-width,.fon-size{font-size: 1.4rem;}
+	    	.fon-size{letter-spacing: 0.1rem;}
+	    	/*按钮*/
+	    	.butt-size{margin: 8rem auto 10rem;position: relative;}
+	    	/*登录*/
+	    	.p-marg{margin-bottom: 3rem;display: block;font-size: 1.4rem;letter-spacing: 0.1rem;/*display: none;*/}
+	    	.p-marg>a{color: #FF5A00;}
+			/*抢名额*/
+			@-webkit-keyframes orangellowPulse {
+			  from { border-color: #AFA747; -webkit-box-shadow: 0 0 30px #333; }
+			  50% { border-color: #ffb515; -webkit-box-shadow: 0 0 48px #ffb515; }
+			  to { border-color: #AFA747; -webkit-box-shadow: 0 0 39px #333; }
+			}
+			button.but-style {-webkit-animation-duration: 2s;-webkit-animation-iteration-count: infinite;}
+			.but-style{font-size: 1.8rem;background-color: inherit;border: 0.17rem solid #FAEE65;border-radius:25rem;letter-spacing: 0.2rem;width:50%;height: 5rem; -webkit-animation-name: orangellowPulse; -webkit-animation-duration: 3s;/*display: none;*/}
+			.but-style:focus, .but-style:hover{color: #FAEE65;text-decoration: none;}
+			/*活动已结束*/
+			.but-style2{font-size: 2rem;border-radius:25rem;padding: 1.3rem;background: rgba(210,179,138,0.26);border: 0.17rem solid rgba(150,143,61,0.52);display: none;}
+			/*活动即将开始*/
+			.but-style3{font-size: 2rem;border-radius:25rem;padding: 1.3rem;background-color:inherit;border: 0.17rem solid #AFA747;display: none;}
+			.but-style3[disabled]{opacity:1;}
+	    	/*须知*/
+	    	.bott-size{font-size: 1.4rem;border: 0.17rem solid #FAEE65;padding: 2.5rem 1rem 1rem;position: relative;letter-spacing: 0.2rem;margin: 0 -0.3rem 2rem;}
+	    	.top-text{height:3rem;border: 0.17rem solid #FAEE65;position: absolute;top: -1.5rem;left: 30%;background-color:#000000 ;line-height: 2.5rem;}
+	    	/*************************************/
+	    	/*弹框*/
+	    	.modal{top: 30%;font-family: "SimHei";}
+	    	.modal-dialog{width: 80%;margin: 2rem auto;}
+	    	/*弹框共用*/
+	    	.successful .modal-content img,.failure .modal-content img,.failure2 .modal-content img{width: 3.5rem;height: 3rem;}
+	    	.successful .modal-content .modal-body,.failure .modal-content .modal-body,.failure2 .modal-content .modal-body{color: #0B0603;font-size: 1.8rem;letter-spacing: 0.1rem;font-weight: bold;}
+	    	.successful .modal-content .modal-footer,.failure .modal-content .modal-footer,.failure2 .modal-content .modal-footer{text-align: center;border-radius:0 0 2rem 2rem;line-height: 4rem;font-size: 1.8rem;letter-spacing: 0.1rem;font-weight: bold;padding: 0;}
+	    	/*已登录成功*/
+	    	.successful{display: none;}
+	    	.successful .modal-content{border-radius: 2rem;}
+	    	.successful .modal-content img{margin-top: -1.3rem;}
+	    	.successful .modal-content .modal-body>p{font-size: 1.2rem;color: #666666;letter-spacing: 0.2rem;line-height: 4rem;}
+	    	.successful .modal-content .modal-footer{border: none;background-image: linear-gradient(-225deg, #EFD5A4 0%, #D6B485 100%);color: #0B0603;width: 100%;}
+	    	.successful .modal-content .modal-footer:focus,.successful .modal-content .modal-footer:hover{background-image: linear-gradient(-225deg, #EFD5A4 0%, #ffb515 100%);color: #FAEE65;}
+	    	/*已登录失败*/
+	    	.failure{display: none;}
+	    	.failure .modal-content{border-radius: 2rem 2rem 2.1rem 2.1rem;}
+	    	.failure .modal-content img{margin-top: -1.5rem;}
+	    	.failure .modal-content .modal-body>p{font-size: 1.4rem;color: #666666;letter-spacing: 0.2rem;line-height: 2.5rem;}
+	    	.failure .modal-content .modal-footer{color: #fff;background-color:#666;border: 0.17rem solid #666;width: 100%;}
+	    	.failure .modal-content .modal-footer:focus,.failure .modal-content .modal-footer:hover{background-color:#fff;color: #666;}
+	    	/*未登录失败*/
+	    	.failure2{display: none;}
+	    	.failure2 .modal-content{border-radius: 2rem 2rem 2.1rem 2.1rem;}
+	    	.failure2 .modal-content img{margin-top: -1.5rem;}
+	    	.failure2 .modal-content .modal-body>p{font-size: 1.3rem;color: #0B0603;letter-spacing: 0.2rem;line-height: 2.5rem;margin-top: 0.5rem;}
+	    	.failure2 .modal-content .modal-footer{overflow: hidden;border: 0.17rem solid #C6C6C6;}
+	    	.failure2 .modal-content .modal-footer .focus-hover{color: #fff;background-color:#C6C6C6;line-height: 3rem;}
+	    	.failure2 .modal-content .modal-footer .focus-hover:nth-child(2){color: #000;background-color:#fff;}
+	    	.failure2 .modal-content .modal-footer .focus-hover:focus,.failure2 .modal-content .modal-footer .focus-hover:hover{color: #FAEE65;}
+	    	
+			

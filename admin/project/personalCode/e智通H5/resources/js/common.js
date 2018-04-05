@@ -61,11 +61,4 @@ $(function(){
             $(".mm_box li").eq(i).attr("data","");
         }
     });
-//清空
-//        $(".nub_ggg li .zf_empty").click(function(){
-//            $(".mm_box li").removeClass("mmdd");
-//            $(".mm_box li").attr("data","");
-//            i = 0;
-//        });
-
 });

@@ -1,0 +1,137 @@
+body{
+    overflow: hidden;
+}
+html,body{
+    height: 100%;
+}
+.container{
+    height: 100%;
+}
+.detail-content .content-list{
+    font-family: PingFangSC-Medium;
+    background: #fff;
+    overflow: hidden;
+    border-radius: .4rem;
+    margin: 1rem 0;
+    box-shadow: 1px 1px 2px 0 rgba(125,125,125,0.20);
+    padding: 1rem 0;
+}
+.detail-content{
+    border-bottom: 1px solid #dadada;
+}
+.detail-content .col-xs-2 img{
+    margin-bottom: .5rem;
+}
+.detail-content .content-list img{
+    width: 3.2rem;
+    height: 3.2rem;
+}
+.content-list .col-xs-10 h3{
+    font-size: 1.6rem;
+    color: #4995EF;
+    margin: 0;
+}
+.content-list .col-xs-10 .content-info{
+    margin-top: 1.5rem;
+}
+.content-list .col-xs-10 .content-bond span:nth-child(1){
+    font-size: 1.2rem;
+    color: #999999;
+    margin-right: 6rem;
+}
+.content-list .col-xs-10 .content-bond span:nth-child(2){
+    font-size: 1.6rem;
+    color: #999999;
+}
+.content-list .col-xs-10 .content-bank span:nth-child(1){
+    font-size: 1.6rem;
+    color: #999999;
+}
+.content-list .col-xs-10 .content-bank span:nth-child(2){
+    font-size: 1.2rem;
+    color: #999999;
+    float: right;
+}
+.content-list .col-xs-2 h3{
+    font-size: 1.2rem;
+    color: #999999;
+    margin: 0;
+    white-space: nowrap;
+}
+.content-center{
+    height: 52%;
+    overflow-y: scroll;
+    /*解决iOSoverflow不流畅*/
+    -webkit-overflow-scrolling: touch;
+    font-family: ArialMT;
+}
+.content-center .contents-list h3{
+    font-size: 1.2rem;
+    color: #AAAAAA;
+    padding: 0 1.5rem;
+}
+.content-center .contents-list .list-info{
+    background: #fff;
+    overflow: hidden;
+    padding: .5rem 0;
+}
+.list-info .list-left{
+    line-height: 5rem;
+}
+.list-info .list-left img{
+    width: 3.2rem;
+    height: 3.2rem;
+}
+.list-info .list-center p:nth-child(1){
+    font-size: 1.4rem;
+    color: #666666;
+    margin: 0;
+    padding: .5rem 0;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.list-info .list-center p:nth-child(2){
+
+    font-size: 1.2rem;
+    color: #999999;
+}
+.list-info .list-center p:nth-child(2)>span{
+    padding-right: 1rem;
+}
+.list-info .list-right{
+    text-align: right;
+}
+.list-info .list-right .right-top{
+    font-size: 2rem;
+    color: #666666;
+}
+.list-info .list-right .right-top img{
+    width: .8rem;
+    height: auto;
+}
+.list-info .list-right .right-bottom{
+    font-size: 1.2rem;
+    color: #FF4158;
+}
+/*没有交易记录提示*/
+.default-tips{
+    display: none;
+}
+.default-tips .default-img{
+    width: 24rem;
+    height: 19rem;
+    margin: 2rem auto;
+    display: block;
+}
+.default-tips p{
+    font-family: PingFangSC-Medium;
+    text-align: center;
+    color: #666666;
+}
+.default-tips p:nth-child(2){
+    font-size: 1.6rem;
+}
+.default-tips p:nth-child(3){
+    font-size: 1.2rem;
+}

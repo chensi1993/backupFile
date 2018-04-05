@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="keywords" content="" />
+	    <meta name="description" content="" />
+	    <meta name="format-detection" content="telephone=no" />
+	    <meta http-equiv="Cache-Control" content="no-siteapp">
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="author" content="zlzf-cs" />
+	    <title>证联大咖</title>
+    	<link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+	    <link rel="stylesheet" type="text/css" href="resources/css/Grab_diamonds.css"/>
+	    <script src="resources/js/jquery-3.0.0.min.js"></script>
+		<script src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!--header-->
+			<div class="row head-size text-center">
+				<p class="p-text-size">成为证联大咖，您将享受</p>
+				<ul class="list-inline ul-width">
+					<li>【抄底费率】</li>
+					<li>【自主定价】</li>
+					<li>【坐享收益】</li>
+				</ul>
+				<p class="fon-size">招募日期：<span>6月6日-7月6日</span></p>
+				<p class="fon-size">招募人数：<span>300名</span></p>
+			</div>
+			<!--按钮-->
+			<div class="row butt-size text-center">
+				<!--登录-->
+				<p class="text-center p-marg">为快速抢到名额，请在活动开始前，<br/>先去<a href="#">登录，绑定微信</a></p>
+				<button type="button" class="btn btn-lg but-style3"disabled="disabled">活动即将开始</button>
+				<button type="button" class="btn btn-lg but-style" data-toggle="modal" data-target="#myModal">抢名额</button>
+				<button type="button" class="btn btn-lg but-style2"disabled="disabled">名额已满，本次活动已结束</button>
+				<!--弹框-->
+				<div class="row modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<!--已登录成功-->
+					<div class="modal-dialog successful">
+						<div class="modal-content">
+							<img src="resources/img/bitmap@3x.png"/>
+							<div class="modal-body">
+								恭喜您！<br/>已获得钻石大咖名额
+								<p>钻石大咖的费率为2.5‰</p>
+							</div>
+							<!--<a class="modal-footer" href="#">进入大咖专区</a>-->
+							<button type="button" class="modal-footer btn focus-hover">进入大咖专区</button>
+						</div>
+					</div>
+					<!--已登录失败-->
+					<div class="modal-dialog failure">
+						<div class="modal-content">
+							<img src="resources/img/sad.svg"/>
+							<div class="modal-body">
+								很遗憾，名额已被抢光了！
+								<p>不要气馁，敬请期待下次活动<br/>加油  加油  加油哦 </p>
+							</div>
+							<button type="button" class="modal-footer btn focus-hover"data-dismiss="modal">朕知道了</button>
+						</div>
+					</div>
+					<!--未登录失败-->
+					<div class="modal-dialog failure2">
+						<div class="modal-content">
+							<img src="resources/img/sad.svg"/>
+							<div class="modal-body">
+								很遗憾，名额已被抢光了！
+								<p>为快速抢到名额，<br/>请在下次活动开始前登录</p>
+							</div>
+							<div class="modal-footer">
+								<!--<a class="col-xs-6 focus-hover" href="#">朕知道了</a>
+								<a class="col-xs-6 focus-hover" href="#">去登录</a>-->
+								<button type="button" class="col-xs-6 btn list-inline focus-hover"data-dismiss="modal">朕知道了</button>
+								<button type="button" class="col-xs-6 btn list-inline focus-hover">去登录</button>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--须知-->
+			<div class="row bott-size">
+				<div class="top-text col-xs-5 text-center">大咖须知</div>
+				<ul class="list-unstyled">
+					<li>1.大咖需年满18周岁；</li>
+					<li>2.大咖分钻石、黄金、白银、青铜四级，钻石大咖享受最低代理费率。</li>
+					<li>3.大咖收益=（商户费率—大咖代理费率）X  商户扫码交易额。</li>
+					<li>4.大咖邀请的商户必须合法、真实、有效</li>
+					<li>5.本活动最终解释权归证联支付有限责任公司所有。</li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+</html>

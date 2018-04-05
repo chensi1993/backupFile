@@ -11,16 +11,16 @@
     <title></title>
     <!--引入bootstrap样式-->
     <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="resources/css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="resources/css/common_mqpay.css"/>
     <link rel="stylesheet" href="resources/css/index.css"/>
 </head>
 <body>
 <div class="container">
     <!--top-->
     <div class="page-top row">
-        <div class="top-img col-xs-2"><a href=""><img src="resources/img/v1mine.png" alt=""/></a></div>
+        <div class="top-img col-xs-2" id="leftImg"><img src="resources/img/v1mine.png" alt=""/></div>
         <h3 class="col-xs-8">主页</h3>
-        <div class="top-img col-xs-2"><img src="resources/img/v1close.png" alt=""/></div>
+        <div class="top-img col-xs-2" onclick="linkApp()"><img src="resources/img/v1close.png" alt=""/></div>
     </div>
     <!--label-->
     <div class="page-label row">
@@ -63,7 +63,47 @@
         <span class="col-xs-3"></span>
     </div>
 </div>
-<!--侧边栏-->
+    <!--侧边栏-->
+    <div class="container content-info">
+        <div class="myInfo row">
+            <div class="info-left col-xs-7">
+                <h3>账户设置</h3>
+                <div class="info-list">
+                    <p>账户信息</p>
+                    <div class="info-li row">
+                        <span class="col-xs-9">个人信息</span>
+                        <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                    </div>
+                </div>
+                <div class="info-list">
+                    <p>支付设置</p>
+                    <div class="info-li row">
+                        <span class="col-xs-9">修改支付密码</span>
+                        <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                    </div>
+                    <div class="info-li info-top row">
+                        <span class="col-xs-9">忘记支付密码</span>
+                        <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                    </div>
+                </div>
+                <div class="info-list">
+                    <p>我的资金账号</p>
+                    <div class="info-li row">
+                        <span class="col-xs-9">资金账号</span>
+                        <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                    </div>
+                </div>
+                <div class="info-list">
+                    <div class="info-li row">
+                        <span class="col-xs-9">帮助中心</span>
+                        <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                    </div>
+                </div>
+            </div>
+            <div class="info-right col-xs-5"></div>
+        </div>
+
+    </div>
 <!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">开始演示模态框</button>-->
 <!--模态框-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
@@ -78,5 +118,6 @@
 </div><!-- /.modal -->
 <script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/index.js"></script>
 </body>
 </html>

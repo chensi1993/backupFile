@@ -1,0 +1,76 @@
+body.modal-open {
+    position: fixed;
+    width: 100%;
+}
+
+.modal-dialog.js-css-Payment {
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+.modal-header {
+     border-bottom: none; 
+}
+/*输入支付密码*/
+.js-Payment-Money{display: none;}
+.modal-header .close {
+    margin-top: 0;
+}
+.css-fol-left{float: left;}
+.css-Payment{border-top: 1px solid #E5E5E5;padding-top: 1rem;}
+/*6个密码框*/
+.mm_box {margin: 1rem auto; height: 4rem; overflow: hidden; border: 1px solid #bebebe; padding: 0;}
+.mm_box li { border-right: 1px solid #d9d9d9; height: 4rem; float: left; background: #FFF; }
+.mm_box li.mmdd{ background:#FFF url(../img/dd_03.jpg) center no-repeat ; background-size:25%;}
+.mm_box li:last-child { border-right: none; }
+/*忘记密码*/
+.css-Payment-p{padding-right: 1.5rem;height: 3rem;line-height: 3rem;}
+.css-Payment-p a{color: #4995EF;font-size: 1.5rem;}
+/*数字键盘*/
+.nub_ggg { border: 1px solid #dadada; overflow: hidden; border-bottom: none; margin-bottom: 0;}
+.nub_ggg li {border-bottom: 1px solid #dadada; float: left; text-align: center; font-size: 2.5rem; padding: 0;font-family: ArialMT;}
+.nub_ggg li.zj_x { border-left: 1px solid #dadada; border-right: 1px solid #dadada; }
+.nub_ggg li a { display: block; color: #000; height: 5rem; line-height: 5rem; overflow: hidden; font-family: ArialMT;}
+.nub_ggg li a:active { background: #e0e0e0;}
+
+/*弹框*/
+.modal-dialog.js-css-alert{
+	width: 80%;
+	margin: 2rem auto;
+	top: 30%;
+}
+.modal-dialog.js-css-alert .modal-content .modal-body{
+	font-family: PingFangSC-Regular;
+	color: #000;
+	font-size: 1.5rem;
+	border-bottom:1px solid #e5e5e5;
+	line-height: 2.4rem;
+	padding: 2.5rem 0;
+}
+.modal-dialog.js-css-alert .modal-content .modal-footer{
+	margin-bottom: 0;
+	padding: 0;
+	border-top: none;
+	overflow: hidden;
+	border-radius: 0 0 2rem 2rem;
+}
+.modal-dialog.js-css-alert .modal-content .modal-footer .btn{
+	height: 4rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: #666;
+	padding-left: 1.5rem;
+	border-radius: 0;
+}
+.modal-dialog.js-css-alert .modal-content .modal-footer .btn:nth-child(1){
+	border:none;
+}
+.modal-dialog.js-css-alert .modal-content .modal-footer .btn:nth-child(2){
+	color: #508CF1;margin-left: 0;border:none;border-left: 1px solid #e5e5e5;
+}
+.modal-dialog.js-css-alert .modal-content .btn.css-Btn{
+	color: #508CF1;font-size: 2rem;height: 4rem;width: 100%;font-weight: bold;border: none;
+}
+.js-Payment5,.js-Payment6,.js-Tim{display: none;}

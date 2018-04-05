@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--禁止iPhone手机上数字转换为拨号链接-->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="zlzf-cs" />
+    <title></title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="resources/css/common_mqpay.css"/>
+    <!--条形码插件-->
+    <link rel="stylesheet" href="resources/css/barCode.css"/>
+    <link type="text/css" rel="stylesheet" href="resources/css/numberDetail_second.css"/>
+</head>
+<body>
+<div class="container">
+    <!--top-->
+    <div class="page-top row">
+        <div class="top-image col-xs-2"><a href="account_numberDetail.html"><img src="resources/img/v1return.png" alt=""/>返回</a></div>
+        <h3 class="col-xs-8">明细详情</h3>
+        <div class="top-image col-xs-2"></div>
+    </div>
+    <!--center-->
+    <div class="detail-content">
+        <img src="resources/img/v1zhenglian@2x.png" alt=""/>
+        <div class="detail-top">
+            <p>￥100.00</p>
+            <p>交易成功</p>
+        </div>
+        <div class="order-list">
+            <!--优惠-->
+            <div class="order-coupon">
+                <p class="order-li">
+                    <span class="col-xs-4">订单金额</span>
+                    <span class="col-xs-8">100.00元</span>
+                </p>
+                <p class="order-li" id="color-red">
+                    <span class="col-xs-4">银联随机减优惠</span>
+                    <span class="col-xs-8">5.00元</span>
+                </p>
+            </div>
+            <!--退款-->
+            <div class="order-refund">
+                <p class="order-li">
+                    <span class="col-xs-4">交易金额</span>
+                    <span class="col-xs-8">115.9元</span>
+                </p>
+                <p class="order-li">
+                    <span class="col-xs-4">退款记录</span>
+                    <span class="col-xs-8" style="color: #ff6363">已退款73.00元</span>
+                    <p class="text-right" style="padding-right: 1.5rem;color: #666"><span style="margin-right: .5rem">2017-05-28</span><span>16:05:36</span></p>
+                </p>
+                <p class="order-li">
+                    <span class="col-xs-4">当前状态</span>
+                    <span class="col-xs-8" style="color: #ff6363">已退款(73.00)元</span>
+                </p>
+            </div>
+            <p class="order-li">
+                <span class="col-xs-4">商品说明</span>
+                <span class="col-xs-8">小胖沙县</span>
+            </p>
+            <p class="order-li">
+                <span class="col-xs-4">付款方式</span>
+                <span class="col-xs-8">资金账号(8888)</span>
+            </p>
+            <p class="order-li order-style">
+                <span class="col-xs-4">创建时间</span>
+                <span class="col-xs-8"><span style="margin-right: .5rem">2017-05-28</span><span>16:05:36</span></span>
+            </p>
+            <p class="order-li order-style">
+                <span class="col-xs-4">交易号</span>
+                <span class="col-xs-8">12345678901234567890123456</span>
+            </p>
+            <p class="order-li order-style">
+                <span class="col-xs-4">商户订单号</span>
+                <span class="col-xs-8">支持商家扫码退款及查询交易</span>
+            </p>
+            <p class="order-li order-style">
+                <span class="col-xs-4">备注</span>
+                <span class="col-xs-8">呵呵哈</span>
+            </p>
+        </div>
+        <!--条形码-->
+        <div class="swept-barcode barcode2" id="div128">
+
+        </div>
+    </div>
+    <!--bottom-->
+    <div class="page-bottom">
+        <span class="col-xs-3"></span>
+        <div class="col-xs-6"><span>由证联支付提供技术支持</span></div>
+        <span class="col-xs-3"></span>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<!--生成条形码js-->
+<script type="text/javascript" src="resources/js/barCode.js"></script>
+<script type="text/javascript" src="resources/js/numberDetail_second.js"></script>
+</body>
+</html>

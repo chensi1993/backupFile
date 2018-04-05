@@ -1,0 +1,21 @@
+html{font-size: 62.5%}
+body{font-family: "SourceHanSansCN-Regular";}
+.sty{background-color: #fff;background:url("../img/suoding@3x.png") no-repeat;background-size: contain;}
+.p_time{margin-top: 22rem;font-size: 1.3rem;letter-spacing: 0.1rem;line-height: 3rem;color: #000000;margin-bottom: 5rem;}
+.p_time span{font-family: "Arial";font-size: 2rem;color: #FF7777;margin: 0 0.2rem;}
+.back-color{background-image: linear-gradient(-225deg, #EFD5A4 0%, #D6B485 100%);color: #000;}
+.back-color:hover{color: #FAEE65;}
+.font-size{color: #666;background-color: rgba(191,191,191,0.35);}
+.font-size:hover{color: #FAEE65;background-color: rgba(191,191,191,1);}
+.btn-group-lg>.btn, .btn-lg {border-radius: 3rem;display: block;margin: 4rem auto;width: 50%;}
+/*************************************/
+/*弹框*/
+.modal{top: 30%;font-family: "SimHei";font-size: 1.8rem;color: #333333;letter-spacing: 0.6px;}
+.modal-dialog{width: 80%;margin: 2rem auto;}
+.modal-content{border-radius: 2rem;}
+.modal-body p{font-size: 1.4rem;color: #666;margin-top: 1rem;line-height: 2rem;letter-spacing: 0.2;border-radius: 2rem;}
+.modal-footer{padding: 0;}
+.But-style{color: #999999;}
+.But-style2{border-left: 0.17rem solid #E0E3E6;color: #000000;}
+.modal-footer .btn+.btn,.But-style{margin: 0;background: inherit;line-height: 4rem;}
+.btn.But-style:hover,.btn.But-style2:hover{color: #FAEE65;}

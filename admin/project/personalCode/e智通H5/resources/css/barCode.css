@@ -36,7 +36,8 @@
 }
 .barcode2 + * { clear:both; }
 .barcode2 div {
-    float:left;
+    /*float:left;*/
+    display: inline-block;
     height:0.7in;/*size*/
 }
 .barcode2 .bar1 { border-left:2px solid black; }

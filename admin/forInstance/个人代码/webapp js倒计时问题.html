@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="item in items">
+            <com1 :value="item.time"></com1>
+        </li>
+    </ul>
+</div>
+
+<script src="https://cdn.bootcss.com/moment.js/2.17.1/moment.min.js"></script>
+<script src="http://cdn.bootcss.com/rxjs/5.2.0/Rx.min.js"></script>
+<script src="http://cdn.bootcss.com/vue/2.1.0/vue.min.js"></script>
+
+<script>
+    const source = Rx.Observable.interval(1000);
+
+    Vue.component('com1', {
+        props: ['value'],
+        data() {
+        return {
+            count: null,
+        }
+    },
+    created() {
+        source.subscribe(count => this.count = count % 2);
+    },
+    template: '<div>距离 {{ value | date("HH:mm:ss") }} 还有 {{ seconds }}s</div>',
+            computed: {
+        seconds() {
+            this.count;
+            return Math.abs(moment().diff(this.value, 'seconds'));
+        }
+    },
+    filters: {
+        date(val, format) {
+            if (val) return moment(val).format(format || 'YYYY-MM-DD HH:mm:ss')
+            return val
+        }
+    }
+    });
+
+    new Vue({
+        el: '#app',
+        data() {
+        return {
+            items: []
+        }
+    },
+    created() {
+        for (var i = 0; i < 10; i++) {
+            this.items.push({
+                time: moment().add(i + 1, 'hours')
+            })
+        }
+    }
+    })
+</script>
+</body>
+</html>

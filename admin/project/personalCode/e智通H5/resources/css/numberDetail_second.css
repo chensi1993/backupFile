@@ -1,0 +1,70 @@
+.detail-content{
+    background: #fff;
+    border-radius: .4rem;
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+.detail-content img{
+    width: 10rem;
+    display: block;
+    margin: 0 auto;
+}
+.detail-content .detail-top{
+    margin-top:1rem;
+}
+.detail-content .detail-top p{
+    text-align: center;
+    font-family: ArialMT;
+    color: #666666;
+}
+.detail-content .detail-top p:nth-child(1){
+    font-size: 3.5rem;
+    margin: 0;
+}
+.detail-content .detail-top p:nth-child(2){
+    font-family: PingFangSC-Medium;
+    font-size: 1.6rem;
+}
+.order-list{
+    margin-bottom: 1rem;
+}
+.order-list .order-li{
+    overflow: hidden;
+    font-size: 1.4rem;
+    color: #666666;
+}
+.order-list .order-li span{
+    white-space:nowrap;
+}
+.order-list .order-li span:nth-child(2){
+    text-align: right;
+    padding-left: 0;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.order-list .order-coupon,.order-refund{
+    /*display: none;*/
+}
+.order-list .order-style{
+    margin: 0;
+}
+#color-red{
+    color: #ff6363;
+}
+/*条形码*/
+.detail-content .swept-barcode div:first-child{
+    margin-left: 3rem;
+}
+@media screen and (max-width:320px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 1rem;}}
+@media screen and (min-width:321px) and (max-width:375px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 3rem;}}
+@media screen and (min-width:376px) and (max-width:414px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 5.5rem;}}
+@media screen and (min-width:768px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 20rem;}}
+.swept-barcode label{
+    font-family: ArialMT;
+    font-size: 1.4rem;
+    color: #666666;
+}
+.barcode2 div{
+    height: 0.6in;
+}
