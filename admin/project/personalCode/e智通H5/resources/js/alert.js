@@ -19,7 +19,7 @@ var showModal = function(errMsg){
 	errMsg = ""; //清空错误信息内容
     $("#my-modal-alert").toggle();//显示模态框
     clearFlag = self.setInterval("autoClose()",300);//每过一秒调用一次autoClose方法
-}
+};
 
 var autoClose = function(){
     if(time>0){
@@ -33,4 +33,4 @@ var autoClose = function(){
         //移除父页面禁止点击、触摸、滑动操作
     	$(".container").unbind();
     }
-}
+};

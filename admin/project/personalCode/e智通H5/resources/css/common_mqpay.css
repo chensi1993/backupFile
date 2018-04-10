@@ -11,25 +11,28 @@ a, a:link, a:visited, a:hover, a:active {
 }
 /*top*/
 .page-top{
-    height: 4rem;
-    line-height: 4rem;
+    height: 6rem;
+    line-height: 6rem;
     background: #fff;
 }
 .page-top .top-img,.page-top .top-image{
-    padding-right: 0;
-    padding-left: 1rem;
     font-size: 1.6rem;
     color: #494949;
+    padding: 0;
+    text-align: center;
 }
 .page-top .top-img img{
     width: 1.8rem;
+    height: auto;
 }
-
 .page-top .top-image img{
     width: 1rem;
+    height: auto;
+    margin-right: .2rem;
+    padding-bottom: .2rem;
 }
 .page-top h3{
-    line-height: 4rem;
+    line-height: 6rem;
     opacity: 0.9;
     font-size: 1.8rem;
     color: #353535;

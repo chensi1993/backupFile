@@ -5,24 +5,24 @@ body{
     width: 95%;
     background: #fff;
     margin: 2.5rem auto;
-    padding-top: 9rem;
+    padding-top: 2rem;
     border-radius: .4rem;
     position: relative;
 }
-.swept-content .swept-barcode{
-    overflow: hidden;
-    position: absolute;
-    top: 2rem;
-    left: 12.5%;
+/*.swept-content .swept-barcode{*/
+    /*overflow: hidden;*/
+    /*position: absolute;*/
+    /*top: 2rem;*/
+    /*left: 12.5%;*/
     /*width: 95%;*/
     /*height: 10rem;*/
     /*margin: 0 auto;*/
     /*padding: 2rem;*/
-}
-@media screen and (max-width:320px){.swept-content .swept-barcode{overflow: hidden;position: absolute;top: 2rem;left: 5%;}}
-@media screen and (min-width:321px) and (max-width:375px){.swept-content .swept-barcode{overflow: hidden;position: absolute;top: 2rem;left: 12.5%;}}
-@media screen and (min-width:376px) and (max-width:414px){.swept-content .swept-barcode{overflow: hidden;position: absolute;top: 2rem;left: 17%;}}
-@media screen and (min-width:800px){.swept-content .swept-barcode{overflow: hidden;position: absolute;top: 2rem;left: 36%;}}
+/*}*/
+/*@media screen and (max-width:320px){.swept-content .swept-barcode{overflow: hidden;position: absolute;top: 2rem;left: 5%;}}*/
+/*@media screen and (min-width:321px) and (max-width:375px){.swept-content .swept-barcode{overflow: hidden;position: absolute;top: 2rem;left: 12.5%;}}*/
+/*@media screen and (min-width:376px) and (max-width:414px){.swept-content .swept-barcode{overflow: hidden;position: absolute;top: 2rem;left: 17%;}}*/
+/*@media screen and (min-width:800px){.swept-content .swept-barcode{overflow: hidden;position: absolute;top: 2rem;left: 36%;}}*/
 .swept-content .swept-QRcode{
     width: 200px;
     height: 200px;
@@ -103,4 +103,8 @@ body{
     font-size: 3.4rem;
     color: #333333;
     text-align: center;
+}
+
+#bcTarget{
+    margin: 0 auto;
 }

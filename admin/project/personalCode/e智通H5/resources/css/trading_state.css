@@ -40,9 +40,10 @@
     color: #666666;
 }
 .trading-suc .trading-info .trading-coupon{
-    display: none;
+    /*display: none;*/
+    /*margin-top: 1rem;*/
 }
-.trading-suc .trading-info .trading-coupon p:nth-child(1){
+.trading-suc .trading-info .trading-coupon .original-price{
     font-size: 1.6rem;
     color: #999999;
     margin-bottom: 1rem ;

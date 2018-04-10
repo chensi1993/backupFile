@@ -12,7 +12,9 @@ $(function () {
 	//console.log(barCode + QRcode);
 });
 
-
+//function code128(){
+//    $("#bcTarget").empty().barcode("1234567890123456789012345678", "code128",{barWidth:1, barHeight:30,showHRI:false});
+//}
 //提示用户是否离开此页面（关闭、刷新或者点击后退等）
 
 //window.addEventListener("beforeunload", function (e) {
@@ -75,7 +77,8 @@ function checkLeave(){
 //条形码和二维码每分钟更新一次
 function refreshFun(){
     //页面加载时显示条形码
-    createBarcode('div128','1234567912345679','C');
+    //createBarcode('div128','1234567912345679','C');
+    $("#bcTarget").empty().barcode("1234567912345679", "code128",{barWidth:1, barHeight:70,showHRI:false});
     //页面加载时显示二维码
     outputQRCod(1234567912345679, 200, 200);
 }
@@ -194,6 +197,8 @@ function passwordFun(){
     //调取支付密码框
     //$('.js-Payment-Money').show();
     $('.js-Payment5').show();
+    //$('.js-Payment6').show();
+    //$('.js-Tim').show();
     $('#myModal').modal('show');
     //输入支付密码
     Payment_Money();
@@ -209,4 +214,62 @@ function clearFun(){
     $(".mm_box li").removeClass("mmdd");
     $(".mm_box li").attr("data","");
 }
-passwordFun();
+//passwordFun();
+
+//点击重新输入
+$("#reInput").on("click",function(){
+    $('.js-Payment-Money').show(); //密码框
+    $('.js-Payment5').hide();//输入五次错误框
+    $('#myModal').modal('show');//模态框
+});
+//输入5次
+function fiveFun(msg){
+    $('#myModal').modal('show');//模态框
+    $('.js-Payment5').show();//输入五次错误框
+    $('.js-Payment-Money').hide(); //密码框
+    $('.js-Payment6').hide();//输入六次错误框
+    $('.js-Tim').hide();//支付时间超时框
+    $('.js-Payment5').find('.modal-body').text(msg);//输入五次提示信息
+}
+//输入6次
+function sixFun(msg){
+    $('#myModal').modal('show');//模态框
+    $('.js-Payment6').show();//输入六次错误框
+    $('.js-Payment5').hide();//输入五次错误框
+    $('.js-Payment-Money').hide(); //密码框
+    $('.js-Tim').hide();//支付时间超时框
+    $('.js-Payment6').find('.modal-body').text(msg+'<br />请点击忘记密码进行找回');//输入六次提示信息
+}
+//支付超时
+function overtimeFun(msg){
+    $('#myModal').modal('show');//模态框
+    $('.js-Tim').show();//支付时间超时框
+    $('.js-Payment6').hide();//输入六次错误框
+    $('.js-Payment5').hide();//输入五次错误框
+    $('.js-Payment-Money').hide(); //密码框
+    $('.js-Tim').find('.modal-body').text(msg);//支付时间超时
+}
+
+//点击返回
+function returnFun(){
+
+}
+
+
+
+var u = navigator.userAgent, app = navigator.appVersion;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+//打开扫一扫
+function linkScan(){
+    if (isAndroid) {
+
+        window.location.href = Android.closeActivity(); //关闭页面
+    }
+    if (isIOS) {
+
+        window.location.href ="";
+        openScan();
+    }
+
+}

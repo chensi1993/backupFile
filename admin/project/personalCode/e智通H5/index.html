@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="resources/css/index.css"/>
 </head>
 <body>
-<div class="container">
+<div class="container content-main">
     <!--top-->
     <div class="page-top row">
         <div class="top-img col-xs-2" id="leftImg"><img src="resources/img/v1mine.png" alt=""/></div>
@@ -25,13 +25,13 @@
     <!--label-->
     <div class="page-label row">
         <div class="label-img col-xs-6">
-            <a href="#">
-                <img src="resources/img/v1saoyisao.png" alt=""/>
+            <a href="javascript:;" onclick="linkScan()">
+                <img onclick="linkScan()" src="resources/img/v1saoyisao.png" alt=""/>
                 <p>扫一扫</p>
             </a>
         </div>
         <div class="label-img col-xs-6">
-            <a href="#">
+            <a href="pay_swept.html">
                 <img src="resources/img/v1fukuanma.png" alt=""/>
                 <p>付款码</p>
             </a>
@@ -71,32 +71,42 @@
                 <div class="info-list">
                     <p>账户信息</p>
                     <div class="info-li row">
-                        <span class="col-xs-9">个人信息</span>
-                        <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                        <a href="personalInfor.html">
+                            <span class="col-xs-9">个人信息</span>
+                            <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                        </a>
                     </div>
                 </div>
                 <div class="info-list">
                     <p>支付设置</p>
                     <div class="info-li row">
-                        <span class="col-xs-9">修改支付密码</span>
-                        <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                        <a href="modify_payPassward.html">
+                            <span class="col-xs-9">修改支付密码</span>
+                            <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                        </a>
                     </div>
                     <div class="info-li info-top row">
-                        <span class="col-xs-9">忘记支付密码</span>
-                        <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                        <a href="modify_account.html">
+                            <span class="col-xs-9">忘记支付密码</span>
+                            <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                        </a>
                     </div>
                 </div>
                 <div class="info-list">
                     <p>我的资金账号</p>
                     <div class="info-li row">
-                        <span class="col-xs-9">资金账号</span>
-                        <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                        <a href="account_numberDetail.html">
+                            <span class="col-xs-9">资金账号</span>
+                            <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                        </a>
                     </div>
                 </div>
                 <div class="info-list">
                     <div class="info-li row">
-                        <span class="col-xs-9">帮助中心</span>
-                        <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                        <a href="help_center.html">
+                            <span class="col-xs-9">帮助中心</span>
+                            <span class="col-xs-3 text-right"><img src="resources/img/v1more2@2x.png" alt=""/></span>
+                        </a>
                     </div>
                 </div>
             </div>

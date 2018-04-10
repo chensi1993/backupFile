@@ -26,7 +26,9 @@
     font-size: 1.6rem;
 }
 .order-list{
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
+    /*4.9修改*/
+    margin: 1rem 0;
 }
 .order-list .order-li{
     overflow: hidden;
@@ -53,13 +55,13 @@
     color: #ff6363;
 }
 /*条形码*/
-.detail-content .swept-barcode div:first-child{
-    margin-left: 3rem;
-}
-@media screen and (max-width:320px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 1rem;}}
-@media screen and (min-width:321px) and (max-width:375px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 3rem;}}
-@media screen and (min-width:376px) and (max-width:414px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 5.5rem;}}
-@media screen and (min-width:768px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 20rem;}}
+/*.detail-content .swept-barcode div:first-child{*/
+    /*margin-left: 3rem;*/
+/*}*/
+/*@media screen and (max-width:320px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 1rem;}}*/
+/*@media screen and (min-width:321px) and (max-width:375px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 3rem;}}*/
+/*@media screen and (min-width:376px) and (max-width:414px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 5.5rem;}}*/
+/*@media screen and (min-width:768px){.detail-content .swept-barcode div:first-child{overflow: hidden;margin-left: 20rem;}}*/
 .swept-barcode label{
     font-family: ArialMT;
     font-size: 1.4rem;
@@ -67,4 +69,8 @@
 }
 .barcode2 div{
     height: 0.6in;
+}
+
+#bcTarget{
+    margin: 0 auto;
 }

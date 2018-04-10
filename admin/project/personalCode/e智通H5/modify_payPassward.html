@@ -14,18 +14,41 @@
     <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="resources/css/common_mqpay.css"/>
     <link type="text/css" rel="stylesheet" href="resources/css/password.css"/>
+    <style>
+        /*模态框样式*/
+        .modal-dialog{
+            margin: 4rem;
+            top: 14rem;
+        }
+        .modal-dialog .modal-content .modal-body{
+            padding: 2.5rem;
+        }
+        .modal-footer{
+            padding: 0;
+        }
+        .modal-footer .btn+.btn{
+            margin: 0;
+            color: #666;
+            background: none;
+        }
+        .modal-footer input{
+            border: none;
+            padding: 1rem 0;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <!--top-->
     <div class="page-top row">
-        <div class="top-image col-xs-2"></div>
+        <div class="top-image col-xs-2"><a href="javascript:history.back(-1)">取消</a></div>
         <h3 class="col-xs-8">修改支付密码</h3>
         <div class="top-image col-xs-2"></div>
     </div>
     <!--password-->
     <div class="pay-password">
         <p>请输入支付密码，以验证身份</p>
+        <!--两次密码不一致时提示-->
         <p style="display: none">建议不要与银行卡密码相同</p>
         <div class="ftc_wzsf">
             <div class="srzfmm_box">
@@ -38,7 +61,10 @@
                     <li class="col-xs-2">——</li>
                 </ul>
             </div>
-            <input class="completeBtn" type="button" value="完成"/>
+            <!--两次密码不一致时提示-->
+            <p id="info-tips"><img src="resources/img/v1shibai.png" alt=""/>两次密码输入不一致</p>
+            <!--两次密码一致时显示-->
+            <input style="display: none" class="completeBtn" type="button" value="完成"/>
             <div class="numb_box">
                 <div class="xiaq_tb">
                     <img src="resources/img/jftc_14.jpg" height="10"></div>
@@ -60,8 +86,21 @@
         </div>
     </div>
 </div>
+<!--模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-center">是否放弃修改支付密码？</div>
+            <div class="modal-footer">
+                <input type="button" class="btn btn-default col-xs-6" data-dismiss="modal" value="否">
+                <input type="button" id="yesBtn" class="btn btn-primary col-xs-6" value="是">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="resources/js/common.js"></script>
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="resources/js/modify_payPassward.js"></script>
 </body>
 </html>

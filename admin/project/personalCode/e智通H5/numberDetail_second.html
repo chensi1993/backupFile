@@ -20,7 +20,7 @@
 <div class="container">
     <!--top-->
     <div class="page-top row">
-        <div class="top-image col-xs-2"><a href="account_numberDetail.html"><img src="resources/img/v1return.png" alt=""/>返回</a></div>
+        <div class="top-image col-xs-2"><a href="javascript:history.back(-1)"><img src="resources/img/v1return.png" alt=""/>返回</a></div>
         <h3 class="col-xs-8">明细详情</h3>
         <div class="top-image col-xs-2"></div>
     </div>
@@ -75,19 +75,18 @@
                 <span class="col-xs-4">交易号</span>
                 <span class="col-xs-8">12345678901234567890123456</span>
             </p>
-            <p class="order-li order-style">
-                <span class="col-xs-4">商户订单号</span>
-                <span class="col-xs-8">支持商家扫码退款及查询交易</span>
-            </p>
+            <!--<p class="order-li order-style">-->
+                <!--<span class="col-xs-4">商户订单号</span>-->
+                <!--<span class="col-xs-8">支持商家扫码退款及查询交易</span>-->
+            <!--</p>-->
             <p class="order-li order-style">
                 <span class="col-xs-4">备注</span>
                 <span class="col-xs-8">呵呵哈</span>
             </p>
         </div>
         <!--条形码-->
-        <div class="swept-barcode barcode2" id="div128">
-
-        </div>
+        <!--<div class="swept-barcode barcode2" id="div128"></div>-->
+        <div id="bcTarget" class="barcodeImg"></div>
     </div>
     <!--bottom-->
     <div class="page-bottom">
@@ -98,7 +97,8 @@
 </div>
 <script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
 <!--生成条形码js-->
-<script type="text/javascript" src="resources/js/barCode.js"></script>
+<!--<script type="text/javascript" src="resources/js/barCode.js"></script>-->
+<script type="text/javascript" src="resources/js/jquery-barcode.js"></script>
 <script type="text/javascript" src="resources/js/numberDetail_second.js"></script>
 </body>
 </html>
