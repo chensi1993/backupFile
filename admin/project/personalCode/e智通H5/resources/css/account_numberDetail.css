@@ -1,6 +1,8 @@
 body{
-    overflow: hidden;
+    /*overflow: hidden;*/
+
 }
+.container::-webkit-scrollbar {display:none;}
 html,body{
     height: 100%;
 }
@@ -12,7 +14,7 @@ html,body{
     background: #fff;
     overflow: hidden;
     border-radius: .4rem;
-    margin: 1rem 0;
+    margin: 1rem;
     box-shadow: 1px 1px 2px 0 rgba(125,125,125,0.20);
     padding: 1rem 0;
 }
@@ -59,10 +61,11 @@ html,body{
     white-space: nowrap;
 }
 .content-center{
-    height: 52%;
-    overflow-y: scroll;
+    /*height: 52%;*/
+    /*height: 30rem;*/
+    /*overflow-y: scroll;*/
     /*解决iOSoverflow不流畅*/
-    -webkit-overflow-scrolling: touch;
+    /*-webkit-overflow-scrolling: touch;*/
     font-family: ArialMT;
 }
 .content-center .contents-list h3{
@@ -72,8 +75,9 @@ html,body{
 }
 .content-center .contents-list .list-info{
     background: #fff;
-    overflow: hidden;
+    /*overflow: hidden;*/
     padding: .5rem 0;
+    margin: 0;
 }
 .list-info .list-left{
     line-height: 5rem;
@@ -134,4 +138,30 @@ html,body{
 }
 .default-tips p:nth-child(3){
     font-size: 1.2rem;
+}
+
+
+/*修改*/
+.content-pop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #efeff4;
+    z-index: 999;
+}
+.content-center{
+    margin-top: 24rem;
+    margin-bottom: 2rem;
+}
+.page-bottom{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 2rem 0 0 0;
+    background: #efeff4;
+    z-index: 999;
+}
+.page-top .top-image{
+    padding-left: 1.5rem;
 }

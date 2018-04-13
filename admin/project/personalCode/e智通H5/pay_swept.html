@@ -17,7 +17,7 @@
     <!--引入bootstrap样式-->
     <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="resources/css/common_mqpay.css"/>
-    <link rel="stylesheet" type="text/css" href="resources/css/alert.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="resources/css/alert.css"/>-->
     <!--引入弹出提示框样式-->
     <link type="text/css" rel="stylesheet" href="resources/css/style-alert.css">
     <!--条形码插件-->
@@ -28,14 +28,17 @@
 <div class="container">
     <!--top-->
     <div class="page-top row">
-        <div class="top-image col-xs-2"><a href="index.html"><img src="resources/img/v1return.png" alt=""/>返回</a></div>
+        <div class="top-image col-xs-2" id="backBtn"><a href="index.html"><img src="resources/img/v1return.png" alt=""/>返回</a></div>
         <h3 class="col-xs-8">向商家付款</h3>
         <div class="top-image col-xs-2"></div>
     </div>
+
+    <!--付款提示-->
+    <p class="pay-tips">请在标记有<img src="resources/img/yinlian@2x.png"/><img src="resources/img/yunshanfu@2x.png">的银联商户使用</p>
+
     <!--center-->
     <div class="swept-content">
         <!--条形码-->
-        <!--<div class="swept-barcode barcode2" id="div128"></div>-->
         <div id="bcTarget" class="barcodeImg"></div>
         <!--二维码-->
         <div class="swept-QRcode">
@@ -43,10 +46,9 @@
             <img class="pay-logo" src="resources/img/v1yunshanfu.png" alt=""/>
         </div>
         <input type="hidden" class="input" id="inputTxt" value="555555">
-        <!--<input type="button" id="txt_btn" value="生成二维码">-->
         <!--自动更新-->
         <div class="swept-update">
-            <img src="resources/img/v1refresh.png" alt=""/>
+            <img onclick="btnRefresh()" src="resources/img/v1refresh.png" alt=""/>
             <p>付款码及数字每分钟更新，请当面使用请勿截屏</p>
 
         </div>
@@ -155,11 +157,10 @@
 </div>
 <script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-<!--生成条形码js-->
-<!--<script type="text/javascript" src="resources/js/barCode.js"></script>-->
-<script type="text/javascript" src="resources/js/jquery-barcode.js"></script>
 <!--引入弹出提示框脚本-->
 <script src="resources/js/alert.js"></script>
+<!--生成条形码js-->
+<script type="text/javascript" src="resources/js/jquery-barcode.js"></script>
 <!--生成二维码js-->
 <script type="text/javascript" src="resources/js/jquery.qrcode.min.js"></script>
 <script type="text/javascript" src="resources/js/pay_swept.js"></script>

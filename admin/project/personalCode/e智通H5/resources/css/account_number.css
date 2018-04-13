@@ -30,6 +30,8 @@
     width: 100%;
     height: 3rem;
     line-height: 3rem;
+}
+#account-company{
     color: #C1C1C1;
 }
 .account-content .account-group .account-li .font-color{

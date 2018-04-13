@@ -84,6 +84,7 @@ function addMore(){
                 url: 'resources/json/blog.json',
                 dataType: 'json',
                 success: function(data){
+                    console.log(data);
                     //data = JSON.parse(data);
                     var result = '';
                     counter++;

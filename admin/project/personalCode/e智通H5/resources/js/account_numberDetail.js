@@ -7,14 +7,14 @@ $(function(){
 });
 
 //跳转到明细详情
-$(".contents-list").children(".list-info").on("click",function(){
-    //var listId =$(".contents-list").children(".list-info").attr('id');
+function listToDetail(){
     window.location.href = "numberDetail_second.html";
-});
-
+}
 //上拉加载更多
 function loadData(){
     var counter = 0;//页码数
+    //每页展示5个
+    var num = 5;
 
     // dropload函数接口设置
     $('.content-center').dropload({
@@ -34,7 +34,7 @@ function loadData(){
                     // 选择需要显示的数据 拼接 DOM
                     for(var i = 0; i < data.shopList.length; i++){
 
-                        result +='<div class="list-info" id="infoList">'
+                        result +='<div class="list-info row" id="infoList" onclick="listToDetail();">'
                         +'<div class="list-left col-xs-2">'
                         +'<img src="http://localhost:63342/workSpace/admin/project/personalCode/e%E6%99%BA%E9%80%9AH5/resources/img/v1mxshanghu@2x.png"/>'
                         +'</div>'
@@ -64,13 +64,20 @@ function loadData(){
                         //无数据展示
                         noDateShow();
                     }
-                    if(data.shopList.length == 0){
-
-                        // 锁定
+                    //返回数据列表长度为0
+                    if(parseInt(data.shopList.length/num) == 0){
+                        //锁定
                         me.lock();
-                        // 无数据
+                        //无数据
                         me.noData();
                     }
+                    //if(data.shopList.length == 0){
+                    //
+                    //    // 锁定
+                    //    me.lock();
+                    //    // 无数据
+                    //    me.noData();
+                    //}
 
                     $('.contents-list').append(result);
                     // 每次数据加载完，必须重置

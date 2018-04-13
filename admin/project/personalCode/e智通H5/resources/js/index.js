@@ -42,7 +42,7 @@ function linkScan(){
     }
     if (isIOS) {
 
-        //window.location.href ="";
+        window.location.href ="http://www.baidu.com/";
         scanIos();
 
     }
