@@ -1,6 +1,17 @@
 body{
     background: #4995EF;
 }
+/*头部样式*/
+.page-top{
+    background: #4995EF;
+    color: #fff;
+}
+.page-top .top-image>a{
+    color: #fff;
+}
+.page-top h3{
+    color: #fff;
+}
 .pay-tips{
     color: #fff;
     text-align: center;
@@ -17,14 +28,14 @@ body{
     width: 95%;
     background: #fff;
     margin: 0 auto;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     border-radius: .4rem;
     position: relative;
 }
 
 .swept-content .swept-QRcode{
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: auto;
     position: relative;
     margin: 1.5rem auto;
 
@@ -38,12 +49,15 @@ body{
     height: 100%;
 }
 .swept-content .swept-QRcode .pay-logo{
-    position: absolute;
-    top: 40%;
     width: 5rem;
     height: auto;
-    left: 35%;
     z-index: 999;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
 .swept-barcode label{
     display: none;
@@ -73,10 +87,11 @@ body{
 }
 .swept-scan{
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 .swept-scan a{
     display: inline-block;
+    color: #fff;
 }
 .swept-scan img{
     width: 6rem;
@@ -197,3 +212,11 @@ body.modal-open {
     color: #508CF1;font-size: 2rem;height: 4rem;width: 100%;font-weight: bold;border: none;
 }
 .js-Payment5,.js-Payment6,.js-Tim{display: none;}
+
+/*条形码样式*/
+#barcode3{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 10rem;
+}

@@ -1,31 +1,14 @@
 /* 弹框设置 */
-/*.alert-bg{
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0);
-}*/
 .my-modal-alert{
     width: 70%;
     margin: 0 auto;
     margin-top: 20rem;
 }
 .my-modal-alert .modal-body{
-    height: 4rem;
-    /*text-align: center;
-    font-size: 1.6rem;
-    color: #fff;
-    background-color: rgba(0,0,0,0.3);*/
-    /*8-28添加*/
-    line-height: 1rem;
     text-align: center;
     font-size: 1.6rem;
     color: #fff;
-    background-color: #666;
-    opacity: .8;
-    border-radius:0.4rem;
+    background-color: rgba(0,0,0,.6);
+    border-radius:0.5rem;
 
 }

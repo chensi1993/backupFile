@@ -13,7 +13,7 @@
 }
 .account-horizontal .account-content .account-group .account-lab{
     font-size: 1.7rem;
-    color: #000;
+    color: #494949;
     vertical-align: middle;
     padding: .6rem 0 0 0;
     white-space: nowrap;
@@ -57,7 +57,7 @@
     color: #C1C1C1;
 }
 #change-color{
-    color: #BEBEBE;
+    color: #999;
 }
 
 /**/

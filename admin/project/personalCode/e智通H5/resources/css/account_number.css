@@ -16,7 +16,7 @@
 }
 .account-horizontal .account-content .account-group .account-lab{
     font-size: 1.7rem;
-    color: #000;
+    color: #494949;
     vertical-align: middle;
     padding-top: .6rem;
     white-space: nowrap;
@@ -35,7 +35,7 @@
     color: #C1C1C1;
 }
 .account-content .account-group .account-li .font-color{
-    color: #000;
+    color: #535353;
 }
 .account-content .account-group .account-li input::-webkit-input-placeholder{
     font-size: 1.7rem;
@@ -50,7 +50,7 @@
     color: #C1C1C1;
 }
 #change-color{
-    color: #BEBEBE;
+    color: #999;
 }
 
 /**/

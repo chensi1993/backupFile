@@ -4,7 +4,7 @@
     margin-top: 1rem;
     padding: 1rem 0;
 }
-.detail-content img{
+.detail-content .image-logo{
     width: 10rem;
     display: block;
     margin: 0 auto;
@@ -73,4 +73,11 @@
 
 #bcTarget{
     margin: 0 auto;
+}
+
+/*条形码css*/
+#barcode3{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
 }

@@ -19,9 +19,17 @@ $("#backBtn").on("click",function(){
 //条形码和二维码每分钟更新一次
 function refreshFun(){
     //页面加载时显示条形码
-    $("#bcTarget").empty().barcode("123456791234567912345679", "code128",{barWidth:1, barHeight:70,showHRI:false});
+    //$("#bcTarget").empty().barcode("12345679012345679012345679", "code128",{barWidth:1, barHeight:95,showHRI:false});
+    JsBarcode("#barcode3", "12345678901234567890123456789", {
+        //width:1.4,
+        displayValue:false
+    });
     //页面加载时显示二维码
-    outputQRCod(1234567912345679, 200, 200);
+    outputQRCod(1234567912345679, 160, 160);
+    //qrcode = new QRCode(document.getElementById("bcTarget"), {
+    //    width : 150,//设置宽高
+    //    height : 150
+    //});
 }
 //中文字符处理
 function toUtf8(str) {
@@ -99,7 +107,7 @@ function stateChanged(){
         console.log("likai")
     }
     else {
-        alert("aa");
+        //alert("aa");
         //alert('You were away for ' + (new Date().getTime()-timer)/1000+ ' seconds.')
     }
 }

@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>H5密码控件Demo</title>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="This is my page">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="initial-scale=1,width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta name="App-Config"
+			content="fullscreen=yes,useHistoryState=yes,transition=yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<link rel="stylesheet" type="text/css" href="./css/demo.css">
+		<link rel="stylesheet" type="text/css" href="./css/microdone-h5.css">
+		<script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="./js/demo.js"></script>
+		<script type="text/javascript" src="./js/microdoneH5.js"></script>
+		<script type="text/javascript">
+			var kb = new keyBoard( {
+				"chaosMode" : 0, // 混乱模式,0:无混乱;1:打开时乱一次;2:每输入一个字符乱一次,默认值0
+				"pressStatus" : 1, // 按键状态,0:按下、抬起按键无变化;1:按下、抬起按键的颜色变化,默认值0
+				"kbType" : 0, // 键盘类型,0:全键盘;1:纯数字键盘,默认值0
+				"svg" : "svg",//svg图片的地址
+				"hasMap" : "0",//是否调用mapping值：当为1时调用，当为非1时，不调用
+				"license" : "S3pWN014S0F3bCtTSU5HVFNDT2dKVUM4QWhYajZxK1ZZaTRyODJhMC9JMDQ1WFU4QkRDajJWYmJOSFY4QmxFUFV0VWNlMExaRUFvVk1qdk9EZGpQeTJ2YlNKcklqcTZaMHlzVFNqS1V4eDlkWEtUVHZhanhGeWwvM2xRaWM0WThxR2VlSnd5Y2lvNktPOEhmNHpGdy9aWjI0SXphMGRRR2lCdm9zZGlPL1FFPXsiaWQiOjAsInR5cGUiOiJ0ZXN0IiwicGxhdGZvcm0iOjEwLCJub3RiZWZvcmUiOiIyMDE3MTEwOSIsIm5vdGFmdGVyIjoiMjAxODAyMDkifQ=="
+			});
+			//设置映射数组,此处为了方便demo演示，写死了，正常应该由
+			//服务器端下发映射数组
+			passGuard.mapArr = "Wyc0MycsICc1NycsICc3MScsICcxMjEnLCAnMTI2JywgJzEyNCcsICc5MCcsICcxMTInLCAnODknLCAnOTMnLCAnMTA1JywgJzgxJywgJzExMycsICcxMjUnLCAnNjgnLCAnMzgnLCAnODUnLCAnNjUnLCAnMTE4JywgJzgwJywgJzg3JywgJzkxJywgJzQ0JywgJzMzJywgJzc4JywgJzg4JywgJzk2JywgJzEwOScsICc2MScsICc2NicsICc0MCcsICc4MicsICc3MicsICcxMjAnLCAnOTUnLCAnMTEwJywgJzQ2JywgJzg2JywgJzEwNycsICc1MCcsICc3MCcsICc5OCcsICcxMTcnLCAnMzYnLCAnMTAxJywgJzgzJywgJzQ4JywgJzExNCcsICc2NycsICc3NycsICcxMDgnLCAnMTAwJywgJzM1JywgJzczJywgJzY5JywgJzk5JywgJzEwMicsICc3NicsICc3NScsICcxMDQnLCAnNDknLCAnOTInLCAnNjInLCAnNTgnLCAnNTMnLCAnNzknLCAnOTcnLCAnNDUnLCAnNDEnLCAnMTE5JywgJzEyMycsICc1MScsICc2MycsICc0NycsICcxMDYnLCAnMzknLCAnMTExJywgJzExNScsICczNCcsICc5NCcsICcxMjInLCAnNjQnLCAnNTknLCAnMTE2JywgJzM3JywgJzc0JywgJzU1JywgJzYwJywgJzU0JywgJzUyJywgJzQyJywgJzg0JywgJzEwMycsICc1Nidd";
+			var passGuard1 = new passGuard(
+			{
+				//"mappurl" : "./send_mapping.jsp",//此处为了前端演示而屏蔽了，正常开发中需要此参数，该地址由后台人员提供
+				"fixed":"H5fixed",//当fixed接口添加时，代表该输入框在fixed覆盖层上且覆盖层的ID为接口的值(在demo中覆盖层ID为"H5fixed")
+				"maxLength" : 12, // 最大输入长度
+				"regExp1" : "[\\S\\s]", // 输入过程限制的正则
+				"regExp2" : "[\\S\\s]{6,12}",
+				"displayMode" : 0, // 显示形式,0:星号;1:明文,默认值0
+				"callBack" : cb1, //成功回调
+				"errorCallBack" : cb2, //失败回调
+				"focus":inputFocus1,//H5键盘获取焦点回调
+			    "blur":inputBlur1,//H5键盘失去焦点回调
+				"rsaPublicKey" : "3081890281810092d9d8d04fb5f8ef9b8374f21690fd46fdbf49b40eeccdf416b4e2ac2044b0cfe3bd67eb4416b26fd18c9d3833770a526fd1ab66a83ed969af74238d6c900403fc498154ec74eaf420e7338675cad7f19332b4a56be4ff946b662a3c2d217efbe4dc646fb742b8c62bfe8e25fd5dc59e7540695fa8b9cd5bfd9f92dfad009d230203010001" // rsa公钥
+			});
+			var passGuard2 = new passGuard(
+			{
+				//"mappurl" : "./send_mapping.jsp",//此处为了前端演示而屏蔽了，正常开发中需要此参数，该地址由后台人员提供
+				"maxLength" : 12, // 最大输入长度
+				"regExp1" : "[\\S\\s]", // 输入过程限制的正则
+				"regExp2" : "[\\S\\s]{6,12}",
+				"displayMode" : 0, // 显示形式,0:星号;1:明文,默认值0
+				"callBack" : cb3, //成功回调
+				"errorCallBack" : cb4, //失败回调
+				"focus":inputFocus2,//H5键盘获取焦点回调
+			    "blur":inputBlur2,//H5键盘失去焦点回调
+				"rsaPublicKey" : "3081890281810092d9d8d04fb5f8ef9b8374f21690fd46fdbf49b40eeccdf416b4e2ac2044b0cfe3bd67eb4416b26fd18c9d3833770a526fd1ab66a83ed969af74238d6c900403fc498154ec74eaf420e7338675cad7f19332b4a56be4ff946b662a3c2d217efbe4dc646fb742b8c62bfe8e25fd5dc59e7540695fa8b9cd5bfd9f92dfad009d230203010001" // rsa公钥
+			});
+			var passGuard3 = new passGuard(
+			{
+				//"mappurl" : "./send_mapping.jsp",//此处为了前端演示而屏蔽了，正常开发中需要此参数，该地址由后台人员提供
+        	    "jump": 1, //是否用添加删除回调：1代表使用，0代表不使用(可用于6个格子)
+			    "add": tianjia, //输入框值添加回调,当jump为1时，才有回调
+			    "del": jianshao, //输入框值减少回调,当jump为1时，才有回调
+			    "fixed":"H5fixed",//当fixed接口添加时，代表该输入框在fixed覆盖层上且覆盖层的ID为接口的值(在demo中覆盖层ID为"H5fixed")
+				"maxLength" : 6, // 最大输入长度
+				"regExp1" : "[\\S\\s]", // 输入过程限制的正则
+				"regExp2" : "[\\S\\s]{6,12}",
+				"displayMode" : 0, // 显示形式,0:星号;1:明文,默认值0
+				"callBack" : cb5, //成功回调
+				"errorCallBack" : cb6, //失败回调
+				"focus":inputFocus3,//H5键盘获取焦点回调
+			    "blur":inputBlur3,//H5键盘失去焦点回调
+				"rsaPublicKey" : "3081890281810092d9d8d04fb5f8ef9b8374f21690fd46fdbf49b40eeccdf416b4e2ac2044b0cfe3bd67eb4416b26fd18c9d3833770a526fd1ab66a83ed969af74238d6c900403fc498154ec74eaf420e7338675cad7f19332b4a56be4ff946b662a3c2d217efbe4dc646fb742b8c62bfe8e25fd5dc59e7540695fa8b9cd5bfd9f92dfad009d230203010001" // rsa公钥
+			});
+			function cb1() {
+				console.log("passGuard1输入的密码匹配regExp2");
+			}
+			function cb2() {
+				console.log("passGuard1输入的密码不匹配regExp2");
+			}
+			function cb3() {
+				console.log("passGuard2输入的密码匹配regExp2");
+			}
+			function cb4() {
+				console.log("passGuard2输入的密码不匹配regExp2");
+			}
+			function cb5() {
+				console.log("passGuard3输入的密码匹配regExp2");
+			}
+			function cb6() {
+				console.log("passGuard3输入的密码不匹配regExp2");
+			}
+			function inputFocus1(){
+				console.log("passGuard1输入框获得焦点");
+			}
+			function inputBlur1(){
+				console.log("passGuard1输入框失去焦点");
+			}
+			function inputFocus2(){
+				console.log("passGuard2输入框获得焦点");
+			}
+			function inputBlur2(){
+				console.log("passGuard2输入框失去焦点");
+			}
+			function inputFocus3(){
+				console.log("passGuard3输入框获得焦点");
+			}
+			function inputBlur3(){
+				console.log("passGuard3输入框失去焦点");
+			}
+			function tianjia(xh) { //xh为密码的长度
+				$(".kb3>li").eq(xh - 1).append($("<p class='yuan'></p>"));
+				if(xh == 6) {
+					kb.hide();
+				}
+			}
+
+			function jianshao(xh) {
+				$(".kb3>li").eq(xh).html("");
+			}
+</script>
+	</head>
+	<body>
+		<form id="form1" name="form1" method="post" action="return false;">
+			<div id="Main">
+				<div id="TitleBar">
+					<div id="LogoBg_Topbar">
+						北京微通新成手机网银H5密码控件Demo
+					</div>
+					<div id="LoginTab">
+						<div class="on">
+							修改密码场景
+						</div>
+					</div>
+				</div>
+				<div id="InputBlock">
+					<div id="InputInfoTable">
+						<div class="line5px"></div>
+						<table class="InputLine">
+							<tbody>
+								<tr>
+									<td class="left" align="right">
+										<table class="AutoAlignLabel">
+											<tr>
+												<td class="BeginWord">
+													账
+												</td>
+												<td class="EndWord">
+													号
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="right" align="left">
+										<input type="text" value="tester" id="username2"
+											onfocus="kb.hide();" name="username" class="de2 NoneInput90"
+											maxlength="50" tabindex="1" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="line0px"></div>
+						<table class="InputLine">
+							<tbody>
+								<tr>
+									<td class="left" align="right">
+										<table class="AutoAlignLabel">
+											<tr>
+												<td class="BeginWord">
+													旧
+												</td>
+												<td class="MidWord">
+													密
+												</td>
+												<td class="EndWord">
+													码
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="right" align="left" style="position: relative;">
+										<input type="text" readonly="readonly" id="kb1" name="input3"
+											placeholder="请输入密码" class="default NoneInput90"
+											maxlength="50" tabindex="3" />
+										<script>
+	//初始化密码卫士,绑定键盘对象。数字参数：0代表全键盘，1代表数字键盘
+	passGuard1.generate("kb1", kb, "passGuard1", 0);
+</script>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td class="left" align="right">
+										<table class="AutoAlignLabel">
+											<tr>
+												<td class="BeginWord">
+													新
+												</td>
+												<td class="MidWord">
+													密
+												</td>
+												<td class="EndWord">
+													码
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="right" align="left" style="position: relative;">
+										<input type="text" id="kb2" readonly="readonly" name="input3"
+											placeholder="请输入新密码" class="default NoneInput90"
+											maxlength="50" tabindex="3" />
+										<script>
+	//初始化密码卫士,绑定键盘对象。数字参数：0代表全键盘，1代表数字键盘
+	passGuard2.generate("kb2", kb, "passGuard2", 0);
+</script>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td class="left" align="right">
+										<table class="AutoAlignLabel">
+											<tr>
+												<td class="BeginWord">
+													确
+												</td>
+												<td class="MidWord">
+													认
+												</td>
+												<td class="MidWord">
+													新
+												</td>
+												<td class="MidWord">
+													密
+												</td>
+												<td class="EndWord">
+													码
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="right" align="left" style="position: relative;">
+										<input type="text" id="kb3" readonly="readonly" name="input3"
+											placeholder="请输入确认密码" class="default NoneInput90"
+											maxlength="50" tabindex="3" />
+										<script>
+	//初始化密码卫士,绑定键盘对象。数字参数：0代表全键盘，1代表数字键盘
+	passGuard3.generate("kb3", kb, "passGuard3", 0);
+</script>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						<div id="LoginBar">
+							<table id="LoginBtn" ontouchstart="javascript:kb.hide();" onclick="javascript:formSubmit();">
+								<tr>
+									<td>
+										提交
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<input type="hidden" name="password" id="password" value="" />
+			<input type="hidden" name="repassword" id="repassword" value="" />
+		</form>
+		<script type="text/javascript">
+	window.onload = function() {
+		Le = $(".default").length;
+		for ( var i = 1; i <= Le; i++) {
+			$("#kb" + i).val("");
+		};
+		setTimeout(function() {
+			kb.generate();
+			Show = 0;
+		}, 100);
+	};
+</script>
+	</body>
+</html>
