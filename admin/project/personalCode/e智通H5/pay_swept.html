@@ -20,8 +20,7 @@
     <!--<link rel="stylesheet" type="text/css" href="resources/css/alert.css"/>-->
     <!--引入弹出提示框样式-->
     <link type="text/css" rel="stylesheet" href="resources/css/style-alert.css">
-    <!--条形码插件-->
-    <link rel="stylesheet" href="resources/css/barCode.css"/>
+    <!--<link type="text/css" rel="stylesheet" href="resources/css/loading.css">-->
     <link rel="stylesheet" href="resources/css/pay_swept.css"/>
 </head>
 <body>
@@ -39,11 +38,21 @@
     <!--center-->
     <div class="swept-content">
         <!--条形码-->
-        <div id="bcTarget" class="barcodeImg"><img id="barcode3"/></div>
+        <div id="bcTarget" class="barcodeImg"><img id="barcode3" onclick="modalTips()"/></div>
         <!--二维码-->
         <div class="swept-QRcode">
-            <div  id="code"></div>
+            <div id="code"></div>
             <img class="pay-logo" src="resources/img/v1yunshanfu.png" alt=""/>
+        </div>
+        <!--全屏条形码-->
+        <div class="window">
+            <div class="barCodeLogo cloes-img">
+                <img class="" id="barcode2"/>
+            </div>
+            <!--<div class="QRCodeLogo">-->
+                <!--<div id="code1"></div>-->
+                <!--<img class="pay-logo" src="resources/img/v1yunshanfu.png" alt=""/>-->
+            <!--</div>-->
         </div>
         <input type="hidden" class="input" id="inputTxt" value="555555">
         <!--自动更新-->
@@ -157,7 +166,22 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModalTips" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>付款码数字仅用于付款，为防诈骗，请勿转发他人。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="codeBtn">知道了</button>
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">知道了</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 <!--引入弹出提示框脚本-->
@@ -168,5 +192,6 @@
 <!--生成二维码js-->
 <script type="text/javascript" src="resources/js/jquery.qrcode.min.js"></script>
 <script type="text/javascript" src="resources/js/pay_swept.js"></script>
+<!--<script type="text/javascript" src="resources/js/loading.js"></script>-->
 </body>
 </html>

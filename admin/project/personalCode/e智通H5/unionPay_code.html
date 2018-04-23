@@ -26,7 +26,7 @@
     <!--password-->
     <div class="pay-password">
         <p>已发送验证码到您的手机</p>
-        <input class="phoneNum" type="text" value="177****8888" readonly="readonly"/>
+        <input class="phoneNum" type="text" value="177****8888" readonly="readonly" onfocus="this.blur()"/>
         <div class="ftc_wzsf">
             <div class="srzfmm_box">
                 <ul class="mm_box">
@@ -61,7 +61,7 @@
         <div class="account-agree">
             <!--<img id="agree-img" src="resources/img/agree@3x.png">-->
             <input class="checkbox" id="agree-img" type="checkbox">
-            <label class="label1" for="agree-img"><a href="QRcode_protocol.html">同意开通<span id="change-color">二维码支付用户服务协议</span></a></label>
+            <label class="label1" for="agree-img">同意开通<a href="QRcode_protocol.html"><span id="change-color">二维码支付用户服务协议</span></a></label>
         </div>
         <input type="button" id="account-btn" value="立即开通" onclick="javascript:isCheck();">
     </div>

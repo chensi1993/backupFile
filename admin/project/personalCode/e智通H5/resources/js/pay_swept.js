@@ -2,6 +2,7 @@
  * Created by admin on 2018/4/1.
  */
 $(function () {
+    //loadHtml();
     refreshFun();
 
     onLoad();
@@ -24,6 +25,12 @@ function refreshFun(){
         //width:1.4,
         displayValue:false
     });
+    JsBarcode("#barcode2", "12345678901234567890123456789", {
+        width:2.3,
+        height:160,
+        displayValue:true,
+        fontSize:20
+    });
     //页面加载时显示二维码
     outputQRCod(1234567912345679, 160, 160);
     //qrcode = new QRCode(document.getElementById("bcTarget"), {
@@ -31,6 +38,23 @@ function refreshFun(){
     //    height : 150
     //});
 }
+//点击条形码弹出付款码提示框
+function modalTips(){
+    $("#myModalTips").modal("show");
+}
+//点击知道了弹出全屏条形码
+function codeBtn(){
+    $("#codeBtn").on("click",function(){
+        $("#myModalTips").modal("hide");
+        $(".window").addClass("window-show");
+        //$("#barcode2").addClass("cloes-img");
+    });
+    $(".window").on("click",function(){
+        $(".window").removeClass("window-show");
+        //$("#barcode2").removeClass("cloes-img");
+    });
+}
+codeBtn();
 //中文字符处理
 function toUtf8(str) {
     var out, i, len, c;
@@ -55,6 +79,7 @@ function toUtf8(str) {
 function outputQRCod(txt, width, height) {
     //先清空
     $("#code").empty();
+    $("#code1").empty();
     //中文格式转换
     var str = toUtf8(txt);
     //生成二维码
@@ -64,6 +89,12 @@ function outputQRCod(txt, width, height) {
         height: height,
         text: str
     });
+    //$("#code1").qrcode({
+    //    render: "table",
+    //    width: width,
+    //    height: height,
+    //    text: str
+    //});
 }
 //定时刷新
 function rr(){

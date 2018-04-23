@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+</head>
+<body>
+<input id="inputMoney" type="text" onkeyup="clearNoNum(this)" onKeyPress="if((event.keyCode<48 || event.keyCode>57)&& event.keyCode!=46 || /\.\d\d$/.test(value))event.returnValue=false" />
+</body>
+<script>
+    function clearNoNum(obj)
+    {
+        //先把非数字的都替换掉，除了数字和.
+        obj.value = obj.value.replace(/[^\d.]/g,"");
+        //必须保证第一个为数字而不是.
+        obj.value = obj.value.replace(/^\./g,"");
+        //保证只有出现一个.而没有多个.
+        obj.value = obj.value.replace(/\.{2,}/g,".");
+        //保证.只出现一次，而不能出现两次以上
+        obj.value = obj.value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
+
+        var inputMoney = $("#inputMoney").val();
+        if("" == inputMoney){
+            $("#moneyShow").html("0.00");
+        }else{
+            $("#moneyShow").html(inputMoney);
+        }
+        $("#inputMoneyMessage").html("");
+    }
+
+</script>
+</html>

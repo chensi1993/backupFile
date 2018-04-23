@@ -17,7 +17,7 @@ $(function(){
                 "background":"#ADCBF2"
             });
             $("#change-color").css({
-                "color":"#999"
+                "color":"#BEBEBE"
             })
         }
     });

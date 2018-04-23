@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #con img{
+            animation: rotate 3s linear 0s infinite ;
+            -webkit-animation: rotate 3s linear 0s infinite ;
+            -moz-animation:rotate 3s linear 0s infinite;
+            -ms-animation: rotate 3s linear 0s infinite;
+            -o-animation: rotate 3s linear 0s infinite;
+
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes rotate{
+            from{-webkit-transform: rotate(0deg);}
+            to{-webkit-transform: rotate(360deg);}
+        }
+        @-moz-keyframes rotate{
+            from{-moz-transform: rotate(0deg);}
+            to{-moz-transform: rotate(360deg);}
+        }
+        @-ms-keyframes rotate{
+            from{-ms-transform: rotate(0deg);}
+            to{-ms-transform: rotate(360deg);}
+        }
+        @-o-keyframes rotate{
+            from{-o-transform: rotate(0deg);}
+            to{-o-transform: rotate(360deg);}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="con">
+        <img src="image/Dry1.jpg"/>
+    </div>
+</body>
+</html>

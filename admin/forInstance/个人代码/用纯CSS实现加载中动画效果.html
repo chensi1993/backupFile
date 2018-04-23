@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .loadAnimate{
+            width: 12rem;
+            height: 12rem;
+            text-align: center;
+            background: rgba(0,0,0,0.50);
+            border-radius: 5px;
+            padding-top: 2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .loadAnimate p{
+            font-size: 1.5rem;
+            color: #FFFFFF;
+            margin-top: 1rem;
+        }
+        #loading3 {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            margin: auto;
+        }
+        .demo3 {
+            width: 4px;
+            height: 4px;
+            border-radius: 2px;
+            background: #ddd;
+            position: absolute;
+            animation: demo3 linear 0.8s infinite;
+            -webkit-animation: demo3 linear 0.8s infinite;
+        }
+        .demo3:nth-child(1){
+            left: 24px;
+            top: 2px;
+            animation-delay:0s;
+        }
+        .demo3:nth-child(2){
+            left: 40px;
+            top: 8px;
+            animation-delay:0.1s;
+        }
+        .demo3:nth-child(3){
+            left: 47px;
+            top: 24px;
+            animation-delay:0.1s;
+        }
+        .demo3:nth-child(4){
+            left: 40px;
+            top: 40px;
+            animation-delay:0.2s;
+        }
+        .demo3:nth-child(5){
+            left: 24px;
+            top: 47px;
+            animation-delay:0.4s;
+        }
+        .demo3:nth-child(6){
+            left: 8px;
+            top: 40px;
+            animation-delay:0.5s;
+        }
+        .demo3:nth-child(7){
+            left: 2px;
+            top: 24px;
+            animation-delay:0.6s;
+        }
+        .demo3:nth-child(8){
+            left: 8px;
+            top: 8px;
+            animation-delay:0.7s;
+        }
+
+        @keyframes demo3
+        {
+            0%,40%,100% {transform: scale(1);}
+            20% {transform: scale(3);}
+        }
+        @-webkit-keyframes demo3
+        {
+            0%,40%,100% {transform: scale(1);}
+            20% {transform: scale(3);}
+        }
+
+    </style>
+</head>
+<body>
+<!--<div class="loadAnimate">-->
+    <!--<div id="loading3">-->
+        <!--<div class="demo3"></div>-->
+        <!--<div class="demo3"></div>-->
+        <!--<div class="demo3"></div>-->
+        <!--<div class="demo3"></div>-->
+        <!--<div class="demo3"></div>-->
+        <!--<div class="demo3"></div>-->
+        <!--<div class="demo3"></div>-->
+        <!--<div class="demo3"></div>-->
+    <!--</div>-->
+    <!--<p>加载中···</p>-->
+<!--</div>-->
+<script src="js/jquery-3.0.0.min.js"></script>
+<script>
+    function loadHtml(){
+        var loadHtml = '';
+        loadHtml +='<div class="loadAnimate">'
+        + '<div id="loading3">';
+        for(var i=0;i<8;i++){
+            loadHtml +='<div class="demo3"></div>';
+        }
+        loadHtml +='</div>'
+        +'<p>加载中···</p>'
+        +'</div>';
+        $("body").append(loadHtml);
+    }
+    loadHtml();
+</script>
+</body>
+</html>

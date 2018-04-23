@@ -1,0 +1,98 @@
+.add_list {
+    margin-top: 1rem;
+    background: #fff;
+}
+.add_list .add_group {
+    overflow: hidden;
+    line-height: 3rem;
+    padding: 0.5rem 0;
+    margin: 0 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.add_list .add_group:last-child{
+    border-bottom: none;
+}
+.add_list .add_group .add_label {
+    font-size: 1.7rem;
+    padding: 0;
+    margin-bottom: 0;
+    color: #494949;
+}
+.add_list .add_group .add_input{
+    font-size: 1.7rem;
+    color: #666;
+    width: 100%;
+    border: none;
+    outline:none;
+}
+.add_list .add_group input::-webkit-input-placeholder{
+    font-size: 1.7rem;
+    color: #b2b2b2;
+}
+.add_list .add_group input::-moz-placeholder{
+    font-size: 1.7rem;
+    color: #b2b2b2;
+}
+.add_list .add_group input:-ms-input-placeholder{
+    font-size: 1.7rem;
+    color: #b2b2b2;
+}
+.add_group .info_tips img{
+    width: 2rem;
+    height: 2rem;
+}
+#nextBtn{
+    border: none;
+    outline:none;
+    width: 95%;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    letter-spacing: .2rem;
+    display: block;
+    margin: 8rem auto;
+    background: #ADCBF2;
+    border-radius: .5rem;
+}
+/*模态框样式*/
+#myModal{
+    padding-top: 20%;
+}
+#myModal .modal-dialog{
+    margin: 4rem;
+}
+#myModal .modal-header,#myModal .modal-footer{
+    border: none;
+}
+#myModal .modal-header{
+    font-size: 1.8rem;
+    color: #333333;
+}
+#myModal .modal-footer{
+    text-align: center;
+}
+.modal-title{
+    text-align: center;
+}
+#myModal .modal-footer .btn-default{
+    border: none;
+    outline:none;
+    width: 100%;
+    font-size: 1.8rem;
+    color: #508CF1;
+}
+#myModal .modal-body img{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+#myModal .modal-body p{
+    font-size: 1.5rem;
+    color: #888888;
+    padding: 0 1.5rem;
+}
+#myModal .modal-body .first-p{
+    margin-top: 1rem;
+}
