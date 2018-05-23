@@ -59,9 +59,9 @@ $(function(){
         setObj["setImg"]=img.toString();
         setObj["setName"]=name.toString();
         setObj["setMoney"]=price.toString();
-
         console.log(setJson.length);
         setJson.push(setObj);
+        console.log(setJson);
 
     });
 

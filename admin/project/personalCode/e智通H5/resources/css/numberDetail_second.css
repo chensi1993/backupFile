@@ -8,10 +8,11 @@
     width: 10rem;
     display: block;
     margin: 0 auto;
+    padding-bottom: 1.3rem;
 }
-.detail-content .detail-top{
-    margin-top:1rem;
-}
+/*.detail-content .detail-top{*/
+    /*margin-top:1rem;*/
+/*}*/
 .detail-content .detail-top p{
     text-align: center;
     font-family: ArialMT;
@@ -41,9 +42,11 @@
 .order-list .order-li span:nth-child(2){
     text-align: right;
     padding-left: 0;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    word-wrap: break-word;
+    white-space:normal;
+
+    /*overflow:hidden;*/
+    /*text-overflow:ellipsis;*/
 }
 .order-list .order-coupon,.order-refund{
     /*display: none;*/

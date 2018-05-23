@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--禁止iPhone手机上数字转换为拨号链接-->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="zlzf-cs" />
+    <title></title>
+    <!--引入bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="resources/css/common_mqpay.css"/>
+    <style>
+        body{
+            background: #fff;
+        }
+        .page-top{
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .page-center{
+            padding-top: 10rem;
+        }
+        .page-center img{
+            width: 22rem;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        .page-center p{
+            text-align: center;
+            font-size: 1.6rem;
+            color: #666666;
+            letter-spacing: 0.03rem;
+            line-height: 16px;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--top-->
+    <div class="page-top row">
+        <div class="top-image col-xs-2"><a href="javascript:void(0)" onclick="linkApp();"><img src="resources/img/v1return.png" alt=""/>返回</a></div>
+        <h3 class="col-xs-8">系统升级</h3>
+        <div class="top-image col-xs-2"></div>
+    </div>
+    <div class="page-center">
+        <img src="resources/img/xitongshengji@2x.png" alt=""/>
+        <p>系统升级，敬请期待</p>
+    </div>
+    <!--bottom-->
+    <div class="page-bottom">
+        <span class="col-xs-3"></span>
+        <div class="col-xs-6"><span>由证联支付提供技术支持</span></div>
+        <span class="col-xs-3"></span>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script>
+    var u = navigator.userAgent, app = navigator.appVersion;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    //退出H5，返回原生APP
+    function linkApp(){
+        if (isAndroid) {
+
+            window.location.href = Android.closeActivity(); //关闭页面
+        }
+        if (isIOS) {
+
+            nativeIos();
+        }
+
+    }
+</script>
+</body>
+</html>

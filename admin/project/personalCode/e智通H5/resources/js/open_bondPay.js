@@ -1,6 +1,32 @@
 /**
  * Created by admin on 2018/4/2.
  */
+$(function(){
+    //协议前边同意按钮
+    $("#agree-img").on("click",function(){
+        if($("#agree-img").prop("checked") == true){
+            $("#account-btn").css({
+                "background":"#4995EF"
+            });
+            $("#change-color").css({
+                "color":"#4995EF"
+            });
+            $("#account-btn").attr("disabled",false);
+            $("#account-btn").on("click",function(){
+                isCheck();
+            });
+
+        }else{
+            $("#account-btn").css({
+                "background":"#ADCBF2"
+            });
+            $("#change-color").css({
+                "color":"#BEBEBE"
+            });
+            $("#account-btn").attr("disabled",true);
+        }
+    });
+});
 //获取验证码
 function getVerCode() {
     var phone = $.trim($(".pay-password").find(".phoneNum").val());//获取手机号

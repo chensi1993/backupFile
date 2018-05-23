@@ -46,28 +46,28 @@
             <div class="account-group row">
                 <label for="account-name" class="account-lab col-xs-3">姓名</label>
                 <div class="account-li col-xs-9">
-                    <input type="text" class="account-inp" id="account-name" placeholder="请输入姓名">
+                    <input type="text" class="account-inp" id="account-name" placeholder="请输入姓名" autocomplete="off">
                 </div>
             </div>
             <!--身份证号-->
             <div class="account-group row">
                 <label for="Id-number" class="account-lab col-xs-3">身份证号</label>
                 <div class="account-li col-xs-9">
-                    <input type="text" class="account-inp" id="Id-number" placeholder="请输入证件号" oninput="if(value.length>18)value=value.slice(0,18)">
+                    <input type="text" class="account-inp" id="Id-number" placeholder="请输入证件号" oninput="if(value.length>18)value=value.slice(0,18)" autocomplete="off">
                 </div>
             </div>
             <!--手机号-->
             <div class="account-group row">
                 <label for="phone-number" class="account-lab col-xs-3">手机号</label>
                 <div class="account-li col-xs-9">
-                    <input type="tel" class="account-inp" id="phone-number" placeholder="请输入手机号" value="" oninput="if(value.length>11)value=value.slice(0,11)">
+                    <input type="tel" class="account-inp" id="phone-number" placeholder="请输入手机号" value="" oninput="if(value.length>11)value=value.slice(0,11)" autocomplete="off">
                 </div>
             </div>
         </div>
         <div class="account-agree">
             <!--<img id="agree-img" src="resources/img/agree@3x.png">-->
             <input class="checkbox" id="agree-img" type="checkbox">
-            <label class="label1" for="agree-img">同意开通<a href="netPay_protocol.html"><span id="change-color">《证联支付网络支付业务服务协议》</span></a></label>
+            <label class="label1" for="agree-img">同意开通<a href="netPay_protocol.html"><span id="change-color">《用户网络支付业务服务协议》</span></a></label>
         </div>
         <input type="button" id="account-btn" value="同意并签约" onclick="javascript:isCheck();">
     </form>

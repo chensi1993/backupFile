@@ -26,15 +26,15 @@ $(function(){
     });
 
     //数字显示隐藏
-    $(".xiaq_tb").on("click",function(){
+    $(".xiaq_tb").on("touchstart",function(){
         $(".numb_box").slideUp(500);
     });
-    $(".mm_box").on("click",function(){
+    $(".mm_box").on("touchstart",function(){
         $(".numb_box").slideDown(500);
     });
     //----
     var i = 0;
-    $(".nub_ggg li .zf_num").on("click",function(){
+    $(".nub_ggg li .zf_num").on("touchstart",function(){
         //$(".mm_box li").eq(i).children("span").css("display","none");
         $(".mm_box li").eq(i).text($(this).text());
         console.log($(this).text());
@@ -57,7 +57,7 @@ $(function(){
         }
     });
 
-    $(".nub_ggg li .zf_del").on("click",function(){
+    $(".nub_ggg li .zf_del").on("touchstart",function(){
 
         if(i>0){
             i--;

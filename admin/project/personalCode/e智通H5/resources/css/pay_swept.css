@@ -15,7 +15,8 @@ body{
 .pay-tips{
     color: #fff;
     text-align: center;
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
+    margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
 .pay-tips img{
@@ -28,14 +29,14 @@ body{
     width: 95%;
     background: #fff;
     margin: 0 auto;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     border-radius: .4rem;
     position: relative;
 }
 
 .swept-content .swept-QRcode{
     width: 160px;
-    height: auto;
+    height: 168px;
     position: relative;
     margin: 1.5rem auto;
 
@@ -129,6 +130,7 @@ body{
 /*4.14修改*/
 #bcTarget{
     margin: 0 auto;
+    /*height: 10rem;*/
 }
 #myModal .js-css-alert{
     margin-top: 50%;
@@ -218,7 +220,7 @@ body.modal-open {
     display: block;
     margin: 0 auto;
     width: 90%;
-    height: 10rem;
+    /*height: 10rem;*/
 }
 
 
@@ -353,4 +355,76 @@ body.modal-open {
     padding: 0 1.5rem;
     margin: 0;
     text-align: center;
+}
+#codeBtn{
+    cursor: pointer;
+}
+/*无可用付款码*/
+.swept-nothing{
+    padding: 4rem 0;
+    /*display: none;*/
+}
+.swept-nothing img{
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    margin: 0 auto;
+}
+.swept-nothing p{
+    font-size: 16px;
+    color: #666666;
+    padding: 1rem 4.5rem;
+    margin-bottom: 12rem;
+    text-align: center;
+}
+.swept-nothing input{
+    width: 65%;
+    display: block;
+    margin: 0 auto;
+    padding: 0.8rem 0;
+    background: #FFFFFF;
+    border: 1px solid #358DF6;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #4995EF;
+}
+/*占位图*/
+#bcTarget .barcode-bitmap{
+    background: #efefef;
+    width: 90%;
+    height: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+#bcTarget .barcode-bitmap img{
+    width: 4.2rem;
+    height: 4.2rem;
+    display: block;
+    margin: 0 auto;
+}
+#bcTarget .barcode-bitmap p{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #DEDEDE;
+    margin-top: 1rem;
+}
+.swept-QRcode .QRcode-bitmap{
+    background: #efefef;
+    width: 100%;
+    height: 100%;
+    padding-top: 4.5rem;
+}
+.swept-QRcode .QRcode-bitmap img{
+    width: 4.2rem;
+    height: 4.2rem;
+    display: block;
+    margin: 0 auto;
+}
+.swept-QRcode .QRcode-bitmap p{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #DEDEDE;
+    margin-top: 1rem;
 }

@@ -1,14 +1,114 @@
-/* 弹框设置 */
-.my-modal-alert{
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 20rem;
+/*4.27修改弹窗*/
+/*弹框遮罩层*/
+.alert-bg{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1051;
+    background-color: rgba(0,0,0,0.2);
 }
+.my-modal-alert{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 18rem;
+    z-index: 1052;
+}
+.modal-content{border: none;box-shadow:none;overflow: hidden;}
 .my-modal-alert .modal-body{
-    text-align: center;
+    line-height: 3rem;
     font-size: 1.6rem;
     color: #fff;
-    background-color: rgba(0,0,0,.6);
-    border-radius:0.5rem;
-
+    background-color: rgba(0,0,0,0.50);
+    border-radius:0.4rem;
 }
+/*网络超时遮罩层*/
+.modal-backdrop.in
+
+{opacity: 0.3;}
+/*.modal-open .modal{width: 80%;}*/
+.modal-open .modal .modal-dialog .modal-content .modal-body{color:#000;background-color:#fff !important;border-radius:0.4rem 0.4rem 0 0;}
+.modal-footer{padding: 0;}
+.modal-footer.but-1{display: none;margin: 0;border:1px solid #e5e5e5;}
+.modal-footer.but-1 .btn-default{width: 100%;border: none;line-height: 3rem;font-size: 1.5rem;color: #508CF1;letter-spacing: 0.2rem;}
+/*加载中*/
+#loading3 {
+    display: none;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    left: 25%;
+}
+@media screen and (max-width: 320px) {/*兼容iPhone5*/
+    #loading3{left: 18%;}
+}
+.demo3 {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 0.4rem;
+    background: #fff;
+    position: absolute;
+    animation: demo3 linear 0.8s infinite;
+    -webkit-animation: demo3 linear 0.8s infinite;
+}
+.demo3:nth-child(1){
+    left: 2.4rem;
+    top: 0.2rem;
+    animation-delay:0s;
+}
+.demo3:nth-child(2){
+    left: 4rem;
+    top: 0.8rem;
+    animation-delay:0.1s;
+}
+.demo3:nth-child(3){
+    left: 4.7rem;
+    top: 2.4rem;
+    animation-delay:0.1s;
+}
+.demo3:nth-child(4){
+    left: 4rem;
+    top: 4rem;
+    animation-delay:0.2s;
+}
+.demo3:nth-child(5){
+    left: 2.4rem;
+    top: 4.7rem;
+    animation-delay:0.4s;
+}
+.demo3:nth-child(6){
+    left: 0.8rem;
+    top: 4rem;
+    animation-delay:0.5s;
+}
+.demo3:nth-child(7){
+    left: 0.2rem;
+    top: 2.4rem;
+    animation-delay:0.6s;
+}
+.demo3:nth-child(8){
+    left: 0.8rem;
+    top: 0.8rem;
+    animation-delay:0.7s;
+}
+
+@keyframes demo3
+{
+    0%,40%,100% {transform: scale(1);}
+    20% {transform: scale(3);}
+}
+@-webkit-keyframes demo3
+{
+    0%,40%,100% {transform: scale(1);}
+    20% {transform: scale(3);}
+}
+
+#modal_message{text-align: center;}
+
+/*密码错误提示*/
+.modal-footer.but-2,.modal-footer.but-3,.modal-footer.but-4{margin-bottom: 0;padding: 0;border-top: 1px solid #e5e5e5;overflow: hidden;display: none;}
+.modal-footer.but-2>.btn,.modal-footer.but-3>.btn,.modal-footer.but-4>a>.btn{height: 4rem;font-size: 1.8rem;font-weight: bold;color: #666;padding-left: 1.5rem;border-radius: 0;border: none;}
+.modal-footer.but-2>.btn:nth-child(2),.modal-footer.but-3>.btn,.modal-footer.but-4>a>.btn{color: #508CF1;margin-left: 0;border: none;border-left: 1px solid #e5e5e5;}
+.css-Btn{width: 100%;}

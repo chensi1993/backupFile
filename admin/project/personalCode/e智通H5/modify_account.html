@@ -46,10 +46,15 @@
     <p class="info-tips">通过已添加资金账号找回</p>
     <div class="content row">
         <a href="">
-            <div class="col-xs-9">资金账号(<span>2222</span>)</div>
+            <div class="col-xs-9">资金账号(<span id="capital-num">****2222</span>)</div>
             <div class="col-xs-3"><img src="resources/img/v1more2@2x.png" alt=""/></div>
         </a>
     </div>
 </div>
+<script type="text/javascript" src="resources/js/jquery-3.0.0.min.js"></script>
+<script>
+    var capitalNum ='****2222';
+    $('#capital-num').html(capitalNum.substr(-4));
+</script>
 </body>
 </html>

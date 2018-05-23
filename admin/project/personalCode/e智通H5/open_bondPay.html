@@ -40,28 +40,32 @@
             <div class="account-group row">
                 <label for="account-number" class="account-lab col-xs-3">资金账号</label>
                 <div class="account-li col-xs-9">
-                    <input type="text" class="account-inp font-color" id="account-number" value="" placeholder="**** 2222(请输入完整资金账号)">
+                    <input type="text" class="account-inp font-color" id="account-number" value="" placeholder="**** 2222(请输入完整资金账号)" autocomplete="off"
+                            >
                 </div>
             </div>
             <!--姓名-->
             <div class="account-group row">
                 <label for="account-name" class="account-lab col-xs-3">姓名</label>
                 <div class="account-li col-xs-9">
-                    <input type="text" class="account-inp" id="account-name" placeholder="*胖(请输入完整姓名)">
+                    <input type="text" class="account-inp" id="account-name" placeholder="*胖(请输入完整姓名)" autocomplete="off"
+                            >
                 </div>
             </div>
             <!--身份证号-->
             <div class="account-group row">
                 <label for="Id-number" class="account-lab col-xs-3">身份证号</label>
                 <div class="account-li col-xs-9">
-                    <input type="text" class="account-inp" id="Id-number" placeholder="请输入证件号" pattern="[0-9]*" oninput="if(value.length>18)value=value.slice(0,18)">
+                    <input type="text" class="account-inp" id="Id-number" placeholder="请输入证件号" pattern="[0-9]*" oninput="if(value.length>18)value=value.slice(0,18)" autocomplete="off"
+                            >
                 </div>
             </div>
             <!--手机号-->
             <div class="account-group row">
                 <label for="phone-number" class="account-lab col-xs-3">手机号</label>
                 <div class="account-li col-xs-9">
-                    <input type="tel" class="account-inp" id="phone-number" placeholder="请输入手机号" value="" oninput="if(value.length>11)value=value.slice(0,11)">
+                    <input type="tel" class="account-inp" id="phone-number" placeholder="请输入手机号" value="" oninput="if(value.length>11)value=value.slice(0,11)" autocomplete="off"
+                            >
                 </div>
             </div>
             <!--验证码-->
@@ -75,9 +79,9 @@
         </div>
         <div class="account-agree">
             <input class="checkbox" id="agree-img" type="checkbox">
-            <label class="label1" for="agree-img">同意<a href="netPay_protocol.html"><span id="change-color">《证联支付用户网络支付业务服务协议》</span></a></label>
+            <label class="label1" for="agree-img">同意<a href="netPay_protocol.html"><span id="change-color">《用户网络支付业务服务协议》</span></a></label>
         </div>
-        <input type="button" id="account-btn" value="确认" onclick="javascript:isCheck();">
+        <input type="button" id="account-btn" value="确认">
     </form>
     <!--bottom-->
     <div class="page-bottom">
@@ -102,5 +106,39 @@
 <!--引入弹出提示框脚本-->
 <script src="resources/js/alert.js"></script>
 <script type="text/javascript" src="resources/js/open_bondPay.js"></script>
+<script>
+//    //判断屏幕方向
+//    if(window.orientation==90||window.orientation==-90){
+//        alert("横屏状态！")
+//    }
+//    window.screen.lockOrientation = screen.lockOrientation ||screen.mozLockOrientation || screen.msLockOrientation;
+//    // 锁定屏幕为竖屏模式，不能设备如何旋转，屏幕都不会切换到横屏模式。
+//    window.screen.lockOrientation(["portrait-primary”,“portrait-secondary"]);
+
+//function orient() {
+//    //;
+//    if (window.orientation == 0 || window.orientation == 180) {
+//        $("body").attr("class", "portrait");  //当竖屏的时候为body增加一个class
+//        orientation = 'portrait';
+//        return false;
+//    }
+//    else if (window.orientation == 90 || window.orientation == -90) {
+//        $("body").attr("class", "landscape"); //当横屏的时候为body移除这个class
+//        orientation = 'landscape';
+//
+//        return false;
+//    }
+//}
+//
+//
+//$(function(){
+//    orient();
+//});
+//
+//
+//$(window).bind( 'orientationchange', function(e){
+//    orient();
+//});
+</script>
 </body>
 </html>

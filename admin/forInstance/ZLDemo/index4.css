@@ -1,0 +1,58 @@
+body{
+    background: #edeadc;
+    font-family: 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover{
+    color: #222;
+    text-decoration: none;
+}
+.row{
+    margin: 0;
+}
+.container{
+    font-size: 16px;
+}
+#back {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+#loginDiv {
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+    position: fixed;
+    left: 38%;
+    top: 15%;
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+.content-top{
+    padding: 20px 15px;
+}
+#tips{
+    display: none;
+    font-size: 12px;
+    color: #ff5612;
+    margin-top: 10px;
+}
+.content-bottom{
+    padding-bottom: 15px;
+}
+.content-bottom input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+

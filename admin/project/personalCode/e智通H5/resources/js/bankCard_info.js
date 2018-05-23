@@ -2,17 +2,8 @@
  * Created by chensi on 2018/4/18.
  */
 $(function(){
-
-
-    //isCheck();
-    // 正则验证银行卡方法
-    //!function () {
-    //    $('#add_cardnumber').on('keyup mouseout input',function(){
-    //        var $this = $(this),
-    //            v = $this.val();
-    //        /\S{5}/.test(v) && $this.val(v.replace(/\s/g,'').replace(/(.{4})/g, "$1 "));
-    //    });
-    //}();
+    second("加载中...");
+    secondout();
 
     //监听三个input输入框状态，改变按钮颜色
     $('#add_cardnumber').bind('input propertychange', function() {
@@ -24,8 +15,15 @@ $(function(){
     $('#add_phone').bind('input propertychange', function() {
         changeColor();
     });
-
 });
+// 正则验证银行卡方法
+//!function () {
+//    $('#add_cardnumber').on('keyup mouseout input',function(){
+//        var $this = $(this),
+//            v = $this.val();
+//        /\S{5}/.test(v) && $this.val(v.replace(/\s/g,'').replace(/(.{4})/g, "$1 "));
+//    });
+//}();
 function changeColor(){
     var cardNumber = $.trim($("#add_cardnumber").val());//获取银行卡号
     var addBank = $.trim($("#add_bank").val());//获取银行卡卡类型

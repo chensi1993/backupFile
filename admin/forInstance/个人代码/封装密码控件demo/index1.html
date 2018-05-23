@@ -1,10 +1,94 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<head>
+    <title>正式版本</title>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <meta name="viewport" content="initial-scale=1,width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!-- 启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--"添加到主屏幕“后，全屏显示-->
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--禁止移动设备将数字识别为手机号码，不识别邮箱-->
+    <meta name="format-detection" content="telephone=no,email=no">
+    <!--<link rel="stylesheet" type="text/css" href="./css/demo.css">-->
+    <link rel="stylesheet" type="text/css" href="./css/microdone-h5.css">
+    <link rel="stylesheet" type="text/css" href="./css/index1.css">
 </head>
 <body>
+<form id="form1" name="form1" method="post" action="decrypt.jsp">
+    <!--<div id="Main">-->
+        <!--<div id="TitleBar">-->
+            <!--<div id="LogoBg_Topbar">-->
+                <!--北京微通新成手机网银密码控件Demo-->
+            <!--</div>-->
+            <!--<div id="LoginTab">-->
+                <!--<div class="on">登录场景</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div id="InputBlock">-->
+            <!--<div id="InputInfoTable">-->
+                <!--<div class="line5px" ></div>-->
+                <!--<table class="InputLine">-->
+                    <!--<tbody>-->
+                    <!--<tr>-->
+                        <!--<td class="left" align="right">-->
+                            <!--<table class="AutoAlignLabel">-->
+                                <!--<tr>-->
+                                    <!--<td class="BeginWord">账</td>-->
+                                    <!--<td class="EndWord">号</td>-->
+                                <!--</tr>-->
+                            <!--</table>-->
+                        <!--</td>-->
+                        <!--<td class="right" align="left">-->
+                            <!--<input type="text" value="tester" id="username2" name="username" class="de2 NoneInput90" maxlength="50" tabindex="1" />-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                    <!--</tbody>-->
+                <!--</table>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<table id="LoginBtn">-->
+                    <!--<tr>-->
+                        <!--<td class="default">-->
+                            <!--输入交易密码-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <input type="hidden" name="password" id="password" value="" />
+    <input type="hidden" name="repassword" id="repassword" value="" />
+    <!--模拟6个格子-->
+    <div class="cover">
+        <div class="cover-Div">
+            <!--<p class="close">×</p>-->
+            <!--<p class="title">请输入支付密码</p>-->
+            <div class="pay">
+                <input type="text" readonly="readonly" id="kb1" name="input3" class="default NoneInput90" maxlength="50" tabindex="3" />
+                <ul class="kb1">
+                    <li style="">——</li>
+                    <li>——</li>
+                    <li>——</li>
+                    <li>——</li>
+                    <li>——</li>
+                    <li>——</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</form>
 
+<script type="text/javascript" src="./js/jquery-3.0.0.min.js"></script>
+<!--<script type="text/javascript" src="./js/demo.js"></script>-->
+<script type="text/javascript" src="./js/microdoneH5.js"></script>
+<script type="text/javascript" src="./js/index1.js"></script>
 </body>
 </html>

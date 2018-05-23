@@ -2,27 +2,37 @@
  * Created by admin on 2018/4/1.
  */
 $(function () {
-    //loadHtml();
+    bitmapHide();
     refreshFun();
-
     onLoad();
-    //passwordFun();
-
-
-    //overtimeFun();
-    //fiveFun();
-    //sixFun();
 
 });
+//点击条形码弹出付款码提示框
+window.onload = function(){
+    $("#barcode3").on("click",function(e){
+    $("#myModalTips").modal("show");
+});
+};
+//点击知道了，展示全屏条形码
+function yesBtn(){
+    $("#myModalTips").modal("hide");
+    $(".window").addClass("window-show");
+}
+//点击关闭全屏条形码弹出层
+function layerBtn(){
+    $(".window").removeClass("window-show");
+}
+
 $("#backBtn").on("click",function(){
 
 });
 //条形码和二维码每分钟更新一次
 function refreshFun(){
     //页面加载时显示条形码
-    //$("#bcTarget").empty().barcode("12345679012345679012345679", "code128",{barWidth:1, barHeight:95,showHRI:false});
     JsBarcode("#barcode3", "12345678901234567890123456789", {
-        //width:1.4,
+        //width:1.2,
+        //height:60,
+        height:120,
         displayValue:false
     });
     JsBarcode("#barcode2", "12345678901234567890123456789", {
@@ -33,28 +43,12 @@ function refreshFun(){
     });
     //页面加载时显示二维码
     outputQRCod(1234567912345679, 160, 160);
-    //qrcode = new QRCode(document.getElementById("bcTarget"), {
-    //    width : 150,//设置宽高
-    //    height : 150
-    //});
+    //console.log("q"+ new Date());
 }
 //点击条形码弹出付款码提示框
-function modalTips(){
-    $("#myModalTips").modal("show");
-}
-//点击知道了弹出全屏条形码
-function codeBtn(){
-    $("#codeBtn").on("click",function(){
-        $("#myModalTips").modal("hide");
-        $(".window").addClass("window-show");
-        //$("#barcode2").addClass("cloes-img");
-    });
-    $(".window").on("click",function(){
-        $(".window").removeClass("window-show");
-        //$("#barcode2").removeClass("cloes-img");
-    });
-}
-codeBtn();
+//function modalTips(){
+//    $("#myModalTips").modal("show");
+//}
 //中文字符处理
 function toUtf8(str) {
     var out, i, len, c;
@@ -151,13 +145,29 @@ function btnRefresh(){
 //$(".swept-update").children("img").on("click",function(){
 //    window.location.reload();
 //});
-
-
+//有可用付款码
+function normalShow(){
+    $(".swept-center").css("display","block");
+    $(".swept-nothing").css("display","none");
+}
+//请求成功隐藏占位图
+function bitmapHide(){
+    $(".barcode-bitmap").css("display","none");
+    $(".QRcode-bitmap").css("display","none");
+    //$(".swept-QRcode").find(".pay-logo").attr("src","./resource/img/v1yunshanfu.png");
+}
+//不可用付款码
+function disableShow(state){
+    $(".swept-center").css("display","none");
+    $(".swept-nothing").css("display","block");
+    $(".swept-nothing").find(".serverStates").text("网络异常，暂无可用付款码，请在连接网络状态下刷新重试");
+    $(".swept-nothing").find(".serverStates").text("服务异常，暂无可用付款码，请在连接网络状态下刷新重试");
+}
 
 //密码控件
 function Payment_Money(){
     var i = 0;
-    $(".nub_ggg li .zf_num").on("click",function(){
+    $(".nub_ggg li .zf_num").on("touchstart",function(){
         if(i<6){
             $(".mm_box li").eq(i).addClass("mmdd");
             $(".mm_box li").eq(i).attr("data",$(this).text());
@@ -176,7 +186,7 @@ function Payment_Money(){
         }
     });
     //删除
-    $(".nub_ggg li .zf_del").on("click",function(){
+    $(".nub_ggg li .zf_del").on("touchstart",function(){
         if(i>0){
             i--;
             $(".mm_box li").eq(i).removeClass("mmdd");
@@ -184,7 +194,7 @@ function Payment_Money(){
         }
     });
     //清空
-    $(".nub_ggg li .zf_empty").on("click",function(){
+    $(".nub_ggg li .zf_empty").on("touchstart",function(){
         $(".mm_box li").removeClass("mmdd");
         $(".mm_box li").attr("data","");
         i = 0;
@@ -212,8 +222,6 @@ function clearFun(){
     $(".mm_box li").attr("data","");
 
 }
-
-
 //点击重新输入
 $("#reInput").on("click",function(){
     $('.js-Payment-Money').show(); //密码框
@@ -273,59 +281,4 @@ function linkScan(){
     }
 
 }
-
-
-
-//提示用户是否离开此页面（关闭、刷新或者点击后退等）
-
-//window.addEventListener("beforeunload", function (e) {
-//
-//    var confirmationMessage = '确定离开此页吗？本页不需要刷新或后退';
-//
-//    (e || window.event).returnValue = confirmationMessage;     // Gecko and Trident
-//    return confirmationMessage;                                // Gecko and WebKit
-//
-//});
-
-//alert(document.cookie); //首次访问abc！=123，刷新后abc=kill，而不是abc=123
-//document.cookie = 'abc=123';
-//window.onbeforeunload = function (e) {
-//    return e.returnValue = '确认关闭？！！';
-//};
-//window.onunload = function () {
-//    document.cookie = 'abc=kill';
-//};
-
-//var userAgent = navigator.userAgent;
-//if (userAgent.indexOf("Firefox") != -1 || userAgent.indexOf("Chrome") !=-1) {
-////  window.location.href="about:blank";
-//	alert("aa");
-//}else if(userAgent.indexOf('Android') > -1 || userAgent.indexOf('Linux') > -1){
-//  window.opener=null;window.open('about:blank','_self','').close();
-//  alert("bb");
-//}else {
-//  window.opener = null;
-//  window.open("about:blank", "_self");
-//  window.close();
-//  alert("cc");
-//}
-
-//window.onbeforeunload = function(){
-//  //var n = window.event.screenX - window.screenLeft;
-//  //var b = n > document.documentElement.scrollWidth-20;
-//  if(event.clientX > document.body.clientWidth && event.clientY < 0 || event.altKey)
-//  {
-//      alert("关闭");
-//      window.event.returnValue = "是否关闭？";
-//  }else{
-//      alert("刷新");
-//  }
-//};
-
-//window.addEventListener( 'blur', function() { console.log( 'blur' ); } );
-//window.addEventListener( 'focus', function() { console.log( 'focus' ); } );
-
-//window.onbeforeunload=function(e){
-//    return (e||window.event).returnValue='确认离开？！'
-//};
 

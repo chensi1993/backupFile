@@ -10,9 +10,9 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="author" content="zlzf-cs" />
     <!--页面设置成无缓存，解决定时器不准-->
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
+    <!--<meta http-equiv="pragma" content="no-cache">-->
+    <!--<meta http-equiv="cache-control" content="no-cache">-->
+    <!--<meta http-equiv="expires" content="0">-->
     <title></title>
     <!--引入bootstrap样式-->
     <link type="text/css" rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
@@ -37,33 +37,54 @@
 
     <!--center-->
     <div class="swept-content">
-        <!--条形码-->
-        <div id="bcTarget" class="barcodeImg"><img id="barcode3" onclick="modalTips()"/></div>
-        <!--二维码-->
-        <div class="swept-QRcode">
-            <div id="code"></div>
-            <img class="pay-logo" src="resources/img/v1yunshanfu.png" alt=""/>
-        </div>
-        <!--全屏条形码-->
-        <div class="window">
-            <div class="barCodeLogo cloes-img">
-                <img class="" id="barcode2"/>
+        <div class="swept-center">
+            <!--条形码-->
+            <div id="bcTarget" class="barcodeImg">
+                <img src="" id="barcode3"/>
+                <!--条形码占位图-->
+                <div class="barcode-bitmap">
+                    <img src="resources/img/v1_sj_zl@2x.png" alt=""/>
+                    <p>正在加载...请耐心等待</p>
+                </div>
             </div>
-            <!--<div class="QRCodeLogo">-->
+            <!--二维码-->
+            <div class="swept-QRcode">
+                <div id="code"></div>
+                <img class="pay-logo" src="resources/img/v1yunshanfu.png" alt=""/>
+                <!--二维码占位图-->
+                <div class="QRcode-bitmap">
+                    <img src="resources/img/v1_sj_zl@2x.png" alt=""/>
+                    <p>正在加载...请耐心等待</p>
+                </div>
+            </div>
+            <!--全屏条形码-->
+            <div class="window" onclick="layerBtn()">
+                <div class="barCodeLogo cloes-img">
+                    <img src="" class="" id="barcode2"/>
+                </div>
+                <!--<div class="QRCodeLogo">-->
                 <!--<div id="code1"></div>-->
                 <!--<img class="pay-logo" src="resources/img/v1yunshanfu.png" alt=""/>-->
-            <!--</div>-->
-        </div>
-        <input type="hidden" class="input" id="inputTxt" value="555555">
-        <!--自动更新-->
-        <div class="swept-update">
-            <img onclick="btnRefresh()" src="resources/img/v1refresh.png" alt=""/>
-            <p>付款码及数字每分钟更新，请当面使用请勿截屏</p>
+                <!--</div>-->
+            </div>
+            <input type="hidden" class="input" id="inputTxt" value="555555">
+            <!--自动更新-->
+            <div class="swept-update">
+                <img onclick="btnRefresh()" src="resources/img/v1refresh.png" alt=""/>
+                <p>付款码及数字每分钟更新，请当面使用请勿截屏</p>
 
+            </div>
+            <!--资金账号-->
+            <div class="swept-number">
+                <span>资金账号</span>(8888)<span></span>
+            </div>
         </div>
-        <!--资金账号-->
-        <div class="swept-number">
-            <span>资金账号</span>(8888)<span></span>
+        <!--无可用付款码-->
+        <div class="swept-nothing"  style="display: none">
+            <img src="resources/img/v1sjfk_yic@2x.png" alt=""/>
+            <!--<p class="netStates">网络异常，暂无可用付款码，请在连接网络状态下刷新重试</p>-->
+            <p class="serverStates">服务异常，暂无可用付款码，请在连接网络状态下刷新重试</p>
+            <input id="reloadBtn" type="button" value="刷新"/>
         </div>
     </div>
 
@@ -174,7 +195,7 @@
                     <p>付款码数字仅用于付款，为防诈骗，请勿转发他人。</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="codeBtn">知道了</button>
+                    <button class="btn btn-primary" id="codeBtn" onclick="yesBtn();">知道了</button>
                     <!--<button type="button" class="btn btn-default" data-dismiss="modal">知道了</button>-->
                 </div>
             </div>

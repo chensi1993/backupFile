@@ -4,12 +4,17 @@
 $(function(){
 
     loadData();
+    $(".contents-list ").on("click",".list-info",function(){
+        console.log($(this).index());
+        window.location.href = "numberDetail_second.html";
+    });
 });
 
 //跳转到明细详情
-function listToDetail(){
-    window.location.href = "numberDetail_second.html";
-}
+//function listToDetail(){
+//    window.location.href = "numberDetail_second.html";
+//}
+
 //上拉加载更多
 function loadData(){
     var counter = 0;//页码数
@@ -27,6 +32,8 @@ function loadData(){
                 type: 'GET',
                 url: 'resources/js/list.json',
                 dataType: 'json',
+                contentType : 'application/json',
+
                 success: function(data){
 
                     console.log(data);
@@ -34,7 +41,7 @@ function loadData(){
                     // 选择需要显示的数据 拼接 DOM
                     for(var i = 0; i < data.shopList.length; i++){
 
-                        result +='<div class="list-info row" id="infoList" onclick="listToDetail();">'
+                        result +='<div class="list-info row" id="infoList">'
                         +'<div class="list-left col-xs-2">'
                         +'<img src="http://localhost:63342/workSpace/admin/project/personalCode/e%E6%99%BA%E9%80%9AH5/resources/img/v1mxshanghu@2x.png"/>'
                         +'</div>'

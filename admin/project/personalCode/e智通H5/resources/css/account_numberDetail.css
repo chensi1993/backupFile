@@ -39,7 +39,7 @@ html,body{
 .content-list .col-xs-10 .content-bond span:nth-child(1){
     font-size: 1.2rem;
     color: #999999;
-    margin-right: 6rem;
+    margin-right: 4rem;
 }
 .content-list .col-xs-10 .content-bond span:nth-child(2){
     font-size: 1.6rem;
@@ -78,6 +78,7 @@ html,body{
     /*overflow: hidden;*/
     padding: .5rem 0;
     margin: 0;
+    border-bottom: 1px solid #e5e5e5;
 }
 .list-info .list-left{
     line-height: 5rem;
@@ -105,9 +106,11 @@ html,body{
 }
 .list-info .list-right{
     text-align: right;
+    padding-left: 0;
 }
+
 .list-info .list-right .right-top{
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: #666666;
 }
 .list-info .list-right .right-top img{
@@ -152,7 +155,7 @@ html,body{
 }
 .content-center{
     margin-top: 24rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 .page-bottom{
     position: fixed;
@@ -164,4 +167,5 @@ html,body{
 }
 .page-top .top-image{
     padding-left: 1.5rem;
+    white-space: nowrap;
 }

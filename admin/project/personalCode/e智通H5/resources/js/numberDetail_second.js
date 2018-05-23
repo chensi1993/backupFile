@@ -7,11 +7,12 @@
 //});
 
 $(function(){
-    JsBarcode("#barcode3", "699F795F3B557D80E053376010AC21C3", {
+    JsBarcode("#barcode3", "12345678901234567890", {
         format: "CODE128",
-        width:1,
+        width:2,
+        height:80,
         displayValue:true,
-        fontSize:14
+        fontSize:16
     });
     //code128();
 });
